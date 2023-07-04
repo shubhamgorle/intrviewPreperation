@@ -1,0 +1,427 @@
+ que. is javascript synchronous language or asynchronous language?
+ javaScript is an asynchronous and concurrent
+ programming language that offers a lot of 
+ flexibility. It's single-threaded like sync, 
+ but also non-blocking like async.
+ Although it's synchronous by nature, JavaScript benefits from asynchronous code
+
+1. is null and undefined are same ?
+=> null and undefined ---> null and undefined is not equal 
+if we check null and undefined like this ---> null == undefined ---> we will get true bcz both are falsy values.
+but if we check  null and undefined like this ---> null === undefined (Stricktly equals to)---> we will get false.
+
+typeof null; // "object" (not "null" for legacy reasons)
+typeof undefined; // "undefined"
+null === undefined; // false
+null == undefined; // true
+null === null; // true
+null == null; // true
+!null; // true
+Number.isNaN(1 + null); // false
+Number.isNaN(1 + undefined); // true
+what is null ---> The null value represents the intentional "absence" of any object value.
+----------------------------------------------------------->
+
+2. difference between falsy values and truthy values.
+=>  falsy values is the values which is not false but its behave life false is known as falsy values.
+examples of falsy values are false, NaN, null, undefined, 0, ""
+
+eg. if(false || NaN || null || undefined || 0 || ""){
+    console.log("shubham")
+}
+else{
+    console.log("vicky")
+}
+
+output ---> vicky
+
+
+=> truthy values are the values which is not true but act like true is known as truthy values.
+
+eg. if(1){
+    console.log("shubham")
+}
+else{
+    console.log("vicky")
+}
+
+output ---> shubham
+
+----------------------------------------------------------->
+
+3. what is NaN (Not-A-Number)?
+=> The NaN global property is a value representing Not-A-Number.
+NaN is a property of the global object. In other words, it is a variable in global scope.
+In modern browsers, NaN is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it.
+
+eg.
+function sanitise(x){
+  if (isNaN(x)) {
+    return NaN;
+  }
+  return x;
+}
+
+console.log(sanitise('1'));
+// Expected output: "1"
+
+console.log(sanitise('NotANumber'));
+// Expected output: NaN
+
+NaN == NaN -----> false
+{} == {} ----->false---> because two objects have different addresses.
+[] == [] ---->false
+
+----------------------------------------------------------->
+
+4. logical operator
+
+5 && 2 && 0 || 2 && 3 || 15 && 21 ---> output ---> 3  ---> Because 0 is the falsy value.
+5 && 2 && 0 || 2 == 3 || 15 && 21 ---> output ---> 21
+5 && 2 && 0 || 2 == 3  ---> output ---> false
+
+----------------------------------------------------------->
+
+
+5. Arrays (Higher order functions);
+=> forEach --->when we want to iterate to the array and don't want to return any array then forEach is used. 
+ var arr = [1, 2, 3, 4, 5];
+    arr.forEach((e, i) => {
+        console.log(e)
+    })
+
+   map ---> map used when we h to returnave the array.
+  
+    var brr = arr.map((e, i) =>
+        e + 10
+    )
+    console.log(brr)
+
+   filter ---> filter is used when we have to apply any condition and return the array.
+    var brr = arr.filter((e, i) =>
+        e > 2
+    )
+    console.log(brr)
+
+    reduce --->  used to reduce an array to a single value by passing a callback function on each element of the array.
+    var val =  arr.reduce((a,b)=>a+b)
+   console.log(val)
+   --->output--->   15
+   OR 
+   var val =  arr.reduce((a,b)=>{
+    return a+b
+   },0)
+   console.log(val)
+   --->output--->   15
+
+----------------------------------------------------------->
+
+
+6. difference between array and object in javascript.
+=> array is index value pair and objects are key value pair
+console.log(typeof([]) === typeof({})) ---> output is True bcz array is internally object
+
+----------------------------------------------------------->
+
+7. Hoisting 
+=> It is the process whereas the interpreter appears to move the declaration of functions,
+ variables or classes to the top of their scope, Before execution of the code.
+         eg.
+                       Hoist()
+                       function Hoist(){
+                           console.log("Good Morning")
+                       }
+                       console.log(a)
+                       var a;
+                       a = 10
+                       console.log(a)
+
+Note :=> 1) Declaration hoisted to the top but initialisation not.
+         2) Hoisting is only possible with var not with const and let.
+         3) functional expression cannot hoisted.
+         functional expressions are aero fuctions 
+      eg.   Hoist()
+             const Hoist = ()=>{
+           console.log("Good Morning")
+        }
+         4)
+         
+        function data(){
+        var x = 100;
+            y = 10;
+        }
+        data();
+        console.log(x,y)   
+         output :=> 100,10 because if the variable is not declare and value is assign to that 
+         variable in fuction then var is declare to that initialisation at the
+         top of the code bydefault
+
+----------------------------------------------------------->
+
+8. Scopes 
+1) global   :=>var   
+var name = "shubham";
+function data(){
+    console.log(name);
+    name is accessible here also
+}
+var dom = "html"
+name is accessible here also.
+
+2) functional scope 
+function getData(){
+    var data = {
+        name:"shubham"
+    }
+    data is accessible here 
+}
+    data is NOT accessible here 
+
+3) block     :=>let,const
+
+{
+    let data = "shubham"
+    data is accessible in this scope (inside the curley braces) only.
+}
+var is global scope while let & const are block scope.
+ var can updated and redeclared within its scope.    
+ let can updated but not redeclared within its scope.
+ const neither updated nor redeclared within its scope.
+
+----------------------------------------------------------->
+
+8. Promise
+:=> Promises are a way to implement asynchronous programming in JavaScript(ES6 which is also known as ECMAScript-6). 
+   A Promise acts as a container for future values.
+    it is use for parallel execution of code. it allow you to handle asynchronous actions 
+
+    there are three states in promise
+    pending: initial state, neither fulfilled nor rejected.
+   fulfilled: meaning that the operation was completed successfully.
+   rejected: meaning that the operation failed.
+
+
+
+why ?
+JavaScript is indeed an asynchronous language, which means it can handle asynchronous operations without 
+blocking the execution of other code. However, the presence of promises in JavaScript is not because the 
+language itself needs help in handling asynchronous operations. Instead, promises provide a way to manage
+ and work with asynchronous operations in a more organized and structured manner.
+ Promises provide a structured and readable way to handle asynchronous operations in JavaScript,
+ improving code organization, error handling, and overall maintainability.
+ 
+ Sequencing and Chaining Asynchronous Operations: Promises enable you to 
+ sequence multiple asynchronous operations in a more readable and linear manner.
+  You can chain promises using the .then() method, which allows you to specify what should
+   happen when a promise is fulfilled. This chaining mechanism simplifies the process of 
+   passing data between asynchronous operations and creating dependent workflows.
+eg.
+let myPromise = new Promise(function(resolve, reject) {
+  let x = 0;
+setTimeout(() => {
+    if (x == 0) {
+    resolve("OK");
+  } else {
+    reject("Error");
+  }
+}, 3000);
+});
+
+myPromise.then(
+  function(value) {console.log(value);},
+  function(error) {console.log(error);}
+);
+
+----------------------------------------------------------->
+
+9. arrow functions 
+:=>   Arrow functions were introduced in ES6.
+      Arrow functions allow us to write shorter function syntax:
+
+
+var obj = {
+    name:"shubham",
+    data:function(){  
+       setTimeout(function(){
+       console.log(this)
+       }, 1000);
+    }
+}
+obj.data() ---> outpt ---> window object
+      var obj = {
+    name:"shubham",
+    data:function(){  
+       setTimeout(() => {
+       console.log(this)
+       }, 1000);
+    }
+}
+
+what is this in different schenario ?
+=> in simple object if fuction is created using term function (without arrow fuction) & this is used insie the fuction then 
+this is that entire object. this will have the accs of that enire object.
+
+inside the event eg. setTimeout, here if event is make using without arrow fuction then this will become window object. it will
+not have the access of the element present inside that object.
+
+eg. 
+var obj = {
+    name:"shubham",
+    data:function(){  
+       setTimeout(function(){
+       console.log(this)
+       }, 1000);
+    }
+}
+obj.data() ---> outpt ---> window object
+
+inside the event eg. setTimeout, here if event is make using  arrow fuction then it will
+ have the access of the element present inside that object.
+
+      var obj = {
+    name:"shubham",
+    data:function(){  
+       setTimeout(() => {
+       console.log(this)
+       }, 1000);
+    }
+}
+obj.data()    output---> object
+      arrow functions use lexical this.(above example)
+
+----------------------------------------------------------->
+
+10)
+- What is Prototype?
+- What is Prototypal Inheritance?
+- What is Prototype Chain?
+- Why we call it _proto_ ?
+- What is inhertance in Javascript?
+
+=> Every object in JavaScript has a built-in property, which is called its prototype.
+ The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. 
+ The chain ends when we reach a prototype that has null for its own prototype.
+
+Prototypes are the mechanism by which JavaScript objects inherit features from one to another.
+JavaScript object have a special property called prototype that is null or reference to another objects.
+
+Prototype inheritance in javascript is the linking of prototypes of
+ a parent object to a child object to share and utilize the properties of a parent class using a child class.
+
+child.__proto__ = parent;
+
+let company = {
+  name: "A",
+  pay: function () {
+    console.log("Paying");
+  },
+}; //company object
+let worker = {
+  id: 1,
+  work: function () {
+    console.log("Working");
+  },
+}; //worker object
+worker.__proto__ = company; //worker object inherits company object
+console.log(worker);
+worker.pay(); // calling method from company object using worker object.
+
+
+inheritance is one objects trying to access the methods and properties of other object.  
+
+
+----------------------------------------------------------->
+  
+11) call, apply & bind
+Call is a function that helps you change the context of the invoking function.
+ In layperson's terms, it helps you replace the value of this inside a function with whatever value you want.
+
+Apply is very similar to the call function. The only difference is that in 
+apply you can pass an array as an argument list.
+
+Bind is a function that helps you create another function that you can execute later with 
+the new context of this that is provided.
+
+var jethalal = {
+    wife:"Daya",
+    age:45,
+    place:"Mumbai"
+}
+var bide = {
+    wife:"madhvi",
+    age:40,
+    place:"Mumbai"
+}
+function PopatLal(a,b){
+    console.log(this.wife + " will cook food")
+console.log(a,b)
+}
+         // CALL
+// PopatLal.call(jethalal)
+        //  APPLY
+// PopatLal.apply(bide,["hellow", 29])
+        //  BIND
+// var func = PopatLal.bind(bide,"hellow", 29);
+// func()
+
+----------------------------------------------------------->
+
+12)classes
+
+whatever thing  that we used to do with prototype that 
+can we do with classes. it is just sugar sintaxing of prototype.
+
+// function Rectangle(height,width){
+//     this.width = width;
+//     this.height=height
+// }
+
+// Rectangle.prototype.area = function(){
+//     return this.width + this.height
+// }
+
+// let box = new Rectangle(5,10)
+// console.log(box.area())
+
+// same this we can build using classes.
+
+// class Rectangle{
+//     constructor(height,width){
+//         this.height = height
+//         this.width = width
+//     }
+//     area(){
+//         return this.height + this.width
+//     }
+// }
+
+// let box = new Rectangle(5,10)
+// console.log(box.area());
+
+13)bigint
+=>
+var num = 2**53 - 1; it is the largest value can handle in javascript
+
+console.log(num)   ---output => 9007199254740991
+console.log(num+2) ---output =>  ---output => 9007199254740991   but output should be  ---output => 9007199254740993
+it is because the number eceeding the maximum allowed Number in the JavaScript.
+to ovrcome this bigint came into picture.
+to use bigint just append the n to the number then we will get desired output. 
+var num = 2n**53n - 1n; it is the largest value can handle in javascript
+console.log(num)--->output => 9007199254740991n
+console.log(num+2n)---> output => 9007199254740993n
+
+------------------------------------------------------------------->
+
+14) 
+a)what is javaScript
+b)what is Call Stack
+c)Asynchronous callback
+d)Task Queue
+e)Event loop
+
+* javaScript is a single threaded, non blocking, asynchronous concurrent language.
+single threaded => one thing at a time => line by line execution of code.
+* it has call stack, an event loop  and callback queue + other APIs
+* V8 is the javascript runtime which has a callstack and heap
+* the heap is used for memory allocation and stack holds the excecution context
