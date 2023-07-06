@@ -422,6 +422,130 @@ e)Event loop
 
 * javaScript is a single threaded, non blocking, asynchronous concurrent language.
 single threaded => one thing at a time => line by line execution of code.
-* it has call stack, an event loop  and callback queue + other APIs
+* it has call stack, an event loop  and callback queue + web APIs
 * V8 is the javascript runtime which has a callstack and heap
 * the heap is used for memory allocation and stack holds the excecution context
+
+ JavaScript has a runtime model based on an
+ event loop, which is responsible for executing the code.
+ lets take a example 
+
+  const fun1 = ()=>{
+    console.log("fun1 is starting")
+    fun2()
+    console.log('fun1 is ending')
+}
+
+const fun2 = ()=>{
+    setTimeout(() => {
+        console.log("fun2 is starting")
+    }, 3000);
+}
+fun1()
+
+so i want to explain event loop by using this example.
+so we will see how the execution of above code takes place.
+
+so intially fun1() will go in execution stack then console.log("fun1 is starting") will go in execution stack
+and as soon as the execution of this line completed it will get pop up from execution stack. then fun2 will go in execution stack
+then as in fun2 there is settimeout which comes under web api so function settimeout will go in web api and it will run in background and rest of 
+code whcih is console.log('fun1 is ending') will came in call stack and after execution completed it will pop up from call stack.
+now After 3 seconds the function which was in web apis will come in task queue and it will pop up from task que in sequence and then come in 
+execution stack. after execution completed it will pop up from stack and then fun2 will pop up from call stack.
+
+     or
+
+when synchronous code is happening it goes the callstack and its start getting executed 
+and whenever we find asynchronous method get recognise and then timer or callback is kept into it which web apis handle for it .
+when its Done or ready or network request is completed it pushesh into the task queue.
+and from task queue functions invoke to the callstack.
+
+imp=> if callstack is not empty, then task queue does not start element to push into callstack.
+once all synchronous code executed then only asynchronous code will go into call stack.
+
+ what is call stack?
+ => A call stack is a mechanism for an 
+   interpreter to keep track what function is currently being run
+   and what functions are called from within that function, etc.
+
+   what is Task Queue?
+=> 
+any JavaScript code which is scheduled to be run by the standard mechanisms.
+
+c)Asynchronous callback
+  const addButton = document.querySelector("#add")
+addButton.addEventListener("click", () => {
+  console.log("You clicked #addButton")
+})
+
+The addEventListener method attaches an event handler to a DOM element.
+The details of this method is not important here; all we need to know is that
+the second parameter is treated as an asynchronous callback function 
+which is only executed when the particular event is triggered on the target node.
+So, in this case, the async callback function is called every time we click on the #add element.
+
+what is this in javascript?
+=> this refers to an object itself.
+we can change the context of this using call,apply and bind function.
+function, this is created on every function invoke.
+arrow fuction don't have this.
+for strict mode  this is undefined.
+Alone, this refers to the global object/window object.
+
+
+------------------------------------------------------------------------------------->
+
+15) difference between fetch and axios ?
+=> Axios and Fetch are both popular JavaScript libraries
+ used for making HTTP requests in web applications.
+fetch is vanilla javascript and axios is a 3rd party library.
+ fetch return the promise and then we have to convert that promise into
+ jason data, but axios directly return jason data we dont have to convert that data into json.
+
+16) question related settimeout
+
+var arr= [1,2,3,4,5];
+for(var i = 0; i<arr.length; i++){
+    setTimeout(() => 
+        console.log(arr[i]), i*1000);
+}
+
+// In the given code snippet, the issue is related to the scoping of the variable i inside 
+// the setTimeout callback function. The setTimeout function is asynchronous, meaning that 
+// the callback function will execute after the specified delay, while the loop continues executing immediately.
+// By the time the first callback is executed, the loop has already completed, and the value of i has reached the value arr.length. 
+// At this point, arr[i] is arr[arr.length], which is undefined since the last index of the array is arr.length - 1. Therefore, 
+// you are seeing "undefined" being printed.
+
+// To fix this issue, you can use a closure to capture the value of i for each iteration. One way to achieve 
+// this is by using a separate function and passing the value of i as an argument. Here's an updated version
+//  of your code that should work as expected:
+
+
+for (var i = 0; i < arr.length; i++) {
+  setTimeout((i) => {
+    console.log(arr[i]);
+  }, i * 1000, i);
+}
+ or
+ by seperate function --->
+
+ function display(i){
+    setTimeout(() => {
+        console.log(arr[i]);
+      }, i * 1000);
+}
+
+for (var i = 0; i < arr.length; i++) {
+  display(i)
+}
+
+----------------------------------------------------->
+
+17)Strict mode 
+=>The "use strict" directive was new in ECMAScript version 5.
+It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
+The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+With strict mode, you can not, for example, use undeclared variables.
+All modern browsers support "use strict" except Internet Explorer 9 and lower:
+

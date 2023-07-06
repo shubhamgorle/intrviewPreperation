@@ -1,4 +1,8 @@
+"use strict"
 
+
+let a = 10;
+console.log(a);
 // function person (name,energy){
 
 //     var person = {};
@@ -158,6 +162,40 @@ function person(name, energy) {
 
 
 // BIGINT
-var num = 2n**53n - 1n;
-console.log(num)
-console.log(num+2n)
+// var num = 2n**53n - 1n;
+// console.log(num)
+// console.log(num+2n)
+
+// const fun1 = ()=>{
+//     console.log("fun1 is starting")
+//     fun2()
+//     console.log('fun1 is ending')
+// }
+
+// const fun2 = ()=>{
+//     setTimeout(() => {
+//         console.log("fun2 is starting")
+//     }, 3000);
+// }
+
+// fun1()
+
+// var arr= [1,2,3,4,5];
+// for(var i = 0; i<arr.length; i++){
+//     setTimeout(() => 
+//         console.log(arr[i]), i*1000);
+// }
+
+// In the given code snippet, the issue is related to the scoping of the variable i inside 
+// the setTimeout callback function. The setTimeout function is asynchronous, meaning that 
+// the callback function will execute after the specified delay, while the loop continues executing immediately.
+// By the time the first callback is executed, the loop has already completed, and the value of i has reached the value arr.length. 
+// At this point, arr[i] is arr[arr.length], which is undefined since the last index of the array is arr.length - 1. Therefore, 
+// you are seeing "undefined" being printed.
+
+// To fix this issue, you can use a closure to capture the value of i for each iteration. One way to achieve 
+// this is by using a separate function and passing the value of i as an argument. Here's an updated version
+//  of your code that should work as expected:
+
+
+///
