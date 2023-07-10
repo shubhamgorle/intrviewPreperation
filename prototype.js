@@ -1,8 +1,8 @@
-"use strict"
+// "use strict"
 
 
-let a = 10;
-console.log(a);
+// let a = 10;
+// console.log(a);
 // function person (name,energy){
 
 //     var person = {};
@@ -61,7 +61,7 @@ function person(name, energy) {
     // var person = {};   instead of this we can create the person object like
     var person = Object.create(personMethods)
     // now we will not have unneccessary methods in every call
-// but to access this javascropt has inbuild term .ie prototype
+    // but to access this javascropt has inbuild term .ie prototype
     person.name = name;
     person.energy = energy;
     //  person.eat=personMethods.eat
@@ -120,11 +120,11 @@ function person(name, energy) {
 //     console.log(this.wife + " will cook food")
 // console.log(a,b)
 // }
-         // CALL
+// CALL
 // PopatLal.call(jethalal)
-        //  APPLY
+//  APPLY
 // PopatLal.apply(bide,["hellow", 29])
-        //  BIND
+//  BIND
 // var func = PopatLal.bind(bide,"hellow", 29);
 // func()
 
@@ -173,7 +173,7 @@ function person(name, energy) {
 // }
 
 // const fun2 = ()=>{
-//     setTimeout(() => {
+//     setdelay(() => {
 //         console.log("fun2 is starting")
 //     }, 3000);
 // }
@@ -182,12 +182,12 @@ function person(name, energy) {
 
 // var arr= [1,2,3,4,5];
 // for(var i = 0; i<arr.length; i++){
-//     setTimeout(() => 
+//     setdelay(() => 
 //         console.log(arr[i]), i*1000);
 // }
 
 // In the given code snippet, the issue is related to the scoping of the variable i inside 
-// the setTimeout callback function. The setTimeout function is asynchronous, meaning that 
+// the setdelay callback function. The setdelay function is asynchronous, meaning that 
 // the callback function will execute after the specified delay, while the loop continues executing immediately.
 // By the time the first callback is executed, the loop has already completed, and the value of i has reached the value arr.length. 
 // At this point, arr[i] is arr[arr.length], which is undefined since the last index of the array is arr.length - 1. Therefore, 
@@ -199,3 +199,189 @@ function person(name, energy) {
 
 
 ///
+
+function myArray() {
+    this.length = 0;
+}
+// push
+// pop
+// Map
+myArray.prototype.push = function (ele) {
+    this[this.length] = ele
+    this.length++;
+    return this.length;
+}
+
+myArray.prototype.pop = function () {
+    this.length--;
+    var ele = this[this.length];
+    delete this[this.length]
+    return ele;
+}
+var arr = new myArray();
+arr.push(10)
+arr.push(20)
+arr.push(30)
+arr.pop()
+
+// myArray.prototype.map()
+var arrr = [2, 1, 3, 4, 5];
+// arrr.forEach((e)=>console.log(e+10))
+
+
+
+// // In javascript there are two major datatypes.
+// // 1.primitive  ---> string, number, boolean, null, undefined
+// // data is directly store in memory location where variable exist.
+// // 2.reference  --->  array & object
+// // data is stored in variable which is a pointer to allocation in memory where object is stored.
+// let x = 20   
+// let y = x;  
+// // it is immutable because value of x is not changing by changing the value of y.
+// console.log(x)
+// console.log(y+1)
+
+// let a1 = [1,2,3]
+// // let a2 = a1; its mutable because by changing the value of a2, value of a1 is changing. to overcome it we can use spread operator.
+// let a2 = [...a1]
+// a2.pop();
+// console.log(a1)
+// console.log(a2)
+
+
+// let obj1 = {
+//     name:"Shubham",
+//     age:22,
+//     place:"nagpur"
+// }
+// // let obj2 = obj1; its mutable because by changing the value of obj2, value of obj1 is changing. to overcome it we can use spread operator.
+// let obj2 = {...obj1}
+// obj2.color = "brown"
+// console.log(obj1)
+// console.log(obj2)
+
+
+
+
+// <-----------------------------------Closure--------------------------------->
+// var name = "shubham"
+// function fun1(){
+//      name = "vicky"
+
+//      function fun2(){
+//         console.log('good morning', name)
+//      }
+//      name = "suraj"
+//      return fun2
+// }
+// let c = fun1();
+// c()
+
+// function outer(){
+//     var a=10;
+//*     return function inner(b){
+//         return a+b;
+//     }
+// }
+//* var cdn =  outer();
+//* console.log(cdn(10)) ;
+
+// function outer(a){
+//     return function inner(b){
+//         return a+b
+//     }
+// }
+// console.log(outer(10)(20))
+
+// Debouncing
+
+// If user click two times and request time of first request not complete yet then it shoud cancel the first request.
+
+// const makeApiCall=()=>{
+//     console.log("API call in progress");
+// }
+// const debouncer = (func,delay)=>{
+//     ///Should remember if call is called.
+//     let debouncing;
+//     return function(){
+//         debouncing && clearTimeout(debouncing)
+//         debouncing =  setTimeout(() => 
+//             func.apply(this,arguments)
+//         , delay);
+//     }
+// }
+
+// window.addEventListener('load',function(){
+//     var btn = document.getElementById("click");
+//     const fn = debouncer(makeApiCall,1000)
+//     btn.addEventListener("click",fn)
+//     // btn.addEventListener("click",debouncer(makeApiCall,1000))
+// })
+
+// Throtling
+
+
+// const makeApiCall=()=>{
+//     console.log("API call in progress");
+// }
+// const throtller = (func,delay)=>{
+//     ///Should remember if call is called.
+//     let lastcall=0;
+//     return function(){
+//         if(Date.now() - lastcall > delay){
+//             lastcall=Date.now();
+//             func.apply(this,arguments)
+//         }
+//     }
+// }
+
+// window.addEventListener('load',function(){
+//     var btn = document.getElementById("click");
+//     btn.addEventListener("click",throtller(makeApiCall,1000))
+//     // btn.addEventListener("click",debouncer(makeApiCall,1000))
+// })
+
+///   Togler
+
+function toggler(){
+    var arr = arguments;
+    let index= -1;
+    return function(){
+        index = index + 1;
+        if(index >= arr.length){
+            index = 0;
+        }
+        return arr
+    }
+}
+
+
+// const toggle = toggler( 'on', 'off' );
+const toggle = toggler( 1,2,3 );
+console.log(toggle())
+console.log(toggle())
+console.log(toggle())
+console.log(toggle())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

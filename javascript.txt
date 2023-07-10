@@ -549,3 +549,192 @@ The purpose of "use strict" is to indicate that the code should be executed in "
 With strict mode, you can not, for example, use undeclared variables.
 All modern browsers support "use strict" except Internet Explorer 9 and lower:
 
+
+----------------------------------------------------------->
+
+19)Create own array object  with prototype.
+
+function myArray(){
+    this.length =0;
+}
+// push
+// pop
+// Map
+myArray.prototype.push = function(ele){
+    this[this.length] = ele
+    this.length++;
+    return this.length;
+}
+
+myArray.prototype.pop = function(){
+    this.length--;
+    var ele = this[this.length];
+    delete this[this.length]
+    return ele;
+}
+var arr = new myArray();
+arr.push(10)
+arr.push(20)
+arr.push(30)
+arr.pop()
+
+// myArray.prototype.map()
+var arrr = [2,1,3,4,5];
+arrr.forEach((e)=>console.log(e+10))
+
+---------------------------------------------------------------------------------->
+
+20) What is mutability and immutability javascript ?
+=> mutable means, variable which can change it's original value, immutable are those value which cannot be change.
+
+// In javascript there are two major datatypes.
+// 1.primitive  ---> string, number, boolean, null, undefined   ---> immutable
+// data is directly store in memory location where variable exist.
+// 2.reference  --->  array & object   ---> mutable
+// data is stored pointer to allocation in memory where object is stored.
+let x = 20   
+let y = x;  
+// it is immutable because value of x is not changing by changing the value of y.
+console.log(x)
+console.log(y+1)
+
+let a1 = [1,2,3]
+// let a2 = a1; its mutable because by changing the value of a2, value of a1 is changing. to overcome it we can use spread operator.
+let a2 = [...a1]
+a2.pop();
+console.log(a1)
+console.log(a2)
+
+
+let obj1 = {
+    name:"Shubham",
+    age:22,
+    place:"nagpur"
+}
+// let obj2 = obj1; its mutable because by changing the value of obj2, value of obj1 is changing. to overcome it we can use spread operator.
+let obj2 = {...obj1}
+obj2.color = "brown"
+console.log(obj1)
+console.log(obj2)
+
+<--------------------------------closure------------------------------------------>
+
+what are closures ?
+why do we need to use them ?
+what is currying ?
+applications ?
+
+what are closures ?
+=> A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).
+   In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a 
+   function is created, at function creation time.
+
+
+var name = "shubham"
+function fun1(){
+     name = "vicky"
+     function fun2(){
+        console.log('good morning', name)
+     }
+     name = "suraj"
+     return fun2
+}
+let c = fun1();
+c()  ---> o/p suraj 
+
+// function outer(){
+//     var a=10;
+//*     return function inner(b){
+//         return a+b;
+//     }
+// }
+//* var cdn =  outer();
+//* console.log(cdn(10)) ;
+
+what is currying ?
+=> transforms a function with multiple arguments into 
+a nested series of functions, each taking a single
+ argument.
+
+ function outer(a){
+    return function inner(b){
+        return a+b
+    }
+}
+console.log(outer(10)(20))
+
+---------------------------------------------------->
+
+debouncing ?
+=> Debouncing delays the exection of a function untill a 
+certain amount of time has passed withot input being triggered again.
+
+
+If user click two times and request time of first request not complete yet then it shoud cancel the first request.
+Debouncing in JavaScript is a practice used to improve browser performance.
+
+eg.
+
+const makeApiCal = () => {
+    console.log("Api call Running")
+}
+
+const debouncer = (makeApiCal, timeout) => {
+    var debouncing;
+    return function () {
+        debouncing && clearTimeout(debouncing)
+        debouncing = setTimeout(() => {
+            makeApiCal.apply(this, arguments)
+        }, timeout);
+    }
+}
+
+window.addEventListener("load", function () {
+    let btn = document.addEventListener("click", debouncer(makeApiCal, 3000))
+})
+
+Note :=> 
+ Debouncing is a technique used in JavaScript to improve
+ performance and optimize the execution of event 
+ handlers. 
+ It ensures that a function is only executed after a
+ specified period of inactivity.
+
+
+No matter how many times you click the click me button,
+I get executed once every 3 seconds.
+
+Application :=> Debouncing can be applied in implementing 
+suggestive text, where we wait for the user to stop
+ typing for a few seconds before suggesting the text.
+
+
+ ----------------------------------------------------->
+
+what is Throttling ?
+:=>Throtlling is useful when you want to ensure that a function
+is called at a limited rate without missing any important inpt/events.
+
+it call the function after fix interval of time if event is firing.
+
+
+eg.
+const makeApiCall=()=>{
+    console.log("API call in progress");
+}
+const throtller = (func,delay)=>{
+    let lastcall=0;
+    return function(){
+        if(Date.now() - lastcall > delay){
+            lastcall=Date.now();
+            func.apply(this,arguments)
+        }
+    }
+}
+
+window.addEventListener('load',function(){
+    var btn = document.getElementById("click");
+    btn.addEventListener("click",throtller(makeApiCall,1000))
+    // btn.addEventListener("click",debouncer(makeApiCall,1000))
+})
+
