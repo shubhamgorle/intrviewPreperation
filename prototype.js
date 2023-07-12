@@ -206,26 +206,26 @@ function myArray() {
 // push
 // pop
 // Map
-myArray.prototype.push = function (ele) {
-    this[this.length] = ele
-    this.length++;
-    return this.length;
-}
+// myArray.prototype.push = function (ele) {
+//     this[this.length] = ele
+//     this.length++;
+//     return this.length;
+// }
 
-myArray.prototype.pop = function () {
-    this.length--;
-    var ele = this[this.length];
-    delete this[this.length]
-    return ele;
-}
-var arr = new myArray();
-arr.push(10)
-arr.push(20)
-arr.push(30)
-arr.pop()
+// myArray.prototype.pop = function () {
+//     this.length--;
+//     var ele = this[this.length];
+//     delete this[this.length]
+//     return ele;
+// }
+// var arr = new myArray();
+// arr.push(10)
+// arr.push(20)
+// arr.push(30)
+// arr.pop()
 
 // myArray.prototype.map()
-var arrr = [2, 1, 3, 4, 5];
+// var arrr = [2, 1, 3, 4, 5];
 // arrr.forEach((e)=>console.log(e+10))
 
 
@@ -343,45 +343,131 @@ var arrr = [2, 1, 3, 4, 5];
 
 ///   Togler
 
-function toggler(){
-    var arr = arguments;
-    let index= -1;
-    return function(){
-        index = index + 1;
-        if(index >= arr.length){
-            index = 0;
-        }
-        return arr
-    }
-}
+// function toggler(){
+//     var arr = arguments;
+//     let index= -1;
+//     return function(){
+//         index = index + 1;
+//         if(index >= arr.length){
+//             index = 0;
+//         }
+//         return arr
+//     }
+// }
 
 
 // const toggle = toggler( 'on', 'off' );
-const toggle = toggler( 1,2,3 );
-console.log(toggle())
-console.log(toggle())
-console.log(toggle())
-console.log(toggle())
+// const toggle = toggler( 1,2,3 );
+// console.log(toggle())
+// console.log(toggle())
+// console.log(toggle())
+// console.log(toggle())
+
+
+// const print = (i)=>{
+//   setTimeout((i) => {
+//     console.log(i,crr[i])
+// }, i*1000,i);
+// }
+
+// var crr = [1,2,3]
+// for(var i = 0; i<crr.length; i++){
+//     // setTimeout((i) => {
+//     //     console.log(i,crr[i])
+//     // }, i*1000,i);
+//     print(i)
+// }
 
 
 
+///------------------------------------------------------>
 
 
+// Destructuring
+// array and object destructuring
+
+// var person = {
+//     name: "masai",
+//     id: '000',
+//     location: "INDIA"
+// }
+// // before es6
+// const name=person.name 
+// // after es6
+// const {name,id} = person  --->   destructuring
+// console.log(name)
 
 
+// function getData(){
+//     return person
+// }
+
+// const {name,id} = getData();
+// console.log(name,id)
+
+// Array destruturing
+
+// const arr = ['masai','india','bangluru'];
 
 
+// before es6
+// const name = arr[0];
+// const country = arr[1];
+// const city = arr[2];
+// console.log(name)
+// console.log(country)
+// console.log(city)
+
+// after ES6
+
+// const [name,country,city] = arr;   --->   destructuring
+// console.log(name)
+// console.log(country)
+// console.log(city)
+
+// <--------------------default values------------------>
+
+// before ES6
+// function allSubjects(maths,english,science){
+
+// return maths+english+science
+// }
+
+// let total = allSubjects(50,60);
+// console.log(total) --->NaN
+// to avoid this before ES6
+
+// function allSubjects(maths,english,science){
+// maths =  maths || 0
+// english =  english || 0
+// science =  science || 0
+// return maths+english+science
+// }
+
+// let total = allSubjects(50,60);
+// console.log(total)  ---> output is 110
 
 
+// AFTER ES6
 
+// function allSubjects(maths,english,science=0){
+//      return maths+english+science
+// }
+    
+//     let total = allSubjects(50,60);
+//     console.log(total)  ---> output is 110
 
+// Template literals are string literals that allow you to embed expressions
+//  and values within strings.
+// Template literals are enclosed by the back-tick ( ``) or grave accent
+// character instead of double or single quotes
 
+// before ES6
 
+let fname = 'masai';
+let lname = 'school'
+// let str = fname+' '+lname
 
-
-
-
-
-
-
-
+// after ES6
+let str = `${fname} ${lname}`
+console.log(str)
