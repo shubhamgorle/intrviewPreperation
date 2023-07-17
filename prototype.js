@@ -464,10 +464,25 @@ function myArray() {
 
 // before ES6
 
-let fname = 'masai';
-let lname = 'school'
-// let str = fname+' '+lname
+// let fname = 'masai';
+// let lname = 'school'
+// // let str = fname+' '+lname
 
-// after ES6
-let str = `${fname} ${lname}`
-console.log(str)
+// // after ES6
+// let str = `${fname} ${lname}`
+// console.log(str)
+// document.querySelector("#input_form").addEventListener("submit",handleSubmit)    
+//   async function handleSubmit(e){
+//     e.preventDefault()
+//     var fname = document.getElementById("fname").value
+//     var lname = document.getElementById("lname").value
+//     console.log(fname,lname)
+// }
+
+
+// if(navigator.onLine){
+//     console.log("online")
+// }else{
+//     console.log("offline")
+// }
+

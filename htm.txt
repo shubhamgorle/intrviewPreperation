@@ -1,0 +1,208 @@
+# What does CSS stand for?
+:=> Cascading Style Sheets.
+
+# What does HTML stand for?
+:=> Hypertext Markup Language.
+
+# What are the features of HTML5?
+:=> Audio support, video support, form validation, Geolocation API,
+    local Storage, Responsive Images, header, footer, placeholder attribute in input element, email attribute.
+
+# What are the different types of storage in HTML5?
+:=> The two storages are session storage and local storage and they would be used to handle different situations.
+
+# difference btween local storage and session storage ?
+:=> sessionStorage is similar to localStorage; the difference is that while data
+    in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
+
+# What are forms in HTML?
+:=> An HTML form is used to collect user input. The user input is most often sent to a server for processing. 
+
+# What are event listeners in HTML?
+:=> In HTML, event listeners are a way to handle user interactions or actions 
+    that occur on a webpage. They are used to detect when a specific event happens,
+    such as a button click, mouse movement, keyboard input, or the loading of a webpage,
+    and then execute a function or a series of instructions in response to that event.
+
+# what is onload event?
+:=> The onload event is an event in HTML that occurs when a webpage or 
+an element within a webpage has finished loading. 
+It is commonly used to execute JavaScript code or perform certain actions
+once the page or element has fully loaded.
+
+<body onload="myFunction()">
+  <!-- Rest of the HTML content -->
+</body>
+
+<script>
+  function myFunction() {
+    // Code to be executed when the page loads
+    alert('Page loaded!');
+  }
+</script>
+
+# What is scroll event?
+:=> The scroll event is an event in HTML that occurs when the user scrolls
+ the content of a webpage or a scrollable element. It allows you to detect and 
+ respond to scroll-related actions, such as scrolling up, scrolling down, or scrolling to a specific position on the page.
+
+<div id="myDiv" onscroll="myFunction()">
+  <!-- Scrollable content -->
+</div>
+
+<script>
+  function myFunction() {
+    // Code to be executed when scrolling occurs
+    console.log('Scrolling...');
+  }
+</script>
+
+# How do you know if a user is offline or not? What API does the browser provide for that? 
+:=> We can detect if the user is online or offline by using the online property on the navigator
+ object which will return true if the user is connected to the internet, otherwise it returns false.
+
+ if(navigator.onLine){
+    console.log("online")
+}else{
+    console.log("offline")
+}
+
+# How do you use Video and Audio tags?
+:=> 1.
+<video src="video.mp4" controls></video>
+To embed a video on your web page, you can use the <video> tag.
+In the above example, the src attribute specifies the URL or file path of the video file. 
+The controls attribute adds playback controls (play/pause, volume, etc.) to the video player.
+You can also provide alternative video sources using the <source> element within the <video> tag.
+This allows the browser to choose the appropriate video source based on its supported formats.
+Here's an example:
+
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.webm" type="video/webm">
+  Your browser doesn't support HTML5 video.
+</video>
+
+ In this example, the browser will try to play the video.mp4 file first. If it's not supported,
+ it will fallback to the video.webm file. The text "Your browser doesn't support HTML5 video." 
+ is displayed only if the browser doesn't support any of the provided video formats.
+
+2.
+To embed audio on your web page, you can use the <audio> tag.
+<audio src="audio.mp3" controls></audio>
+
+Similar to the <video> tag, the src attribute specifies the URL or file path of the audio file. 
+The controls attribute adds playback controls to the audio player.
+You can also include multiple audio sources using the <source> element
+within the <audio> tag to provide fallback options for different audio formats.
+
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  <source src="audio.ogg" type="audio/ogg">
+  Your browser doesn't support HTML5 audio.
+</audio>
+
+In this example, the browser will attempt to play the audio.mp3 file first,
+ and if not supported, it will fallback to the audio.ogg file.
+  The fallback text is displayed if the browser doesn't support any of the provided audio formats.
+
+# ------------------------------------- CSS (Cascading Style Sheets)------------------------------------- #
+
+
+# What are CSS selectors?
+:=> CSS selectors are patterns used to select and target specific elements in an HTML document.
+Here are some commonly used CSS selectors:
+
+1. Element Selector: Targets elements based on their tag names. For example, p targets all <p> elements.
+
+2. Class Selector: Targets elements with a specific class attribute value. It is denoted with a dot (.) followed by the class name.
+ For example, .my-class targets all elements with class="my-class".
+
+3. ID Selector: Targets a specific element with a unique ID attribute value.
+ It is denoted with a hash (#) followed by the ID name. For example, #my-id targets the element with id="my-id".
+
+4. Attribute Selector: Targets elements based on their attributes. For example, [type="text"] targets all elements with type="text".
+
+5.Descendant Selector: Targets elements that are descendants of another element. It is denoted by a space between two selectors. 
+For example, ul li targets all <li> elements that are descendants of <ul> elements.
+
+6. Child Selector: Targets elements that are direct children of another element. It is denoted by the > symbol between two selectors. 
+For example, div > p targets all <p> elements that are direct children of <div> elements.
+
+
+# What are CSS variables?
+:=> allow you to define reusable values in CSS. They are similar to variables in programming languages,
+ as they can store values and be referenced throughout the stylesheet.
+
+ CSS variables are declared using the -- prefix followed by a name and an optional value.
+  For example:
+
+:root {
+  --primary-color: blue;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+# What is the difference between position absolute and relative?
+:=> position absolute :- position the element relative to the position of its first parent div.
+
+    position relative :- position the element relative to its normal position.
+
+    position fixed    :- position the element relative to its browser window.
+
+    position sticky   :- it will stick when it will reached to top of the page.
+
+
+# Create a search bar with CSS.
+:=> video link  ---> https://www.youtube.com/watch?v=9hnJsNIBq1g&t=636s
+
+# What is Box Model
+:=> The CSS box model is a fundamental concept that
+    describes how elements are rendered and how their dimensions
+    and spacing are calculated. It consists of four main components: 
+    content, padding, border, and margin. These components create a box around an element, 
+    defining its total space and positioning within the 
+    
+# What is a flex-box?
+Flexbox, also known as Flexible Box Layout, is a CSS layout module that provides an efficient 
+way to arrange and align elements within a container. It is designed to handle the distribution 
+of available space among the items in a container, even when their sizes are unknown or dynamic. 
+
+# What does justify-content, justifyItems, justifySelf mean?
+:=>   
+justify-items - Aligns the content inside a grid(box) item along the row axis (it is available in grid only not in Flexbox)
+
+justify-content - This property aligns the grid along the row axis
+
+justify-self - Aligns the content inside a grid item along the row axis and it override the properties of
+
+justify item and justify content (it is available in grid only not in Flexbox).
+
+# what are grids?
+:=> grid is a layout system that allows you to create complex and responsive
+ page layouts by dividing the content into rows and columns.
+
+ fr ---> fractional unit
+
+ # What are the differences between Flex and Grids?
+ :=>              Grids                                                       Flex 
+ Grid is designed for two-dimensional layouts                 ||  The main purpose of Flexbox is to create one-dimensional layouts.
+ allowing you to create both rows and columns simultaneously. ||  allowing you to create either in a row (horizontal) or in a column (vertical).
+
+
+# what is Specificity ?
+:=> Specificity is a concept in CSS that determines which styles should be applied to an HTML
+    element when multiple conflicting CSS rules target the same element. It defines the order of
+    precedence for CSS rules based on their specificity value.        
+
+Inline styles: 1,000 (highest specificity)
+IDs: 100
+Classes, attributes, and pseudo-classes: 10
+Elements and pseudo-elements: 1 (lowest specificity)
+
+# What are media queries?
+:=> Media queries are a fundamental feature of responsive web design in CSS. 
+They allow you to apply different styles and layouts to a web page based on various device characteristics.
+

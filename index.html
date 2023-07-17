@@ -2,23 +2,63 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="./index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>interview preperation</title>
+    <title>interview prep  </title>
     <style>
-        h1 {
-            text-align: center;
-            color: orangered;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        .container{
+            width: 1000px;
+            height: 500px;
+            background: #fafafa;
+            border: 1px solid red;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: repeat(3,200px);
+            gap: 15px;
+          justify-items: center;
+          align-items: center;
+        }
+        
+        .item{
+            border: 1px solid blue; 
+            height: 200px;
+            width: 200px;
+        }
+        .item1{
+            display: grid;
+            justify-items: center;
+            align-items: center;
         }
     </style>
 </head>
-
+eration</title>
+  
 <body>
     <h1 id="header">Welcome to interview preperation</h1>
-    <button id="click">Click me</button>
+    <!-- <button id="click">Click me</button> -->
+<div class="container">
+    <div class="item item1"><a href="#">item 1</a>
+    <p>Testing</p>
+    </div>
+    <div class="item item2"><a href="#">item 2</a></div>
+    <div class="item item3"><a href="#">item 3</a></div>
+    <div class="item item4"><a href="#">item 4</a></div>
+    <div class="item item5"><a href="#">item 5</a></div>
+    <div class="item item6"><a href="#">item 6</a></div>
+</div>
+
+
+    <!-- <form id="input_form" >
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <input type="submit" value="Submit">
+      </form> -->
 </body>
 <script src="./prototype.js">
+    
     
     // console.log('Welcome to interview preperation');
 //     var arr = [1, 2, 3, 4, 5];
