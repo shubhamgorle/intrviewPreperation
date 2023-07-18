@@ -206,3 +206,7 @@ Elements and pseudo-elements: 1 (lowest specificity)
 :=> Media queries are a fundamental feature of responsive web design in CSS. 
 They allow you to apply different styles and layouts to a web page based on various device characteristics.
 
+# what is z-index?
+:=> The z-index property specifies the stack order of an element. 
+    An element with greater stack order is always in front of an element with a lower stack order.
+
