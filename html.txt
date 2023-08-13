@@ -12,7 +12,7 @@
 :=> The two storages are session storage and local storage and they would be used to handle different situations.
 
 # difference btween local storage and session storage ?
-:=> sessionStorage is similar to localStorage; the difference is that while data
+:=> sessionStorage is similar to localStorage, the difference is that while data
     in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
 
 # What are forms in HTML?
@@ -20,7 +20,7 @@
 
 # What are event listeners in HTML?
 :=> In HTML, event listeners are a way to handle user interactions or actions 
-    that occur on a webpage. They are used to detect when a specific event happens,
+    that occur on a webpage. They are 'used to detect' when a specific event happens,
     such as a button click, mouse movement, keyboard input, or the loading of a webpage,
     and then execute a function or a series of instructions in response to that event.
 
@@ -42,7 +42,8 @@ once the page or element has fully loaded.
 </script>
 
 # What is scroll event?
-:=> The scroll event is an event in HTML that occurs when the user scrolls
+:=> 
+ The scroll event is an event in HTML that occurs when the user scrolls
  the content of a webpage or a scrollable element. It allows you to detect and 
  respond to scroll-related actions, such as scrolling up, scrolling down, or scrolling to a specific position on the page.
 
@@ -146,6 +147,7 @@ h1 {
 }
 
 # What is the difference between position absolute and relative?
+
 :=> position absolute :- position the element relative to the position of its first parent div.
 
     position relative :- position the element relative to its normal position.

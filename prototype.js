@@ -1,8 +1,8 @@
-// "use strict"
+// // "use strict"
 
 
-// let a = 10;
-// console.log(a);
+// // let a = 10;
+// // console.log(a);
 // function person (name,energy){
 
 //     var person = {};
@@ -32,49 +32,49 @@
 // var jay = person("jay",12)
 
 // console.log(sai) 
-// when we calling fuction person for every call indirectly we are calling
-// eat, sleep, code function every time unneccesarrily. which takes extra space & memory
-// which is not desirable at all.
+// // when we calling fuction person for every call indirectly we are calling
+// // eat, sleep, code function every time unneccesarrily. which takes extra space & memory
+// // which is not desirable at all.
 // console.log(jay)
 
 // sai.code(15)
 
 
-// to avoid this ------------------------------------------------>
+// // to avoid this ------------------------------------------------>
 
-var personMethods = {
-    eat: function (energy) {
-        console.log(this.name, 'is eating')
-        this.energy += energy
-    },
-    sleep: function (energy) {
-        console.log(this.name, 'is sleeping')
-        this.energy += energy
-    },
-    code: function (energy) {
-        console.log(this.name, 'is coding')
-        this.energy -= energy
-    }
-}
+// var personMethods = {
+//     eat: function (energy) {
+//         console.log(this.name, 'is eating')
+//         this.energy += energy
+//     },
+//     sleep: function (energy) {
+//         console.log(this.name, 'is sleeping')
+//         this.energy += energy
+//     },
+//     code: function (energy) {
+//         console.log(this.name, 'is coding')
+//         this.energy -= energy
+//     }
+// }
 
-function person(name, energy) {
-    // var person = {};   instead of this we can create the person object like
-    var person = Object.create(personMethods)
-    // now we will not have unneccessary methods in every call
-    // but to access this javascropt has inbuild term .ie prototype
-    person.name = name;
-    person.energy = energy;
-    //  person.eat=personMethods.eat
-    //  person.sleep=personMethods.sleep
-    //  person.code=personMethods.code
-    return person;
-}
+// function person(name, energy) {
+//     // var person = {};   instead of this we can create the person object like
+//     var person = Object.create(personMethods)
+//     // now we will not have unneccessary methods in every call
+//     // but to access this javascropt has inbuild term .ie prototype
+//     person.name = name;
+//     person.energy = energy;
+//     //  person.eat=personMethods.eat
+//     //  person.sleep=personMethods.sleep
+//     //  person.code=personMethods.code
+//     return person;
+// }
 
 // var sai = person("sai",15)
 // var jay = person("jay",12)
 
 
-// to rewrite this -------------------------------------------------->
+// // to rewrite this -------------------------------------------------->
 
 
 
@@ -486,3 +486,38 @@ function myArray() {
 //     console.log("offline")
 // }
 
+
+
+// const makeApiCal = () => {
+//     console.log("Api call Running")
+// }
+
+// // const debouncer = (makeApiCal, timeout) => {
+// //     var debouncing;
+// //     return function () {
+// //         debouncing && clearTimeout(debouncing)
+// //         debouncing = setTimeout(() => {
+// //             makeApiCal.apply(this, arguments)
+// //         }, timeout);
+// //     }
+// // }
+
+// window.addEventListener("load", function () {
+//     var btn = document.getElementById("click");
+//      btn.addEventListener("click", debouncer(makeApiCal, 3000))
+// })
+
+// form validation code
+
+// document.getElementById("form").addEventListener("submit",submitform);
+// function submitform(event){
+//     event.preventDefault()
+//    var name = document.getElementById("password").value
+//    var lname = document.getElementById("cpassword").value
+//    if(name != lname){
+//     alert("password don't match")
+//    }
+//    else{
+// alert("Registration Successfylly Completed")
+//    }
+// }

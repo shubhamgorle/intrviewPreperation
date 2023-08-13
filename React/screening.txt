@@ -1,0 +1,59 @@
+1. Tell me about yourself
+:=> 
+Good evening mam.
+i am shubham gorle from orange city i.e nagpur.
+about my  education, i have completed diploma in mechanical engineering form GHRP nagpur and BE in mechanical engineering from RTMNU.
+i have also completed MERN STACK developement course from masai school bengluru.
+I specialize in the MERN stack, which includes MongoDB, Express.js, React.js, and Node.js.
+During my studies, I worked on a project that involved building a clone of shop.com, clone of expendia using html, css and javascript and clone 
+of Koo application using React js. 
+I'm excited about the opportunity to contribute my expertise and learn from the experienced team at MsCorpres Automation Private Limited.
+Thank you for considering me as a potential addition to your team.
+I bring not only technical proficiency but also excellent teamwork, problem-solving, and communication skills.
+
+2. What prompted you to pursue a career in mern stack developement ?
+:=> 
+when i was in final year of graduation i had an idea on which i wanted to build a project which was related to computer 
+science and i did not able to build it bcz i did not familier with the tech stack which is required to build that project.
+but i wanted to learn the tech stack which is required for building that application.
+after completion of graduation to be very honest there was very limited job opportunities ans slow carrier growth in mechanical feild. then i 
+that why i choosen mern stack developer as a carrier.
+
+4. what is your strength ?
+:=> 
+My gretest strenth i would like to say i am peoples person, i enjoy working in teams. during my masai school journey i have worked on three 
+projects in a team of 4 peoples for each project and i dont think they have complaints against me.
+second one is i am quick learner because of that i am able to shift my carrier from mechanical engineering to computer science in very limited period
+of time.
+
+5. what is your weakness ?
+:=>
+public speaking makes me nervous Althught i don't need public speaking for my role as a mern stack developer but i still thing it is important
+skill, especially when i want to offer up my opinions in meetings or group discussions and i am working on this weakness to overcome it.
+
+3. Why do you want to work here specifically?
+:=>
+
+
+ MsC founded in 2017, is an Independent and Professional run Company, which aims
+ to help Businesses take a tiny step towards technology and automation to beat the
+ new age day-to-day challenges of the business world.
+ 
+ We help startups & MSME enterprises to Integrate & Implement CRM, ERP, 
+ Distribution Management Systems (DMS), Utility Software
+ & add-on Software at a growing stage of the Business.
+
+
+ YOUR requireMENT IS YOU WANT A CANDIDATE WITH GOOD technical SKISSLS IN REACT JS JAVVASCRIPT
+ HTML CSS AND WHO CAN CONTERT DESIGN INTO 
+REACT component WITH  effecIENT CODE, Build reusable components and libraries.
+
+
+
+   Job description
+Convert designs into ReactJS components
+
+Create effective code to manage React component states
+
+
+

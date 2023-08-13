@@ -1,0 +1,192 @@
+jorden walke
+
+1. what is useEffect hook ?
+:=> The useEffect Hook allows you to perform side effects in functional components.
+   Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+   useEffect accepts two arguments. The second argument is optional.
+   useEffect(<function>, <dependency>)
+
+            
+13. What are the different ways to apply useEffect?
+:=>    useEffect(() => {
+               //Runs on every render
+               });
+
+               useEffect(() => {
+               //Runs only on the first render
+               }, []);
+
+               useEffect(() => {
+               //Runs on the first render
+               //And any time any dependency value changes
+               }, [prop, state]);
+
+
+2. What is React?         
+:=> ReactJS is an open-source JavaScript library used for building user interfaces (UIs) for web applications.
+
+3. what are the features of react ?
+:=> A. "Component-Based Architecture" : React encourages developers to break down the user interface into reusable components.
+                                        once we build component they we can reuse it wherever we want in entire application.
+
+    B. "Virtual DOM" : React uses a virtual representation of the actual DOM. When changes occur in the state of a component,
+                       React 'computes' the difference (diff) between the virtual DOM and the real DOM and then updates only the necessary 
+                       parts of the real DOM. This approach improves performance by minimizing direct manipulation of the actual DOM.
+
+     c. JSX : JSX (JavaScript XML) is a syntax extension that allows you to write HTML-like code within JavaScript. 
+              This makes it easier to describe the UI components structure and appearance. 
+              JSX gets transpiled into JavaScript before being executed by the browser.
+
+     D. Unidirectional Data Flow :   Parent components pass data down to child components via props. 
+                                     When child components need to communicate changes back to the parent, 
+                                     they do so by invoking callback functions provided by the parent.
+
+     E. Component Lifecycle Methods (or Hooks) : React components have lifecycle methods (in class components) or hooks (in functional components)
+                                                 that allow developers to run code at specific points in a component's lifecycle, such as 
+                                                 when it is created, updated, or destroyed. This helps manage side effects, data fetching,
+                                                 and state changes effectively.    
+
+4. what is react fiber?
+:=>  React Fiber is a concept of ReactJS that is used to render a system faster and smoother. 
+
+5. what is reconciliation in react ?
+:=> it is the process to determine which parts of the UI need to be updated.
+    The reconciliation process involves comparing the current structure of the virtual DOM (a representation of the UI in memory) 
+    with the previous version of the virtual DOM. Based on this comparison, React identifies the minimal set of changes required 
+    to bring the UI in line with the updated state.
+
+6. what is Diffing algorithm ?
+:=> it is the algorithm use to compares the new virtual DOM representation with the previous one.
+   It traverses both virtual DOM trees and identifies differences between the two.   
+
+Entire flow --->
+Initial Render : When a component is first rendered or updated, React creates a virtual DOM representation of the UI. This virtual 
+                DOM is a lightweight copy of the actual DOM that resides in memory.
+
+New State/Props : When the state or props of a component change, React generates a new virtual DOM representation based on the updated data.
+
+Diffing : React then compares the new virtual DOM representation with the previous one using the diffing algorithm.
+         It traverses both virtual DOM trees and identifies differences (changes) between the two.
+
+Minimal Changes : The goal of the diffing algorithm is to find the minimal set of changes needed to update the actual DOM to match 
+                  the new virtual DOM. This involves identifying additions, deletions, and updates of DOM nodes.
+
+4. why we are using react ?
+:=> React is used because it offers efficient UI rendering, promotes code reusability, Unidirectional data flow
+    provides a clear and declarative way to describe UIs, has a supportive community, and is backed by a
+    powerful ecosystem of tools and libraries. These factors collectively make React a strong choice for
+    building modern and interactive web applications.
+    
+
+5. what is conditional rendering ?
+:=> It allows you to render different content or components based on certain conditions.
+function App() {
+  const isLoggedIn = true;
+
+  return (
+    <div>
+      {isLoggedIn ? <WelcomeUser /> : <LoginButton />}
+    </div>
+  );
+}   
+
+6. What is Lifecycle Diagram ?
+:=> The series of event that happens from mounting of react component to its unmounting.
+    Mounting :- Birth of your component.
+    update   :- Grouth of your component.
+    unmounting :- death of your component.
+
+7. Explain how lists work in React?
+
+8. How does Class Components work?
+
+9. What are keys in React?
+:=>  A “key” is a special attribute you need to include when creating lists of elements in React.
+     Keys are used in React to identify which items in the list are changed, updated, or deleted.
+     Keys are used to give an identity to the elements in the lists.
+
+10. What is memoisation in react?
+:=> it is a technique of optimizing component rendering performance. 
+    When a component is wrapped with React.memo(), React will automatically check whether 
+    the component's props have changed since the last render. If the props are the same, the cached 
+    result of the previous render is returned, and the component is not re-rendered.
+
+11. What is the difference between react.memo and react.useMemo?
+                                                                   |   
+React.memo:
+
+React.memo is a higher-order component that you can use to optimize the rendering of functional components.
+It works by memoizing the rendered output of a component and reusing it if the component is rendered with the same props.
+It prevents unnecessary re-renders of a component when its props haven't changed.
+Useful for preventing the rendering of components that have the same props as their previous render.
+It doesn't affect the internal logic or calculations within the component; it only focuses on whether 
+the component should be re-rendered based on its props.
+
+         const ExpensiveComponent = React.memo(({ value }) => {
+  // ...
+  return <div>{value}</div>;
+});
+
+
+React.useMemo is a hook that allows you to memoize the result of a computation within a functional component.
+It takes a function and an array of dependencies as arguments. The result of the function is cached and only 
+recalculated if the dependencies change.
+Useful for avoiding the repeated calculation of values in components.
+It doesn't affect the re-rendering of the component directly; rather, it optimizes the internal calculations within the component.
+
+
+const SomeComponent = ({ array }) => {
+  const processedArray = React.useMemo(() => {
+    // Some expensive array processing based on 'array'
+    return array.map(item => item * 2);
+  }, [array]);
+
+  // ...
+};
+
+12. What are the parameters that react memo takes?
+:=> 
+
+
+13. How does Routing work with react?
+:=>  React itself doesn't provide built-in routing capabilities,
+     but there are popular third-party libraries that simplify the implementation of routing in React applications. 
+     One of the most commonly used routing libraries is react-router-dom.
+
+     npm install react-router-dom
+
+     first we have to wrap the index.js inside the <brouserRouter> component.
+     after that the Route components are used to define what component should be rendered based on the URL.
+     You can use the Link component from react-router-dom to create links that navigate between different routes.
+
+ 14. What is SSR and CSR?    
+ :=> 
+
+
+
+
+ 15. What are dependencies in useEffect?
+ :=> In the useEffect hook in React, the dependencies are an optional second argument that you 
+     can provide to the hook. Dependencies are used to control when the effect runs.
+     The effect will be re-run whenever any of the values in the dependencies array change between renders.
+
+
+16. What is a pure component?
+:=>            //////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

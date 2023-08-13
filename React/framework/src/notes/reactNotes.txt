@@ -1,0 +1,50 @@
+# what is react ?
+:=> React is javascript library for building user interface.
+it is build by jordan walke.
+
+# what is library?
+:=> it is a collection of pre-defined function or casses or properties 
+eg. React, redux, react-router-dom.
+
+# what is framework?
+:=> framework is collection of libraries and set of rules to develpe an application.
+ eg. angular, Vue JS, backbone js.
+
+# why react ?
+:=> 
+
+# what is jsx ?
+:=>  JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it easier to write and add HTML in React.
+ In JSX rather than writing React.createElement we write plane HTML inside our JS itself.
+ This makes our code much more readable and removes unnecessary complexity. 
+
+There are tools like babel which converts our JSX code to simple React.createElement code.
+So Babel will convert our above JSX code to React.createElement code and then it is rendered in the webpage.
+
+# What is the difference between State and Props?
+:=> It is used to store information that can change over time and trigger a re-rendering of the component when it does.
+    and Props (short for "properties") are used to pass data from a parent component to a child component.
+Parent components pass data to child components by adding attributes to the child component's JSX tag,
+ and the child component can access the passed data through its props object.
+
+ # What is Conditional Rendering?
+ :=> Components can render different content based on the values stored in their state. When the state changes, 
+ React automatically triggers a re-render, and the component will display different content accordingly.
+
+import React, { useState } from 'react';
+
+function Greeting() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  return (
+    <div>
+      {isLoggedIn ? <p>Welcome back!</p> : <p>Please log in.</p>}
+      <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
+        {isLoggedIn ? 'Log Out' : 'Log In'}
+      </button>
+    </div>
+  );
+}
+
+
+

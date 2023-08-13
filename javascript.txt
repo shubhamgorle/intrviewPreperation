@@ -1,9 +1,9 @@
- que. is javascript synchronous language or asynchronous language?
+ # is javascript synchronous language or asynchronous language?
  javaScript is an asynchronous and concurrent
  programming language that offers a lot of 
  flexibility. It's single-threaded like sync, 
  but also non-blocking like async.
- Although it's synchronous by nature, JavaScript benefits from asynchronous code
+ Although it's synchronous by nature, JavaScript benefits from asynchronous code.
 
 1. is null and undefined are same ?
 => null and undefined ---> null and undefined is not equal 
@@ -20,6 +20,7 @@ null == null; // true
 Number.isNaN(1 + null); // false
 Number.isNaN(1 + undefined); // true
 what is null ---> The null value represents the intentional "absence" of any object value.
+what is undefined --> A variable that has not been assigned a value;
 ----------------------------------------------------------->
 
 2. difference between falsy values and truthy values.
@@ -50,8 +51,8 @@ output ---> shubham
 ----------------------------------------------------------->
 
 3. what is NaN (Not-A-Number)?
-=> The NaN global property is a value representing Not-A-Number.
-NaN is a property of the global object. In other words, it is a variable in global scope.
+=> NaN is a property of the global object which value representing Not-A-Number.
+ In other words, it is a variable in global scope.
 In modern browsers, NaN is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it.
 
 eg.
@@ -62,7 +63,7 @@ function sanitise(x){
   return x;
 }
 
-console.log(sanitise('1'));
+console.log(dc('1'));
 // Expected output: "1"
 
 console.log(sanitise('NotANumber'));
@@ -84,13 +85,13 @@ NaN == NaN -----> false
 
 
 5. Arrays (Higher order functions);
-=> forEach --->when we want to iterate to the array and don't want to return any array then forEach is used. 
+=> forEach ---> when we want to iterate to the array and don't want to return any array then forEach is used. 
  var arr = [1, 2, 3, 4, 5];
     arr.forEach((e, i) => {
         console.log(e)
     })
 
-   map ---> map used when we h to returnave the array.
+   map ---> map used when we have to return  the array.
   
     var brr = arr.map((e, i) =>
         e + 10
@@ -124,7 +125,7 @@ console.log(typeof([]) === typeof({})) ---> output is True bcz array is internal
 ----------------------------------------------------------->
 
 7. Hoisting 
-=> It is the process whereas the interpreter appears to move the declaration of functions,
+=> It is the process whereas the inteprreter appears to move the declaration of functions,
  variables or classes to the top of their scope, Before execution of the code.
          eg.
                        Hoist()
@@ -159,6 +160,7 @@ Note :=> 1) Declaration hoisted to the top but initialisation not.
 ----------------------------------------------------------->
 
 8. Scopes 
+:=> Scope in JavaScript refers to the current context of code, which determines the accessibility of variables to JavaScript.
 1) global   :=>var   
 var name = "shubham";
 function data(){
@@ -183,6 +185,7 @@ function getData(){
     let data = "shubham"
     data is accessible in this scope (inside the curley braces) only.
 }
+
 var is global scope while let & const are block scope.
  var can updated and redeclared within its scope.    
  let can updated but not redeclared within its scope.
@@ -192,13 +195,13 @@ var is global scope while let & const are block scope.
 
 8. Promise
 :=> Promises are a way to implement asynchronous programming in JavaScript(ES6 which is also known as ECMAScript-6). 
-   A Promise acts as a container for future values.
+    A Promise acts as a container for future values.
     it is use for parallel execution of code. it allow you to handle asynchronous actions 
 
     there are three states in promise
     pending: initial state, neither fulfilled nor rejected.
-   fulfilled: meaning that the operation was completed successfully.
-   rejected: meaning that the operation failed.
+    fulfilled: meaning that the operation was completed successfully.
+    rejected: meaning that the operation failed.
 
 
 
@@ -258,8 +261,8 @@ obj.data() ---> outpt ---> window object
 }
 
 what is this in different schenario ?
-=> in simple object if fuction is created using term function (without arrow fuction) & this is used insie the fuction then 
-this is that entire object. this will have the accs of that enire object.
+=> in simple object if fuction is created using term function (without arrow fuction) & 'this' is used inside the fuction then 
+'this' is that entire object. this will have the access of that enire object.
 
 inside the event eg. setTimeout, here if event is make using without arrow fuction then this will become window object. it will
 not have the access of the element present inside that object.
@@ -305,7 +308,7 @@ obj.data()    output---> object
 Prototypes are the mechanism by which JavaScript objects inherit features from one to another.
 JavaScript object have a special property called prototype that is null or reference to another objects.
 
-Prototype inheritance in javascript is the linking of prototypes of
+'Prototype inheritance' in javascript is the linking of prototypes of
  a parent object to a child object to share and utilize the properties of a parent class using a child class.
 
 child.__proto__ = parent;
@@ -372,12 +375,12 @@ whatever thing  that we used to do with prototype that
 can we do with classes. it is just sugar sintaxing of prototype.
 
 // function Rectangle(height,width){
-//     this.width = width;
-//     this.height=height
+//     this.width  = width;
+//     this.height = height
 // }
 
 // Rectangle.prototype.area = function(){
-//     return this.width + this.height
+//     return this.width * this.height
 // }
 
 // let box = new Rectangle(5,10)
@@ -391,7 +394,7 @@ can we do with classes. it is just sugar sintaxing of prototype.
 //         this.width = width
 //     }
 //     area(){
-//         return this.height + this.width
+//         return this.height * this.width
 //     }
 // }
 
@@ -404,7 +407,7 @@ var num = 2**53 - 1; it is the largest value can handle in javascript
 
 console.log(num)   ---output => 9007199254740991
 console.log(num+2) ---output =>  ---output => 9007199254740991   but output should be  ---output => 9007199254740993
-it is because the number eceeding the maximum allowed Number in the JavaScript.
+it is because the number exceeding the maximum allowed Number in the JavaScript.
 to ovrcome this bigint came into picture.
 to use bigint just append the n to the number then we will get desired output. 
 var num = 2n**53n - 1n; it is the largest value can handle in javascript
@@ -413,14 +416,15 @@ console.log(num+2n)---> output => 9007199254740993n
 
 ------------------------------------------------------------------->
 
-14) 
-a)what is javaScript
-b)what is Call Stack
-c)Asynchronous callback
-d)Task Queue
-e)Event loop
+14) what is event loop ?
+    in the answer of event loop we have to answer the all below question.
+    a)what is javaScript
+    b)what is Call Stack
+    c)Asynchronous callback
+    d)Task Queue
+    e)Event loop
 
-* javaScript is a single threaded, non blocking, asynchronous concurrent language.
+*javaScript is a single threaded, non blocking, asynchronous concurrent language.
 single threaded => one thing at a time => line by line execution of code.
 * it has call stack, an event loop  and callback queue + web APIs
 * V8 is the javascript runtime which has a callstack and heap
@@ -428,6 +432,7 @@ single threaded => one thing at a time => line by line execution of code.
 
  JavaScript has a runtime model based on an
  event loop, which is responsible for executing the code.
+
  lets take a example 
 
   const fun1 = ()=>{
@@ -474,7 +479,7 @@ any JavaScript code which is scheduled to be run by the standard mechanisms.
 
 c)Asynchronous callback
   const addButton = document.querySelector("#add")
-addButton.addEventListener("click", () => {
+  addButton.addEventListener("click", () => {
   console.log("You clicked #addButton")
 })
 
@@ -555,7 +560,7 @@ All modern browsers support "use strict" except Internet Explorer 9 and lower:
 19)Create own array object  with prototype.
 
 function myArray(){
-    this.length =0;
+    this.length = 0;
 }
 // push
 // pop
@@ -669,36 +674,38 @@ debouncing ?
 => Debouncing delays the exection of a function untill a 
 certain amount of time has passed withot input being triggered again.
 
-
+ It ensures that a function is only executed after a
+ specified period of inactivity.
+ 
 If user click two times and request time of first request not complete yet then it shoud cancel the first request.
 Debouncing in JavaScript is a practice used to improve browser performance.
 
 eg.
 
-const makeApiCal = () => {
-    console.log("Api call Running")
+const makeApiCall = ()=>{
+    console.log("Api call started")
 }
 
-const debouncer = (makeApiCal, timeout) => {
+const debouncer = (delay,makeApiCall)=>{
     var debouncing;
-    return function () {
-        debouncing && clearTimeout(debouncing)
-        debouncing = setTimeout(() => {
-            makeApiCal.apply(this, arguments)
-        }, timeout);
-    }
+    return function(){
+    debouncing && clearTimeout(debouncing)
+    debouncing = setTimeout(()=>{
+         makeApiCall.apply(this,arguments)
+   },delay)
+  }
 }
 
-window.addEventListener("load", function () {
-    let btn = document.addEventListener("click", debouncer(makeApiCal, 3000))
-})
+var btn = document.getElementById("click");
+btn.addEventListener("click",debouncer(3000, makeApiCall))
+
+
 
 Note :=> 
  Debouncing is a technique used in JavaScript to improve
  performance and optimize the execution of event 
  handlers. 
- It ensures that a function is only executed after a
- specified period of inactivity.
+
 
 
 No matter how many times you click the click me button,
@@ -826,16 +833,16 @@ object and Arrays destructuring
 
 
 
-<------------------------Template literals---------------------->
-
-// Template literals are string literals that allow you to embed expressions
-//  and values within strings.
+<-----
 // Template literals are enclosed by the back-tick ( ``) or grave accent
 // character instead of double or single quotes
 
 // before ES6
 
-let fname = 'masai';
+let fname = 'masai';-------------------Template literals---------------------->
+
+// Template literals are string literals that allow you to embed expressions
+//  and values within strings.
 let lname = 'school'
 // let str = fname+' '+lname
 
