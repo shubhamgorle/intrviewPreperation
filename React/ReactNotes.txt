@@ -172,11 +172,60 @@ const SomeComponent = ({ array }) => {
 
 
 16. What is a pure component?
-:=>            //////////////////////////////////////////////////////////
+:=> React pure components are the components that do not re-render when the value of props 
+    and state has been updated with the same values. Since these components do not cause re-rendering
+    when the same values are passed thus they improve performance.
 
 
+17. What are useRefs? What are some usecases??
+:=> The useRef Hook allows you to persist values between renders.
+    It can be used to store a mutable value that does not cause a re-render when updated.
+
+   import {useRef,useState,useEffect} from 'react'
+
+function App(){
+  const [inputValue, setInputValue] = useState("");
+  const count = useRef(0);
+
+  useEffect(() => {
+    count.current = count.current + 1;
+  });
+
+  return (
+        <div className="App">
+          <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <h1>Render Count: {count.current}</h1>
+        </div>
+      );
+}
+export default App;
 
 
+18. What is useCallback?
+    :=> The React useCallback Hook returns a memoized callback function.
+ note:- The useCallback and useMemo Hooks are similar. The main difference is that useMemo 
+        returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapter.
+
+
+19. How does Context API work? What does it solve?
+:=>  The Context API is a feature in React that provides a way to share data,
+     such as state or functions, between components without the need to pass props explicitly down the component tree. 
+     It's designed to solve the problem of "prop drilling," which occurs when you have to pass props through multiple 
+     layers of components just to reach a deeply nested component that needs access to that data.
+
+The Context API consists of two main components:
+
+Context Provider: This component holds the shared data that you want to make accessible to other components.
+                  It is usually placed at a higher level in the component tree, near the root of your application. The Context Provider
+                  exposes a value that can be accessed by any component within its subtree.
+
+Context Consumer: This component allows components to subscribe to the data provided by the Context Provider. 
+                  It can access the data and use it within its render function. The Context Consumer helps in avoiding the need to pass 
+                  props down the component tree.
 
 
 
