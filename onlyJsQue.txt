@@ -1,0 +1,90 @@
+ # is javascript synchronous language or asynchronous language?
+1. is null and undefined are same ?
+2. difference between falsy values and truthy values.
+3. what is NaN (Not-A-Number)?
+5. Arrays (Higher order functions);
+6. difference between array and object in javascript.
+****7. Hoisting 
+8. Scopes 
+8. Promise
+9. arrow functions 
+what is this in different schenario ?
+What is Prototype?
+- What is Prototypal Inheritance?
+- What is Prototype Chain?
+- Why we call it _proto_ ?
+- What is inhertance in Javascript?
+11.call, apply & bind
+classes
+bigint
+what is event loop
+ difference between fetch and axios ?
+ Strict mode 
+ Create own array object  with prototype.
+What is mutability and immutability javascript ?
+what are closures ?
+why do we need to use them ?
+what is currying ?
+applications ?
+debouncing
+what is Throttling ?
+destructuring
+Arrays (Higher order functions)
+
+String
+Symbol
+Bigint
+Boolean
+Null
+Number
+Undefined
+Object
+
+Hoisting 
+scope
+Promise
+What is Prototype?
+what are closures ?
+what is currying ?
+debouncing
+what is Throttling ?
+
+https://www.youtube.com/watch?v=k5TC9i5HonI&list=PLKhlp2qtUcSaCVJEt4ogEFs6I41pNnMU5&index=5
+
+
+***Hoisting 
+=> It is the process whereas the inteprreter appears to move the declaration of functions,
+ variables or classes to the top of their scope, Before execution of the code.
+         eg.
+                       Hoist()
+                       function Hoist(){
+                           console.log("Good Morning")
+                       }
+                       console.log(a)
+                       var a;
+                       a = 10
+                       console.log(a)
+
+Note :=> 1) Declaration hoisted to the top but initialisation not.
+         2) Hoisting is only possible with var not with const and let.
+         3) functional expression cannot hoisted.
+         functional expressions are aero fuctions 
+      eg.   Hoist()
+             const Hoist = ()=>{
+           console.log("Good Morning")
+        }
+         4)
+         
+        function data(){
+        var x = 100;
+            y = 10;
+        }
+        data();
+        console.log(x,y)   
+         output :=> 100,10 because if the variable is not declare and value is assign to that 
+         variable in fuction then var is declare to that initialisation at the
+         top of the code bydefault
+
+
+***scope
+

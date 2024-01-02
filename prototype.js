@@ -2,36 +2,36 @@
 
 
 // // let a = 10;
-// // console.log(a);
-// function person (name,energy){
+// console.log(a);
+function person (name,energy){
 
-//     var person = {};
-//     person.name = name;
-//     person.energy = energy;
-
-
-//     person.eat  = function(energy){
-//         console.log(this.name,'is eating')
-//         this.energy += energy
-//     }
+    var person = {};
+    person.name = name;
+    person.energy = energy;
 
 
-//     person.sleep = function(energy){
-//         console.log(this.name,'is sleeping')
-//         this.energy += energy
-//     }
+    person.eat  = function(energy){
+        console.log(this.name,'is eating')
+        this.energy += energy
+    }
 
 
-//     person.code = function(energy){
-//         console.log(this.name,'is coding')
-//         this.energy -= energy
-//     }
-//     return person;
-// }
-// var sai = person("sai",15)
-// var jay = person("jay",12)
+    person.sleep = function(energy){
+        console.log(this.name,'is sleeping')
+        this.energy += energy
+    }
 
-// console.log(sai) 
+
+    person.code = function(energy){
+        console.log(this.name,'is coding')
+        this.energy -= energy
+    }
+    return person;
+}
+var sai = person("sai",15)
+var jay = person("jay",12)
+
+console.log(sai) 
 // // when we calling fuction person for every call indirectly we are calling
 // // eat, sleep, code function every time unneccesarrily. which takes extra space & memory
 // // which is not desirable at all.
@@ -521,3 +521,15 @@ function myArray() {
 // alert("Registration Successfylly Completed")
 //    }
 // }
+
+var obj = {
+    name:"shubham",
+    data:function(){  
+       setTimeout(function(){
+       console.log("this")
+       }, 1000);
+    }
+}
+obj.data() 
+console.log("10")
+

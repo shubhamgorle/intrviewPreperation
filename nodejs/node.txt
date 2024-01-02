@@ -1,0 +1,124 @@
+1. what is nodejs ?
+:=> Node.js is an open source server environment. 
+
+==============================================================_____***_____==============================================================
+
+2. What is non-blocking vs blocking?
+=> In Node.js, blocking and non-blocking behavior is determined by how I/O operations are handled.
+
+
+         Non blocking                                                              Blocking
+                                                                            
+ By default, Node.js uses a non-blocking                                        Blocking behavior can occur when using
+ I/O model, where I/O operations are performed                                  certain synchronous I/O methods in Node.js. 
+ asynchronously without blocking the main thread  
+ of execution. 
+
+This means that when an I/O operation is executed,                              Synchronous methods block the main thread until
+the program continues to execute other tasks while                              the operation is completed, preventing the program 
+waiting for the I/O operation to complete.                                      from executing any other tasks until the operation is finished.
+
+ All of the I/O methods in the Node.js standard library provide asynchronous versions,
+ which are non-blocking, and accept callback functions. 
+ Some methods also have blocking counterparts, which have names that end with Sync.
+
+Blocking methods execute synchronously and non-blocking methods execute asynchronously.
+
+Eg. const fs = require('node:fs');
+    const data = fs.readFileSync('/file.md'); // blocks here until file is read
+
+
+    const fs = require('node:fs');
+    fs.readFile('/file.md', (err, data) => {
+    if (err) throw err;
+  })
+
+
+==============================================================_____***_____==============================================================
+
+
+3. What is throughput?
+:=> rate at which a system can process a certain amount of work within a given amount of time.
+it is important in determining the overall efficiency and effectiveness of a system.
+
+4. what is the difference between readFile and readFileSync
+:=> readFile is an asynchronous function in Node.js that is used for reading the contents of a file.
+    readFileSync is a synchronous version of readFile. It is a blocking function, meaning that 
+    it will block the execution of the program until the file reading operation is complete.
+
+
+5. How can you make a network request using http module?
+
+6. How to create a web server without express?
+:=> 
+we can create a basic web server in Node.js without using Express by using the built-in http module. 
+Here's a simple example:-
+
+
+const http = require('http');
+
+// Create an HTTP server
+const server = http.createServer((req, res) => {
+  // Set the response header
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+
+  // Write the response body
+  res.end('Hello, World!\n');
+});
+
+// Specify the port and IP address to listen on
+const PORT = 3000;
+const IP = '127.0.0.1';
+
+// Start the server
+server.listen(PORT, IP, () => {
+  console.log(`Server running at http://${IP}:${PORT}/`);
+});
+
+
+7.What is libuv?
+:=> Node.js utilizes libuv to achieve its non-blocking and asynchronous characteristics.
+    When you see discussions about the event loop, non-blocking I/O, and concurrency in 
+    the context of Node.js, it often involves the underlying support provided by libuv.
+
+8. What are the different phases involved in event loop?
+:=> The event loop in Node.js consists of several phases, each responsible for different types of tasks. 
+1. Timers Phase:-
+
+This phase handles the callbacks scheduled by setTimeout() and setInterval() functions.
+It executes the callbacks whose timers have expired.
+
+2. I/O Callbacks Phase:-
+    In this phase, callbacks from I/O events, like network or file system operations, are processed.
+   When a task related to I/O completes, its callback is pushed to the event queue to be executed in this phase.
+
+3. Idle, Prepare Phases:-
+    The idle phase allows Node.js to execute callbacks during periods of idle time, 
+    and the prepare phase is used for preparing resources for I/O callbacks.
+
+4. Poll Phase:
+This is the main phase where the event loop blocks and waits for events to occur.
+If there are callbacks in the poll queue, they are executed immediately.
+If the poll queue is empty, the event loop will wait for events to occur.
+
+5. Check Phase:-
+This phase is executed after the poll phase if the poll queue becomes empty and new events are added during the poll phase.
+The check phase executes callbacks registered with setImmediate().
+
+6. Close Callbacks Phase:-
+This phase executes callbacks registered with close events, such as those in socket.on('close', ...).
+
+
+
+9.What are timers in Node.js?
+:=> n Node.js, timers are mechanisms that allow you to schedule the execution of functions or
+ code at a specified time in the future or after a certain interval.
+
+ setTimeout(callback, delay[, ...args]):
+
+setTimeout is used to execute a callback function after a specified delay (in milliseconds).
+setInterval is used to repeatedly execute a callback function at fixed intervals.
+
+
+10. What is NVM? how do you use it?
+:=> 

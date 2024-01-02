@@ -5,9 +5,10 @@
     <link rel="stylesheet" href="./index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>interview prep </title>
+    <title>interview prep</title>
+    <link rel="stylesheet" href="./i">
     <style>
-        /* .container{
+        /* /* .container{
             width: 1000px;
             height: 500px;
             background: #fafafa;
@@ -18,7 +19,7 @@
             gap: 15px;
           justify-items: center;
           align-items: center;
-        }
+        } */
         
         .item{
             border: 1px solid blue; 
@@ -30,13 +31,25 @@
             justify-items: center;
             align-items: center;
         } */
-        body {
+        body{
             font-family: Gumela;
             font-size: 14px;
             font-weight: 100;
             margin-top: 10px;
         }
-
+        /* position:-> static(by default) absolute, relative, fixed, sticky. */
+      .box{
+        border: 2px solid red;
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        margin: 2px;
+       }
+      .conatainer{
+        border: 1px solid green;
+        background-color: khaki;
+        height: 1400px;
+      }
         /* 
         #blue{
             background-color: blue;
@@ -49,32 +62,68 @@
         #green{
             background-color: green;
         } */
-        /* #blue{
+        
+        /* .main{
+            display: flex;
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+           padding: 20px;
+        }
+        .main > div{
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+        }
+        .div1{
+            position: absolute;
+        }
+        #box3{
+            position: sticky;
+            top: 20px;
+          
+        } */
+        #blue{
             background-color: blue;
             position: relative;
-            z-index: 2;
+            z-index: 9;
         }
-
         #red{
             background-color: red;
-            position: absolute;
-           z-index: 1;
+            position: relative;
+            z-index: 10;
         }
-
         #green{
             background-color: green;
-            position: absolute;
-            z-index: 3;
-        } */
+            position: relative;
+            z-index: 7;
+        }
+        table,th,tr,td{
+            border:1px solid black;
+            border-collapse: collapse;
+        }
     </style>
 </head>
 <title>interview preperation</title>
 
+
 <body>
+    <!-- <div class="main">
+        <div class="div1"> div 1</div> 
+        <div class="div2"> div 2</div> 
+        <div class="div3"> div 3 </div> 
+    </div> -->
     <h1 id="header">Welcome to interview preperation</h1>
     <!-- <button id="click">Click me</button>  -->
     <!-- Scrollable content -->
     </div>
+    <!-- <div class="conatainer">
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">4</div>
+    </div> -->
+
     <br> <br>
     <!-- form validation in HTML-->
 
@@ -125,9 +174,73 @@
     </div>
 
 
-</body>
-<script src="./prototype.js">
+<!-- simple table -->
+ <!-- <table>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>add</th>
+            <th>qualification</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>shubham</td>
+            <td>nagpur</td>
+            <td>B.E</td>
+        </tr>
+        <tr>
+            <td>tejas</td>
+            <td>nagpur</td>
+            <td>B.E</td>
+        </tr>
+        <tr>
+            <td>dinesh</td>
+            <td>nagpur</td>
+            <td>B.E</td>
+        </tr>
+    </tbody>
+ </table> -->
 
+ <table style="width:100%">
+    <tr>
+      <th>Name</th>
+      <td>Jill</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Phone</th>
+      <td>555-1234</td>
+    </tr>
+    <tr>
+      <td>555-8745</td>
+    </tr>
+  </table>
+
+  <table>
+  <tr>
+    <th colspan="2">Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>43</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>57</td>
+  </tr>
+</table>
+</body>
+<script >
+
+let a1 = [1,2,3]
+let a2 = a1; 
+//  a2 = [...a1]
+a2.pop();
+console.log(a1)
+console.log(a2)
 
     // console.log('Welcome to interview preperation');
 //     var arr = [1, 2, 3, 4, 5];
@@ -166,7 +279,6 @@
 
 // let myPromise1 = new Promise(function(resolve, reject) {
 //   let x = 0;
-// // The producing code (this may take some time)
 //     if (x == 0) {
 //     resolve("OK1");
 //   } else {
@@ -176,27 +288,68 @@
 
 // let myPromise2 = new Promise(function(resolve, reject) {
 //   let x = 0;
-// // The producing code (this may take some time)
 //     if (x == 0) {
 //     resolve("OK2");
 //   } else {
 //     reject("Error");
 //   }
 // });
+
 // let myPromise3 = new Promise(function(resolve, reject) {
 //   let x = 0;
-// // The producing code (this may take some time)
 //     if (x == 0) {
 //     resolve("OK3");
 //   } else {
 //     reject("Error");
 //   }
 // });
-// Promise.all([myPromise1,myPromise2,myPromise3]).then(res=>console.log(res)) ---> Handle all Promises
-// myPromise1.then( ---> Handle Single Promise
-//   function(value) {console.log(value);},
-//   function(error) {console.log(error);}
+// Promise.all([myPromise1,myPromise2,myPromise3]).then(res=>console.log(res))
+// myPromise1.then( 
+//   function(error) {console.log(error);},
+//   function(value) {console.log(value);}
 // );
+// console.log("object")
+
+// let promise1 = new Promise((resolve,reject)=>{
+//     let x = 0;
+//     if(x == 0){
+//         resolve("ok1")
+//     }
+//     else{
+//         reject("error1")
+//     }
+// })
+// let promise2 = new Promise((resolve,reject)=>{
+//     let x = 1;
+//     if(x == 0){
+//         resolve("ok2")
+//     }
+//     else{
+//         reject("error2")
+//     }
+// })
+// let promise3 = new Promise((resolve,reject)=>{
+//     let x = 0;
+//     if(x == 0){
+//         resolve("ok3")
+//     }
+//     else{
+//         reject("error2")
+//     }
+// })
+// Promise.all(([promise1,promise2,promise3])).then((val)=>{
+// console.log(val)
+// },
+// (err)=>{
+// console.log(err)
+// })
+// promise1.then((value)=>{
+//     console.log(value)
+// },
+// (err)=>{
+// console.log(err)
+// }
+// )
 // var obj = {
 //     name:"shubham",
 //     data:function(){  
@@ -242,6 +395,44 @@
 // }s
 // a.__proto__ = b;
 // a.data();
+
+
+
+
+
+let cities = [
+
+   {name: 'Los Angeles', population: 3792621},
+
+   {name: 'New York', population: 8175133},
+
+   {name: 'Chicago', population: 2695598},
+
+   {name: 'Houston', population: 2099451},
+
+   {name: 'Philadelphia', population: 1526006}
+
+];
+   let newcities = cities.filter((e)=>{
+           return e.population > 3000000
+})
+console.log(newcities)
+//Output should be like this {"A":32,"B":25,"D":90,"E":30}
+
+
+
+// let a = 5;
+// let b = 6;
+//  let temp = a;
+//   a = b;
+//   b = temp;
+// console.log(a);
+// console.log(b);
+console.log("rgg" + 3)
+console.log("3"-3)
+console.log("3"*3)
+console.log("3"/3)
+
 
 
 

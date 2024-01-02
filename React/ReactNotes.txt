@@ -1,10 +1,10 @@
 jorden walke
 
 1. what is useEffect hook ?
-:=> The useEffect Hook allows you to perform side effects in functional components.
-   Some examples of side effects are: fetching data, directly updating the DOM, and timers.
-   useEffect accepts two arguments. The second argument is optional.
-   useEffect(<function>, <dependency>)
+:=> The useEffect oHok allows you to perform side effects in functional components.
+    Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+    useEffect accepts two arguments. The second argument is optional.
+    useEffect(<function>, <dependency>)
 
             
 13. What are the different ways to apply useEffect?
@@ -28,7 +28,7 @@ jorden walke
 3. what are the features of react ?
 :=> A. "Component-Based Architecture" : React encourages developers to break down the user interface into reusable components.
                                         once we build component they we can reuse it wherever we want in entire application.
-
+  
     B. "Virtual DOM" : React uses a virtual representation of the actual DOM. When changes occur in the state of a component,
                        React 'computes' the difference (diff) between the virtual DOM and the real DOM and then updates only the necessary 
                        parts of the real DOM. This approach improves performance by minimizing direct manipulation of the actual DOM.
@@ -45,9 +45,9 @@ jorden walke
                                                  that allow developers to run code at specific points in a component's lifecycle, such as 
                                                  when it is created, updated, or destroyed. This helps manage side effects, data fetching,
                                                  and state changes effectively.    
-
+ 
 4. what is react fiber?
-:=>  React Fiber is a concept of ReactJS that is used to render a system faster and smoother. 
+:=>  React Fiber is a concept of ReactJS that is used to render a system faster and smoother.  
 
 5. what is reconciliation in react ?
 :=> it is the process to determine which parts of the UI need to be updated.
@@ -57,7 +57,7 @@ jorden walke
 
 6. what is Diffing algorithm ?
 :=> it is the algorithm use to compares the new virtual DOM representation with the previous one.
-   It traverses both virtual DOM trees and identifies differences between the two.   
+    It traverses both virtual DOM trees and identifies differences between the two.   
 
 Entire flow --->
 Initial Render : When a component is first rendered or updated, React creates a virtual DOM representation of the UI. This virtual 
@@ -71,8 +71,13 @@ Diffing : React then compares the new virtual DOM representation with the previo
 Minimal Changes : The goal of the diffing algorithm is to find the minimal set of changes needed to update the actual DOM to match 
                   the new virtual DOM. This involves identifying additions, deletions, and updates of DOM nodes.
 
+
+         real dom ---->  vertual dom 
+             update real  dom      ----> new vertual dom 
+
+
 4. why we are using react ?
-:=> React is used because it offers efficient UI rendering, promotes code reusability, Unidirectional data flow
+:=> we are using React because it offers efficient UI rendering, promotes code reusability, Unidirectional data flow
     provides a clear and declarative way to describe UIs, has a supportive community, and is backed by a
     powerful ecosystem of tools and libraries. These factors collectively make React a strong choice for
     building modern and interactive web applications.
@@ -100,13 +105,25 @@ function App() {
 
 8. How does Class Components work?
 
+
 9. What are keys in React?
 :=>  A “key” is a special attribute you need to include when creating lists of elements in React.
      Keys are used in React to identify which items in the list are changed, updated, or deleted.
      Keys are used to give an identity to the elements in the lists.
 
+     const MyList = ({ items }) => {
+  return (
+    <ul>
+      {items.map(item => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  );
+};
+
+
 10. What is memoisation in react?
-:=> it is a technique of optimizing component rendering performance. 
+:=> it is a technique of optimizing rendering performance of component. 
     When a component is wrapped with React.memo(), React will automatically check whether 
     the component's props have changed since the last render. If the props are the same, the cached 
     result of the previous render is returned, and the component is not re-rendered.
@@ -171,10 +188,8 @@ const SomeComponent = ({ array }) => {
      The effect will be re-run whenever any of the values in the dependencies array change between renders.
 
 
-16. What is a pure component?
-:=> React pure components are the components that do not re-render when the value of props 
-    and state has been updated with the same values. Since these components do not cause re-rendering
-    when the same values are passed thus they improve performance.
+16. 
+
 
 
 17. What are useRefs? What are some usecases??
@@ -186,9 +201,10 @@ const SomeComponent = ({ array }) => {
 function App(){
   const [inputValue, setInputValue] = useState("");
   const count = useRef(0);
-
+var count1 = 0;
   useEffect(() => {
     count.current = count.current + 1;
+    count1 = count1 + 1;
   });
 
   return (
@@ -208,9 +224,40 @@ export default App;
 18. What is useCallback?
     :=> The React useCallback Hook returns a memoized callback function.
  note:- The useCallback and useMemo Hooks are similar. The main difference is that useMemo 
-        returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapter.
+        returns a memoized value and useCallback returns a memoized function. 
+import React, { useState, useCallback } from 'react';
 
+function ParentComponent() {
+  const [count, setCount] = useState(0);
 
+  // Without useCallback, ChildComponent would re-render on each ParentComponent render
+  const increment = useCallback(() => {
+    setCount(count + 1);
+  }, [count]);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <ChildComponent increment={increment} />
+    </div>
+  );
+}
+
+function ChildComponent({ increment }) {
+  console.log('ChildComponent rendering');
+  return (
+    <button onClick={increment}>
+      Increment Count in ParentComponent
+    </button>
+  );
+}
+   In this example, the increment function is memoized using useCallback.
+   Without useCallback, the increment function would be recreated on each render
+   of the ParentComponent, causing unnecessary re-renders of the ChildComponent.
+   With useCallback, the increment function will only be recreated if the count 
+   state changes, optimizing performance.
+    
+ 
 19. How does Context API work? What does it solve?
 :=>  The Context API is a feature in React that provides a way to share data,
      such as state or functions, between components without the need to pass props explicitly down the component tree. 
@@ -231,7 +278,7 @@ Context Consumer: This component allows components to subscribe to the data prov
 
 :=> useState:
 useState is a simpler hook and is used for managing local state in a component.
-It's great for managing straightforward, independent pieces of state.
+It's great for managing straihgtforward, independent pieces of state.
 Use useState when the state transitions are straightforward and don't involve complex logic or dependencies between different state variables.
 For example, managing the state of a toggle, input field, or a counter is well-suited for useState.
 
@@ -298,21 +345,203 @@ function Counter() {
 20. How do you use Profiler?
 :=> In the context of React applications, profiling tools are used to analyze and optimize the performance of your components
     and the overall application. React includes a built-in tool called the "React Profiler" that allows you to gather performance data
-    and identify performance bottlenecks. Here's how you can use the React Profiler .
+    and identify performance bottlenecks. Here's how you can use the React Profiler.
 
-function App() {
+import React, { Profiler } from 'react';
+
+function MyComponent() {
+  const onRender = (id, phase, actualDuration, baseDuration, startTime, commitTime) => {
+    console.log(`Component ${id} took ${actualDuration}ms to render.`);
+  };
+
   return (
-    <div>
-      <h1>My Profiler Example</h1>
-      <Profiler id="MyAppProfiler" onRender={onRenderCallback}>
-        {/* Your components */}
-      </Profiler>
-    </div>
+    <Profiler id="MyComponent" onRender={onRender}>
+      {/* Your component's JSX */}
+    </Profiler>
   );
 }
 
  In this example, every time the wrapped components are rendered, the onRenderCallback
  function will be called, and you'll see output in the console showing information about the rendering performance.
+
+
+21. What is flux architecture in react?
+:=> 
+ Flux is an architectural pattern that was introduced by Facebook for managing the flow of data in applications. 
+ It was designed to address the challenges of managing complex state and data flow
+ within the components of a React application. The Flux architecture is characterized by its unidirectional data 
+ flow and clear separation of concerns.
+
+The Flux architecture consists of several key components that work together to manage application state and data flow:
+
+Dispatcher: The central hub of the Flux architecture. It receives actions from various sources,
+            such as user interactions or API responses, and then dispatches these actions to registered stores. 
+           
+Actions: Actions are plain JavaScript objects that represent events or user interactions. 
+         They contain a type that describes the action and often carry additional data required to
+         update the application state. Actions are created by action creators and are dispatched to the dispatcher.
+
+Stores: Stores are responsible for holding the application's state and business logic. 
+        They register with the dispatcher to receive actions and update their state accordingly. 
+        Stores manage specific slices of the application state and ensure that updates are performed in a controlled manner.
+
+Views (React Components): React components represent the user interface of the application. 
+                          They receive data from stores and render based on the current state. When an action is dispatched
+                          and the store's state changes, views automatically re-render to reflect the updated data.
+
+22. What is redux?
+
+Redux is a popular state management library for building JavaScript applications, 
+particularly those using React. It provides centralized way to manage and update
+the application state.
+Redux follows the principles of the Flux architecture 
+
+23. Can you create your own redux and explain all the different entities?
+:=> redux is used to manage states globaly.
+Redux is a state management library for JavaScript 
+commonly used with React. 
+It maintains a centralized global state store where all application data resides. 
+
+                                                                    
+The flow begins with UI components dispatching actions, where we use dispatch which take function action as a argument which return 
+type of action and some payload then These actions are then processed by pure reducer functions, which produce a new state by 
+applying the action's changes to the current state. The updated state is then stored in the store.
+
+dispatch(action) action return type and payload---> which if processed mby reducer -- reducer --> checks type of action --> update the state --->
+updated state stored inside the store 
+we can use react-redux library for getting data from store or we can get data by using redux
+
+24. What are reducers in redux?
+ :=> In Redux, reducers are pure functions responsible for specifying how the application's state 
+     changes in response to dispatched actions. They take the current state and an action as input,
+     and then produce a new state based on the action's description.
+
+// src/redux/reducers.js
+const initialState = {
+  counter: 0,
+};
+
+const rootReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { ...state, counter: state.counter + 1 };
+    case 'DECREMENT':
+      return { ...state, counter: state.counter - 1 };
+    default:
+      return state;
+  }
+};
+
+export default rootReducer;
+
+
+25. What are actions?
+:=> 
+In Redux, actions are plain JavaScript objects that represent the intention to change 
+the state of the application. Actions describe what happened in an application and provide the
+necessary information to update the state accordingly.
+
+
+26. what are side effects in reactjs
+:=> Data Fetching, DOM Manipulation, Subscriptions and Event Listeners, Timers and Intervals.
+Side effects in React are often associated with the useEffect hook, 
+which is used to manage and control these behaviors in functional components.
+
+27. What all does a store do?
+:=>     Stores are responsible for holding the application's state and business logic. 
+        They register with the dispatcher to receive actions and update their state accordingly. 
+        Stores manage specific slices of the application state and ensure that updates are performed in a controlled manner.
+
+Holding State: The store holds the current state of the application. 
+This state includes all the data that the application needs to function,
+ organized into a single JavaScript object known as the state tree.
+
+Dispatching Actions: The store provides the dispatch method, which 
+is used to send actions to the reducers. When an action is dispatched,
+ the store forwards it to the relevant reducer(s), triggering the state update process.
+
+
+28. What are combine reducers?
+:=> combineReducers is a utility function provided by Redux that allows you to combine multiple 
+    reducer functions into a single reducer function. It's commonly used to manage different slices
+    of state in a Redux application, making it easier to organize and scale your state management logic.
+
+29. What does lazy loading mean?
+:=> Lazy loading in React refers to a technique used to optimize 
+    the performance of web applications by loading resources, such as
+    components or assets, only when they are actually needed. This is 
+    particularly useful for large applications where loading all resources
+    upfront could lead to longer initial loading times and increased memory usage.
+
+
+eg.
+import React, { Suspense } from 'react';
+
+const LazyComponent = React.lazy(() => import('./LazyComponent'));
+
+function App() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <v   />
+      </Suspense>
+    </div>
+  );
+}
+
+30. What does webpack do?
+:=> Webpack is a popular build tool and "module bundler" that plays a crucial role
+    in optimizing and organizing the assets of a React application for deployment.
+    It's not specific to React, but it's commonly used within the React ecosystem to 
+    manage various assets and dependencies. Here's what Webpack does in a React application:
+
+     Webpack typically uses Babel as a loader to transpile JSX and ES6/ES7 JavaScript into standard JavaScript.
+
+
+31. What does babel do?
+:=> Babel is a toolchain that is mainly used to convert ECMASCRIPT 2015+ code into a backwords
+    compatible versions of javascript in current and older browsers or environments.
+
+
+
+31. Can you write react without jsx?
+:=> Yes, you can write React applications without using JSX, although JSX is a widely 
+    adopted and more convenient way to define React components. JSX is a syntax extension
+    that allows you to write HTML-like markup directly within your JavaScript code, making 
+    easier to visualize the component structure. However, React itself doesn't require JSX;
+    it can be used with plain JavaScript as well.
+
+
+32. What is SSR and CSR?
+:=>  websites are loaded on browser based on html, css, js
+     files whose Data are fetch from the server .
+     our system which is the cliet side of transaction
+     loads up the websites by rendering these files togather.  
+
+ client side rendering :=> In client side rendering as the name suggest browser renders all the data
+ in the html file on the client side.
+ to explain in detail the server sends a basic skeleton of html file along with 
+ all css properties and javascript Functions one by one seperately. on client side the browser 
+  first receives the html file and loads it up with css file which is receive right after but js 
+ function take much longer to be download so depending on the size of javascript functions which support
+ different functionality of the website loading time of browser increases accordingly. 
+ DYNAMIC WEBSITES
+ IT PREFFERED WHEN WE HAVE LARGE AAMOUNT OF USERS 
+ react js and vue js follow client side rendering and next js and nuxt js follow server
+ side rendering but also supports client side rendering.
+
+
+Server side rendering :=> in case of SERVER SIDE RENDERING before sending the html document to the client the server re-render 
+all the css properties and javascript functions inside full flage hmtl document to display the website.
+STATIC WEBSITES
+THIS IS BECAUSE EVERY TIME USER RELOADS THE PAGE THE SERVER HAS TO REBUILD THE WHOLE HTML DOCUMENT AND 
+SEND IT TO CLIETN SIDE WHICH TAKE MUCH MORE TIME IF DONE REPEATEDLY.
+ ---> WEB APP WITH LESS USER OR LESS INTERACTIVITY.
+
+the   
+
+
+
 
 
 

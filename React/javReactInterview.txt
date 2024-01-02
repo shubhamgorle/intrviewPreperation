@@ -1,0 +1,158 @@
+what is debugger ?
+:=>
+
+what is higher order function ?
+:=> the function will RETURN A FUNCTION OR TAKE FUCTION AS A ARGUMENT IS KNOWN AS HIGHER ORDER FUNCTION.
+eg. map method, filter method.
+
+
+when should we preffered class component over functional componenet?
+:=>
+
+
+can't we pass the states from one component to another component?
+:=>
+
+
+differenet lifelycle methods.
+
+
+difference between controlled and uncontrolled component
+
+
+why browser cant read jsx
+
+what is the main difference between html and html5 ?
+:=> it is the new version of the html which is added like Semantic tags.
+
+
+if we don't mention doctype in html?
+:=> we will not able to access html5 tags.
+
+
+what is the difference between visibility hiddden and display none ?
+:=> 
+
+
+difference between spread operator and rest operator ?
+:=> Spread Operator: Used to spread elements (e.g., of an array or object) into individual elements.
+spread operator eg.
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { ...obj1, c: 3 };
+
+console.log(obj2); // Output: { a: 1, b: 2, c: 3 }
+
+Rest Operator: Used to collect elements (e.g., function arguments or remaining elements in an array) into a single array or object.   
+
+const [first, second, ...rest] = [1, 2, 3, 4, 5];
+
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+console.log(rest); // Output: [3, 4, 5]
+
+
+
+Q1. Difference between let, var and const.
+Q2. // Get output 1,2 without using let.
+for(var i=0; i<=2; i++){
+    setTimeout(function(){console.log(i)}, 1000);
+}
+Answer::
+function print(i){
+    setTimeout(function(){console.log(i)}, 1000)
+}
+
+for(var i=0; i<=2; i++){print(i)}
+
+Q3. Types of copy (Shallow vs Deep)
+Q4. map vs filter
+Q5. Prototype and how it works?
+Q6. Arrow function and advantages of arrow function
+- Don't have this scope. Closer parent will have access. If no then target to global. No argument objects, use rest operator, Arrow functions are not hoisted. 
+Q7. When we use bind VS call apply and bind
+Q8. Difference between spread and rest operator.
+Q9. //Get second last element from array. 
+
+let arr = ["a", "b", "c", "d", "e", "f"];
+output = "e"
+
+console.log(arr[arr.length-2]);
+
+Q10. Output?
+console.log(3+"3")
+console.log(3-"3")
+
+Q11 NodeJS Middleware? 
+
+Q12 React Element vs Component
+:=> A React element is the smallest building block in React applications.
+// Using JSX
+const element = <div>Hello, React!</div>;
+
+// Using React.createElement()
+const element = React.createElement('div', null, 'Hello, React!');
+ 
+ A React component is a reusable and self-contained piece of code that may contain one or more React elements.
+
+
+Q13 What are pure components? 
+
+:=> In React, a pure component is a specific type of component that is optimized for performance by 
+    automatically implementing the shouldComponentUpdate lifecycle method. This method helps prevent 
+    unnecessary renders by determining if the component's props or state have changed. Pure components 
+    are a way to optimize the rendering process by avoiding unnecessary re-renders when the component's 
+    output would be the same given the same input.
+
+
+react.memo
+
+
+
+Q17 Intereceptor :: Intercept request and response before going to backend.
+   Eg, Strictly check API before going to backend. Part of middleware. Depends upon status responses we can do some navigation
+
+Q18 React fibre?
+React Fiber is an internal reimplementation of the core algorithm in React's reconciliation process.
+The term "Fiber" refers to the data structure used to represent the internal state of a React component.
+React Fiber was introduced to improve the performance and responsiveness of React applications.
+
+Q20 In which case you will use HOC? :: 
+
+
+
+
+
+
+
+
+// Declaring a constant object
+const person = {
+  name: "John",
+  age: 30
+};
+
+// Modifying a property of the object is allowed *****
+person.age = 31;
+
+console.log(person); // Output: { name: "John", age: 31 }
+
+// Reassigning the variable to a new object is not allowed
+// Uncommenting the line below would result in an error:
+// person = { name: "Jane", age: 25 };
+
+
+
+// Declare an object
+const person = {
+  name: "John",
+  age: 30
+};
+
+// Make the properties of the object immutable
+Object.freeze(person);
+
+// Attempting to modify a property will not have any effect
+person.age = 31;
+
+console.log(person); // Output: { name: "John", age: 30 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Styling for the draggable and droppable elements */
+    .draggable {
+      width: 100px;
+      height: 50px;
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+      margin: 10px;
+      cursor: move;
+    }
+
+    .droppable {
+      width: 200px;
+      height: 100px;
+      border: 2px dashed #2ecc71;
+      margin: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Draggable Element -->
+  <div class="draggable" draggable="true" id="dragElement">Drag me</div>
+
+  <!-- Droppable Area -->
+  <div class="droppable" id="dropArea" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here</div>
+
+  <script>
+    // Functions for drag and drop
+    function allowDrop(event) {
+      event.preventDefault();
+    }
+
+    function drop(event) {
+      event.preventDefault();
+      var data = event.dataTransfer.getData("text");
+      var draggedElement = document.getElementById(data);
+      var dropArea = event.target;
+      
+      // Append the dragged element to the drop area
+      dropArea.appendChild(draggedElement);
+    }
+
+    // Set up drag event listeners
+    var dragElement = document.getElementById("dragElement");
+    dragElement.addEventListener("dragstart", function(event) {
+      event.dataTransfer.setData("text", event.target.id);
+    });
+  </script>
+
+</body>
+</html>

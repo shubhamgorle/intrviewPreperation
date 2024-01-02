@@ -10,15 +10,16 @@
 
 # What are the different types of storage in HTML5?
 :=> The two storages are session storage and local storage and they would be used to handle different situations.
+Before HTML5, application data had to be stored in cookies.
 
 # difference btween local storage and session storage ?
-:=> sessionStorage is similar to localStorage, the difference is that while data
-    in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
+:=> sessionStorage is similar to localStorage, the difference is that data
+    in localStorage doesn't expire while data in sessionStorage is cleared when the page session ends.
 
 # What are forms in HTML?
 :=> An HTML form is used to collect user input. The user input is most often sent to a server for processing. 
 
-# What are event listeners in HTML?
+# What are event listeners in HTML? 
 :=> In HTML, event listeners are a way to handle user interactions or actions 
     that occur on a webpage. They are 'used to detect' when a specific event happens,
     such as a button click, mouse movement, keyboard input, or the loading of a webpage,
@@ -104,34 +105,74 @@ within the <audio> tag to provide fallback options for different audio formats.
 </audio>
 
 In this example, the browser will attempt to play the audio.mp3 file first,
- and if not supported, it will fallback to the audio.ogg file.
-  The fallback text is displayed if the browser doesn't support any of the provided audio formats.
+and if not supported, it will fallback to the audio.ogg file.
+The fallback text is displayed if the browser doesn't support any of the provided audio formats.
+
+
+1. mWhat is HTML?
+=> HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.
+
+2. What is the purpose of HTML tags?
+=> HTML tags are used to define and structure the content on a web page. They are enclosed in angle brackets and come in pairs.
+
+3. What is the purpose of the DOCTYPE declaration?
+=> The DOCTYPE declaration specifies the document type and version of HTML used in the document.
+It helps browsers to render the web page correctly.
+
+
+4. What is the difference between <div> and <span>?
+=> <div> is a block-level element used for grouping and structuring content.
+<span> is an inline element used for applying styles to a specific part of the text.
+ 
+
+5. What are semantic elements in HTML?
+=>Semantic elements provide meaning to both the browser and the developer. 
+Examples include <header>, <footer>, <article>, <section>, <nav>, 
+
+6. Explain the difference between inline and block-level elements.
+=> Block-level elements start on a new line and take up the full width available, 
+while inline elements do not start on a new line and only take up as much width as necessary.
+
+What is the purpose of the alt attribute in the <img> tag?
+=> The alt attribute provides alternative text for an image, which is displayed if the image cannot be loaded. It is also used for accessibility.
+
+Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+
+Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+
+Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element 
+can sit next to other elements.
+
+what is rowspan and colspan 
+
 
 # ------------------------------------- CSS (Cascading Style Sheets)------------------------------------- #
 
 
 # What are CSS selectors?
 :=> CSS selectors are patterns used to select and target specific elements in an HTML document.
-Here are some commonly used CSS selectors:
+Here are some commonly used CSS selectors: 
 
 1. Element Selector: Targets elements based on their tag names. For example, p targets all <p> elements.
 
 2. Class Selector: Targets elements with a specific class attribute value. It is denoted with a dot (.) followed by the class name.
  For example, .my-class targets all elements with class="my-class".
 
-3. ID Selector: Targets a specific element with a unique ID attribute value.
+3. ID Selector: Targets a specific element with a "unique ID attribute value".
  It is denoted with a hash (#) followed by the ID name. For example, #my-id targets the element with id="my-id".
 
 4. Attribute Selector: Targets elements based on their attributes. For example, [type="text"] targets all elements with type="text".
+https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_attribute
 
 5.Descendant Selector: Targets elements that are descendants of another element. It is denoted by a space between two selectors. 
 For example, ul li targets all <li> elements that are descendants of <ul> elements.
+https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_element_element
 
 6. Child Selector: Targets elements that are direct children of another element. It is denoted by the > symbol between two selectors. 
 For example, div > p targets all <p> elements that are direct children of <div> elements.
+   https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_element_gt
 
-
-# What are CSS variables?
+# What are CSS variables? 
 :=> allow you to define reusable values in CSS. They are similar to variables in programming languages,
  as they can store values and be referenced throughout the stylesheet.
 
@@ -160,12 +201,12 @@ h1 {
 # Create a search bar with CSS.
 :=> video link  ---> https://www.youtube.com/watch?v=9hnJsNIBq1g&t=636s
 
-# What is Box Model
+# What is Box Model ?
 :=> The CSS box model is a fundamental concept that
     describes how elements are rendered and how their dimensions
     and spacing are calculated. It consists of four main components: 
-    content, padding, border, and margin. These components create a box around an element, 
-    defining its total space and positioning within the 
+    content, padding, border, and margin. These components create a box around an element.
+
     
 # What is a flex-box?
 Flexbox, also known as Flexible Box Layout, is a CSS layout module that provides an efficient 
@@ -184,13 +225,14 @@ justify item and justify content (it is available in grid only not in Flexbox).
 
 # what are grids?
 :=> grid is a layout system that allows you to create complex and responsive
- page layouts by dividing the content into rows and columns.
+    page layouts by dividing the content into rows and columns.
+    
 
  fr ---> fractional unit
 
  # What are the differences between Flex and Grids?
  :=>              Grids                                                       Flex 
- Grid is designed for two-dimensional layouts                 ||  The main purpose of Flexbox is to create one-dimensional layouts.
+ Grid is designed for  two-dimensional layouts                 ||  The main purpose of Flexbox is to create one-dimensional layouts.
  allowing you to create both rows and columns simultaneously. ||  allowing you to create either in a row (horizontal) or in a column (vertical).
 
 
@@ -204,11 +246,16 @@ IDs: 100
 Classes, attributes, and pseudo-classes: 10
 Elements and pseudo-elements: 1 (lowest specificity)
 
+psudo elements https://www.w3schools.com/css/tryit.asp?filename=trycss_before   ::
+psudo classes https://www.w3schools.com/css/tryit.asp?filename=trycss_pseudo-class_links :
+
 # What are media queries?
 :=> Media queries are a fundamental feature of responsive web design in CSS. 
-They allow you to apply different styles and layouts to a web page based on various device characteristics.
+    They allow you to apply different styles and layouts to a web page based on various device characteristics.
 
 # what is z-index?
-:=> The z-index property specifies the stack order of an element. 
+:=> The z-index property specifies the stack order of an element.  
     An element with greater stack order is always in front of an element with a lower stack order.
 
+Note : => z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) 
+          and flex items (elements that are direct children of display:flex elements).

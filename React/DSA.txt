@@ -1,0 +1,6 @@
+selection sort
+we search for the lowest element and arrange it to the proper location. We swap the current element with the next lowest number.
+bubble sort
+current element is compared with the next element. If current element is greater than the next element, it is swapped.
+
+Data structures are the building blocks of any computer program as they help in organizing and manipulating data in an efficient manner.

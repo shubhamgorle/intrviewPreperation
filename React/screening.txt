@@ -1,28 +1,28 @@
 1. Tell me about yourself
 :=> 
-Good evening mam.
+Good afternoon Sir/mam.
 i am shubham gorle from orange city i.e nagpur.
 about my  education, i have completed diploma in mechanical engineering form GHRP nagpur and BE in mechanical engineering from RTMNU.
 i have also completed MERN STACK developement course from masai school bengluru.
 I specialize in the MERN stack, which includes MongoDB, Express.js, React.js, and Node.js.
 During my studies, I worked on a project that involved building a clone of shop.com, clone of expendia using html, css and javascript and clone 
 of Koo application using React js. 
-I'm excited about the opportunity to contribute my expertise and learn from the experienced team at MsCorpres Automation Private Limited.
+I'm excited about the opportunity to contribute my expertise and learn from the experienced team at your company.
 Thank you for considering me as a potential addition to your team.
-I bring not only technical proficiency but also excellent teamwork, problem-solving, and communication skills.
+
 
 2. What prompted you to pursue a career in mern stack developement ?
 :=> 
 when i was in final year of graduation i had an idea on which i wanted to build a project which was related to computer 
 science and i did not able to build it bcz i did not familier with the tech stack which is required to build that project.
 but i wanted to learn the tech stack which is required for building that application.
-after completion of graduation to be very honest there was very limited job opportunities ans slow carrier growth in mechanical feild. then i 
-that why i choosen mern stack developer as a carrier.
+after completion of graduation to be very honest there was very limited job opportunities ans slow carrier growth in mechanical feild. 
+thats why i choosen mern stack developer as a carrier.
 
 4. what is your strength ?
 :=> 
 My gretest strenth i would like to say i am peoples person, i enjoy working in teams. during my masai school journey i have worked on three 
-projects in a team of 4 peoples for each project and i dont think they have complaints against me.
+projects in a team of 4 peoples for each project and i don't think they have complaints against me.
 second one is i am quick learner because of that i am able to shift my carrier from mechanical engineering to computer science in very limited period
 of time.
 
@@ -46,14 +46,46 @@ skill, especially when i want to offer up my opinions in meetings or group discu
 
  YOUR requireMENT IS YOU WANT A CANDIDATE WITH GOOD technical SKISSLS IN REACT JS JAVVASCRIPT
  HTML CSS AND WHO CAN CONTERT DESIGN INTO 
-REACT component WITH  effecIENT CODE, Build reusable components and libraries.
+ REACT component WITH  effecIENT CODE, Build reusable components and libraries.
 
 
-
-   Job description
+Job description
 Convert designs into ReactJS components
-
 Create effective code to manage React component states
 
 
+Wunderman Thompson is a growth partner – part creative agency, part consultancy and part technology company, 
+Your experts deliver inspiration across the entire brand and customer experience.
 
+
+
+Introduction and Background:
+
+"Tell me about yourself."
+"What prompted you to pursue a career in [specific field]?"
+Education and Skills:
+
+"Can you elaborate on your academic background?"
+"What programming languages/software/tools are you familiar with?"
+"Do you have any relevant projects or internships you'd like to discuss?"
+Behavioral and Situational:
+
+"Can you describe a time when you had to work in a team?"
+"Tell me about a challenge you faced and how you overcame it."
+"How do you handle tight deadlines?"
+Motivation and Career Goals:
+
+"Why are you interested in this particular role?"
+"Where do you see yourself in the next five years?"
+Company Knowledge:
+
+"What do you know about our company?"
+"Why do you want to work here specifically?"
+Strengths and Weaknesses:
+
+"What do you consider your strengths?"
+"Can you discuss an area you're looking to improve?"
+Communication and Interpersonal Skills:
+
+"How do you handle conflicts or disagreements?"
+"Give an example of a time you had to communicate complex information."

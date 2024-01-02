@@ -10,17 +10,8 @@
 if we check null and undefined like this ---> null == undefined ---> we will get true bcz both are falsy values.
 but if we check  null and undefined like this ---> null === undefined (Stricktly equals to)---> we will get false.
 
-typeof null; // "object" (not "null" for legacy reasons)
-typeof undefined; // "undefined"
-null === undefined; // false
-null == undefined; // true
-null === null; // true
-null == null; // true
-!null; // true
-Number.isNaN(1 + null); // false
-Number.isNaN(1 + undefined); // true
-what is null ---> The null value represents the intentional "absence" of any object value.
-what is undefined --> A variable that has not been assigned a value;
+
+
 ----------------------------------------------------------->
 
 2. difference between falsy values and truthy values.
@@ -51,7 +42,7 @@ output ---> shubham
 ----------------------------------------------------------->
 
 3. what is NaN (Not-A-Number)?
-=> NaN is a property of the global object which value representing Not-A-Number.
+=> NaN is a property of the global object which value repersenting Not-A-Number.
  In other words, it is a variable in global scope.
 In modern browsers, NaN is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it.
 
@@ -63,7 +54,7 @@ function sanitise(x){
   return x;
 }
 
-console.log(dc('1'));
+console.log(sanitise('1'));
 // Expected output: "1"
 
 console.log(sanitise('NotANumber'));
@@ -91,7 +82,7 @@ NaN == NaN -----> false
         console.log(e)
     })
 
-   map ---> map used when we have to return  the array.
+   map ---> map used when we have to return the array.
   
     var brr = arr.map((e, i) =>
         e + 10
@@ -165,7 +156,7 @@ Note :=> 1) Declaration hoisted to the top but initialisation not.
 var name = "shubham";
 function data(){
     console.log(name);
-    name is accessible here also
+    name is accessible here also    
 }
 var dom = "html"
 name is accessible here also.
@@ -219,6 +210,7 @@ language itself needs help in handling asynchronous operations. Instead, promise
    happen when a promise is fulfilled. This chaining mechanism simplifies the process of 
    passing data between asynchronous operations and creating dependent workflows.
 eg.
+
 let myPromise = new Promise(function(resolve, reject) {
   let x = 0;
 setTimeout(() => {
@@ -239,7 +231,7 @@ myPromise.then(
 
 9. arrow functions 
 :=>   Arrow functions were introduced in ES6.
-      Arrow functions allow us to write shorter function syntax:
+      Arrow functions allow us to write shorter function syntax: 
 
 
 var obj = {
@@ -250,6 +242,7 @@ var obj = {
        }, 1000);
     }
 }
+
 obj.data() ---> outpt ---> window object
       var obj = {
     name:"shubham",
@@ -257,12 +250,28 @@ obj.data() ---> outpt ---> window object
        setTimeout(() => {
        console.log(this)
        }, 1000);
-    }
+    } 
 }
 
 what is this in different schenario ?
 => in simple object if fuction is created using term function (without arrow fuction) & 'this' is used inside the fuction then 
 'this' is that entire object. this will have the access of that enire object.
+
+var obj1 = {
+    name:"shubham",
+   data: function(){
+    console.log(this)
+   }
+}
+// obj1.data(); ---> enire object 
+var obj = {
+    name:"shubham",
+   data:(()=>{
+    console.log(this)
+   })
+}
+// obj.data();  ---> window object
+
 
 inside the event eg. setTimeout, here if event is make using without arrow fuction then this will become window object. it will
 not have the access of the element present inside that object.
@@ -299,7 +308,7 @@ obj.data()    output---> object
 - What is Prototypal Inheritance?
 - What is Prototype Chain?
 - Why we call it _proto_ ?
-- What is inhertance in Javascript?
+- What is inhertance in Javascript? 
 
 => Every object in JavaScript has a built-in property, which is called its prototype.
  The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. 
@@ -319,6 +328,7 @@ let company = {
     console.log("Paying");
   },
 }; //company object
+
 let worker = {
   id: 1,
   work: function () {
@@ -337,13 +347,14 @@ inheritance is one objects trying to access the methods and properties of other 
   
 11) call, apply & bind
 Call is a function that helps you change the context of the invoking function.
- In layperson's terms, it helps you replace the value of this inside a function with whatever value you want.
+
+In layperson's terms, it helps you replace the value of this inside a function with whatever value you want.
 
 Apply is very similar to the call function. The only difference is that in 
 apply you can pass an array as an argument list.
 
 Bind is a function that helps you create another function that you can execute later with 
-the new context of this that is provided.
+the new context of  this that is provided.
 
 var jethalal = {
     wife:"Daya",
@@ -380,10 +391,11 @@ can we do with classes. it is just sugar sintaxing of prototype.
 // }
 
 // Rectangle.prototype.area = function(){
+
 //     return this.width * this.height
 // }
 
-// let box = new Rectangle(5,10)
+// let b  = new Rectangle(5,10)
 // console.log(box.area())
 
 // same this we can build using classes.
@@ -409,7 +421,7 @@ console.log(num)   ---output => 9007199254740991
 console.log(num+2) ---output =>  ---output => 9007199254740991   but output should be  ---output => 9007199254740993
 it is because the number exceeding the maximum allowed Number in the JavaScript.
 to ovrcome this bigint came into picture.
-to use bigint just append the n to the number then we will get desired output. 
+to use bigint "{just append the n to the number}" then we will get desired output. 
 var num = 2n**53n - 1n; it is the largest value can handle in javascript
 console.log(num)--->output => 9007199254740991n
 console.log(num+2n)---> output => 9007199254740993n
@@ -417,6 +429,7 @@ console.log(num+2n)---> output => 9007199254740993n
 ------------------------------------------------------------------->
 
 14) what is event loop ?
+
     in the answer of event loop we have to answer the all below question.
     a)what is javaScript
     b)what is Call Stack
@@ -468,8 +481,8 @@ and from task queue functions invoke to the callstack.
 imp=> if callstack is not empty, then task queue does not start element to push into callstack.
 once all synchronous code executed then only asynchronous code will go into call stack.
 
- what is call stack?
- => A call stack is a mechanism for an 
+what is call stack?
+=> A call stack is a mechanism for an 
    interpreter to keep track what function is currently being run
    and what functions are called from within that function, etc.
 
@@ -589,9 +602,8 @@ arrr.forEach((e)=>console.log(e+10))
 
 ---------------------------------------------------------------------------------->
 
-20) What is mutability and immutability javascript ?
-=> mutable means, variable which can change it's original value, immutable are those value which cannot be change.
-
+20) What is  javascript ?
+=> mutable means, variable which can change it's original value, immutable ar\
 // In javascript there are two major datatypes.
 // 1.primitive  ---> string, number, boolean, null, undefined   ---> immutable
 // data is directly store in memory location where variable exist.
@@ -644,6 +656,7 @@ function fun1(){
      name = "suraj"
      return fun2
 }
+
 let c = fun1();
 c()  ---> o/p suraj 
 
@@ -657,7 +670,7 @@ c()  ---> o/p suraj
 //* console.log(cdn(10)) ;
 
 what is currying ?
-=> transforms a function with multiple arguments into 
+=> transforms a functions with multiple arguments into 
 a nested series of functions, each taking a single
  argument.
 
@@ -671,10 +684,7 @@ console.log(outer(10)(20))
 ---------------------------------------------------->
 
 debouncing ?
-=> Debouncing delays the exection of a function untill a 
-certain amount of time has passed withot input being triggered again.
-
- It ensures that a function is only executed after a
+=> It ensures that a function is only executed after a
  specified period of inactivity.
  
 If user click two times and request time of first request not complete yet then it shoud cancel the first request.
@@ -709,10 +719,10 @@ Note :=>
 
 
 No matter how many times you click the click me button,
-I get executed once every 3 seconds.
+I get executed after 3 seconds of inactivity.
 
-Application :=> Debouncing can be applied in implementing 
-suggestive text, where we wait for the user to stop
+ Application :=> Debouncing can be applied in implementing 
+ suggestive text, where we wait for the user to stop
  typing for a few seconds before suggesting the text.
 
 
@@ -742,7 +752,6 @@ const throtller = (func,delay)=>{
 window.addEventListener('load',function(){
     var btn = document.getElementById("click");
     btn.addEventListener("click",throtller(makeApiCall,1000))
-    // btn.addEventListener("click",debouncer(makeApiCall,1000))
 })
 
 -------------------------------------------------------------------------->
@@ -782,7 +791,7 @@ object and Arrays destructuring
 
 // before es6
 // const name = arr[0];
-// const country = arr[1];
+// const + = arr[1];
 // const city = arr[2];
 // console.log(name)
 // console.log(country)
@@ -849,4 +858,5 @@ let lname = 'school'
 // after ES6
 let str = `${fname} ${lname}`
 console.log(str)
+
 

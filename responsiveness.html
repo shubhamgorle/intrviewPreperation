@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Queries</title>
     <style>
+ :root{
+    --primary-color:blue;
+    --font-color:orange;
+ }       
 .box{
     font-size: 72px;
     text-align: center;
-    background-color: red;
+    background-color:var(--primary-color);
     color: wheat;
     display: none;
 }
-/* @media(max-width:300px){
-    #box-1{
-        display: block;
-        background-color: violet;
-    }
-} */
+
 @media only screen and (max-width:300px){
     #box-1{
         display: block;
@@ -34,15 +33,14 @@
     #box-3{
         display: block;
         background-color: skyblue;
-        color: black;
-        
+        color: black; 
     }
 }
 @media only screen and (min-width:801px){
     #box-4{
         display: block;
-        background-color: yellow;
-        color: black;
+        background-color:var(--primary-color);
+        color: var(--font-color);
     }
 }
 
@@ -57,7 +55,7 @@ total 7.
 </head>
 <body>
     <!-- media querry is a way, whenever our screen will resize we will tell if screen width will this then we have to add some specific css to page -->
-    <!-- div.box#box$*3 -->
+    <!-- div.box#box$*4 -->
 <div class="box" id="box-1">i am i-phone</div>
 <div class="box" id="box-2">i am tablet</div>
 <div class="box" id="box-3">i am dekstop computer</div>
