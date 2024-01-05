@@ -121,4 +121,56 @@ setInterval is used to repeatedly execute a callback function at fixed intervals
 
 
 10. What is NVM? how do you use it?
-:=> 
+:=> In Node.js, "NVM" stands for Node Version Manager. 
+    It's a tool that allows you to manage multiple Node.js installations on your machine, 
+    making it easy to switch between different Node.js versions for different projects. 
+
+11. What is common.js? how is it different from es modules?
+CommonJS is a module system for JavaScript that is used primarily in server-side environments, 
+such as Node.js. It allows developers to organize code into separate files, called modules, and then 
+import and use those modules in other parts of the code. CommonJS uses the require function to import
+ modules and module.exports to export values from a module.
+
+ // math.js
+const add = (a, b) => a + b;
+module.exports = add;
+
+
+// main.js
+const add = require('./math');
+console.log(add(2, 3)); // Outputs: 5
+
+
+ ES Modules (ECMAScript Modules) is the official module system for JavaScript as standardized in
+ ECMAScript 6 (ES6). ESM is designed to work both in browsers and in server-side environments like Node.js.
+ It uses import and export statements to define dependencies and expose functionality between modules.
+
+  // math.js
+export const add = (a, b) => a + b;
+
+// main.js
+import { add } from './math';
+console.log(add(2, 3)); // Outputs: 5
+
+
+12. How does the crypto module work?*
+:=> The crypto module in Node.js provides cryptographic functionality. It offers a set of cryptographic operations,
+ including hash functions, HMAC (Hash-based Message Authentication Code), encryption, and decryption.
+
+13. What are web sockets?*
+:=>  They are particularly useful for building applications requiring instant updates,
+     such as real-time chat, messaging, and multiplayer games.
+
+    Unlike traditional HTTP, which is based on a request-response model, WebSockets allow
+    for bidirectional communication, enabling real-time data transfer.
+
+14. What are microservices?*
+:=> It's a software architecture approach that breaks down complex applications into independent components.
+ These individual components interact with each other through well-defined APIs to provide efficient functionality.
+
+15. Creating a CLI based app using Node.js and publish it
+
+
+
+
+

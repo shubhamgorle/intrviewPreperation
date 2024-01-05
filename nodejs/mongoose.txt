@@ -1,0 +1,132 @@
+1. what is mongoose ?
+:=> it is the npm package which is use to connect nodejs to mongodb.
+
+2. what is Schema ?
+:=> A Mongoose schema defines the structure of a document, specifying the fields, their types, default values,
+ and any validation rules. Schemas provide a blueprint for the documents that will be stored in a MongoDB collection.
+
+              const mongoose = require('mongoose');
+
+           const userSchema = new mongoose.Schema({
+          username: { type: String, required: true },
+        email: { type: String, required: true, unique: true },
+             age: { type: Number, min: 18 },
+          });
+
+       const User = mongoose.model('User', userSchema);
+
+
+
+3. what is model ?
+:=> It represents a collection in the MongoDB database.
+- A constructor is a blueprint using which we can create objects. Similarly, using the Model we create documents
+ (collection of a particular database of MongoDB).
+- So, the model is a constructor function.
+
+mongoose.model(NameoftheCollection, SchemaoftheCollection)
+
+This function returns the Mongoose object.
+
+4. What are aggregation pipelines?
+:=> Aggregation pipelines in MongoDB provide a powerful framework for transforming and processing data in complex
+ ways before retrieving the results. The aggregation framework allows you to perform various operations on data,
+  such as filtering, grouping, sorting, and transforming documents, all within the MongoDB server.
+
+about. An aggregation pipeline consists of a series of stages, where each stage performs a specific operation on the data.
+   Stages are executed sequentially, and the output of one stage serves as the input to the next.
+
+b. Operators are expressions used within the stages to perform specific operations on the data. MongoDB provides a rich set of aggregation operators, including:
+$match: Filters documents based on specified criteria.
+$group: Groups documents based on a specified key or keys and applies accumulator expressions to create computed fields.
+$project: Reshapes the documents, including or excluding fields.
+$sort: Orders the documents based on specified criteria.
+$limit: Limits the number of documents passed to the next stage.
+$unwind: Deconstructs an array field from the input documents to output a document for each element.
+
+Find all the small-size pizzas with prices> 16
+db.orders.aggregate([{$match : {size : "small",price : {$gt:16}}}])
+
+c. Expressions are used within operators to perform computations or transformations.
+
+
+5. Explain why a mongoose does not return a promise but has a .then?
+:=> 
+
+
+7. I'm using an arrow function for a virtual, middleware, getter/setter, or method and the value of this is wrong. Why
+:=> Arrow functions do not have their own this context. Instead, they inherit the this value from the enclosing 
+    scope (lexical scoping). This can lead to unexpected behavior in certain contexts, especially when dealing with
+   Mongoose, where the value of this is often important for accessing the document or the model instance.
+
+  in arrow function 'this' is inherited from the surrounding scope(lexical envirnment)
+  in regular function 'this' is determined by how the function is called.
+ To ensure the correct behavior of this in Mongoose virtuals, middleware, getters/setters, or methods, 
+ it's generally recommended to use regular functions instead of arrow functions.
+
+8. Should I create/destroy a new connection for each database operation?
+:=> No, it's generally not advisable to create and destroy a new connection for each database operation, 
+as establishing and tearing down connections can introduce overhead and impact the performance of your application.
+ Instead, it's recommended to reuse connections by opening them once and maintaining their state throughout the lifecycle of your application.
+
+
+ 9.My query/update seems to execute twice. Why is this happening? 
+:=> If you are using Express.js, ensure that you are not adding the same route handler multiple times.
+middleware functions can be executed multiple times if not properly handled
+Check if the operation is triggered multiple times on the client side. 
+Ensure that your error-handling mechanisms are correctly implemented. If an error occurs during the execution of the database operation, 
+it might trigger a retry if not handled properly.
+
+
+10.How do you create indexes with mongoose?
+:=> In Mongoose, you can create indexes on your MongoDB collections to improve query performance for certain fields
+
+a. To create an index on a single field, you can use the index property in your schema:
+const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
+  username: { type: String, unique: true, index: true },
+  email: { type: String, index: true },
+});
+
+const User = mongoose.model('User', userSchema);
+
+
+b. To create a compound index on multiple fields, you can specify an array of field names in the index property:
+const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
+  firstName: String,
+  lastName: String,
+  age: Number,
+});
+
+// Compound index on firstName and lastName
+userSchema.index({ firstName: 1, lastName: 1 });
+
+const User = mongoose.model('User', userSchema);
+
+
+c. For text search functionality, you can create a text index:
+const mongoose = require('mongoose');
+
+const postSchema = new mongoose.Schema({
+  title: String,
+  content: String,
+});
+
+// Text index on the title and content fields
+postSchema.index({ title: 'text', content: 'text' });
+
+const Post = mongoose.model('Post', postSchema);
+
+
+11. What are pre and post-hooks?
+:=> Pre hooks are functions that are executed before a specified operation (e.g., save, validate, remove)
+ is performed on a document. They allow you to perform additional actions, modify data, or validate the 
+ document before it is saved or updated in the database.
+
+ Post hooks, on the other hand, are functions that are executed after a specified operation has been completed.
+  They are often used for tasks like logging, additional processing, or triggering external actions.
+
+
+  

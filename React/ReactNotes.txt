@@ -1,13 +1,13 @@
 jorden walke
 
 1. what is useEffect hook ?
-:=> The useEffect oHok allows you to perform side effects in functional components.
+:=> The useEffect hook allows you to perform side effects in functional components.
     Some examples of side effects are: fetching data, directly updating the DOM, and timers.
     useEffect accepts two arguments. The second argument is optional.
     useEffect(<function>, <dependency>)
 
             
-13. What are the different ways to apply useEffect?
+2. What are the different ways to apply useEffect?
 :=>    useEffect(() => {
                //Runs on every render
                });
@@ -22,10 +22,10 @@ jorden walke
                }, [prop, state]);
 
 
-2. What is React?         
+3. What is React?         
 :=> ReactJS is an open-source JavaScript library used for building user interfaces (UIs) for web applications.
 
-3. what are the features of react ?
+4. what are the features of react ?
 :=> A. "Component-Based Architecture" : React encourages developers to break down the user interface into reusable components.
                                         once we build component they we can reuse it wherever we want in entire application.
   
@@ -46,16 +46,16 @@ jorden walke
                                                  when it is created, updated, or destroyed. This helps manage side effects, data fetching,
                                                  and state changes effectively.    
  
-4. what is react fiber?
+5. what is react fiber?
 :=>  React Fiber is a concept of ReactJS that is used to render a system faster and smoother.  
 
-5. what is reconciliation in react ?
+6. what is reconciliation in react ?
 :=> it is the process to determine which parts of the UI need to be updated.
     The reconciliation process involves comparing the current structure of the virtual DOM (a representation of the UI in memory) 
     with the previous version of the virtual DOM. Based on this comparison, React identifies the minimal set of changes required 
     to bring the UI in line with the updated state.
 
-6. what is Diffing algorithm ?
+7. what is Diffing algorithm ?
 :=> it is the algorithm use to compares the new virtual DOM representation with the previous one.
     It traverses both virtual DOM trees and identifies differences between the two.   
 
@@ -76,15 +76,15 @@ Minimal Changes : The goal of the diffing algorithm is to find the minimal set o
              update real  dom      ----> new vertual dom 
 
 
-4. why we are using react ?
+8. why we are using react ?
 :=> we are using React because it offers efficient UI rendering, promotes code reusability, Unidirectional data flow
     provides a clear and declarative way to describe UIs, has a supportive community, and is backed by a
     powerful ecosystem of tools and libraries. These factors collectively make React a strong choice for
     building modern and interactive web applications.
     
 
-5. what is conditional rendering ?
-:=> It allows you to render different content or components based on certain conditions.
+9. what is conditional rendering ?
+:=> It allows you to render different content or components based on certain conditions. 
 function App() {
   const isLoggedIn = true;
 
@@ -95,18 +95,17 @@ function App() {
   );
 }   
 
-6. What is Lifecycle Diagram ?
+10. What is Lifecycle Diagram ?
 :=> The series of event that happens from mounting of react component to its unmounting.
     Mounting :- Birth of your component.
     update   :- Grouth of your component.
     unmounting :- death of your component.
 
 7. Explain how lists work in React?
-
 8. How does Class Components work?
 
 
-9. What are keys in React?
+11. What are keys in React?
 :=>  A “key” is a special attribute you need to include when creating lists of elements in React.
      Keys are used in React to identify which items in the list are changed, updated, or deleted.
      Keys are used to give an identity to the elements in the lists.
@@ -122,13 +121,13 @@ function App() {
 };
 
 
-10. What is memoisation in react?
+12. What is memoisation in react?
 :=> it is a technique of optimizing rendering performance of component. 
     When a component is wrapped with React.memo(), React will automatically check whether 
     the component's props have changed since the last render. If the props are the same, the cached 
     result of the previous render is returned, and the component is not re-rendered.
 
-11. What is the difference between react.memo and react.useMemo?
+13. What is the difference between react.memo and react.useMemo?
                                                                    |   
 React.memo:
 
@@ -165,7 +164,7 @@ const SomeComponent = ({ array }) => {
 :=> 
 
 
-13. How does Routing work with react?
+14. How does Routing work with react?
 :=>  React itself doesn't provide built-in routing capabilities,
      but there are popular third-party libraries that simplify the implementation of routing in React applications. 
      One of the most commonly used routing libraries is react-router-dom.
@@ -192,7 +191,7 @@ const SomeComponent = ({ array }) => {
 
 
 
-17. What are useRefs? What are some usecases??
+16. What are useRefs? What are some usecases??
 :=> The useRef Hook allows you to persist values between renders.
     It can be used to store a mutable value that does not cause a re-render when updated.
 
@@ -221,7 +220,7 @@ var count1 = 0;
 export default App;
 
 
-18. What is useCallback?
+17. What is useCallback?
     :=> The React useCallback Hook returns a memoized callback function.
  note:- The useCallback and useMemo Hooks are similar. The main difference is that useMemo 
         returns a memoized value and useCallback returns a memoized function. 
@@ -258,7 +257,7 @@ function ChildComponent({ increment }) {
    state changes, optimizing performance.
     
  
-19. How does Context API work? What does it solve?
+18. How does Context API work? What does it solve?
 :=>  The Context API is a feature in React that provides a way to share data,
      such as state or functions, between components without the need to pass props explicitly down the component tree. 
      It's designed to solve the problem of "prop drilling," which occurs when you have to pass props through multiple 
@@ -483,7 +482,7 @@ function App() {
   return (
     <div>
       <Suspense fallback={<div>Loading...</div>}>
-        <v   />
+        <v/>
       </Suspense>
     </div>
   );
@@ -504,7 +503,7 @@ function App() {
 
 
 
-31. Can you write react without jsx?
+32. Can you write react without jsx?
 :=> Yes, you can write React applications without using JSX, although JSX is a widely 
     adopted and more convenient way to define React components. JSX is a syntax extension
     that allows you to write HTML-like markup directly within your JavaScript code, making 
@@ -512,9 +511,9 @@ function App() {
     it can be used with plain JavaScript as well.
 
 
-32. What is SSR and CSR?
+33. What is SSR and CSR?
 :=>  websites are loaded on browser based on html, css, js
-     files whose Data are fetch from the server .
+     files whose Data are fetch from the server.
      our system which is the cliet side of transaction
      loads up the websites by rendering these files togather.  
 

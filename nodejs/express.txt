@@ -1,0 +1,199 @@
+1. How does express work?
+:=> Express is just a framework, that can help us in creating the server in a very easy way.
+It provides a set of features and utilities that make it easier to handle routing, middleware, HTTP requests, and responses.
+
+2. What are Middlewares?
+:=>  Middlewares are the functions that get executed before the request reaches the route handler and after the response is sent to the client.
+It sets between request and response.
+Because of the middleware, we get the chance to perform modification, updation, or deletion on request and response objects.
+- Using middlewares, we can :
+    - change the object
+    - check for security
+    - check for validation
+The next function is crucial in the middleware chain as it passes control to the next middleware in the stack. 
+If next is not called, the request-response cycle can be terminated    
+
+ 
+2. What is the MVC framework?
+:=> The MVC framework, which stands for Model-View-Controller, is a software design pattern commonly used for
+    developing web applications. It divides the application into three interconnected components, each with a
+    specific responsibility. The goal of the MVC pattern is to separate concerns and improve the modularity, 
+    maintainability, and scalability of software.
+
+Here's an overview of the three main components in the MVC pattern:
+
+a. Model:
+
+The Model represents the application's data and business logic.
+It is responsible for managing the data, logic, and rules of the application.
+Changes to the Model (e.g., data updates) notify the View to update itself.
+
+b. View:
+
+The View is responsible for presenting the data to the user and receiving user input.
+It displays information from the Model to the user and sends user input back to the Controller.
+The View should not contain business logic; its primary role is to render data.
+
+c. Controller:
+
+The Controller acts as an intermediary between the Model and the View.
+It receives user input from the View, processes it (possibly interacting with the Model), and updates the View accordingly.
+The Controller is responsible for handling user actions and updating the Model and View as necessary.
+
+
+3. How do you do static routing?
+:=> static routing typically involves specifying the relationship between URLs 
+(Uniform Resource Locators) and the corresponding HTML files or views.
+
+const express = require('express');
+const app = express();
+
+// Define static routes
+app.get('/', (req, res) => {
+  res.send('Home Page');
+});
+
+app.get('/about', (req, res) => {
+  res.send('About Page');
+});
+
+app.get('/contact', (req, res) => {
+  res.send('Contact Page');
+});
+
+// Start the server
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+
+4. What are common libraries you work with express?
+
+a. Body-parser: It parses incoming request data (such as JSON, URL-encoded, or multipart form data) and makes it accessible in req.body.
+
+      const bodyParser = require('body-parser');
+      app.use(bodyParser.json());
+      app.use(bodyParser.urlencoded({ extended: true }));
+
+b. Morgan : 
+c. Cors : Middleware for enabling Cross-Origin Resource Sharing (CORS). It allows or restricts
+          access to resources on a web server from a different domain.
+
+          const cors = require('cors');
+          app.use(cors());
+
+d. Cookie-parser: Middleware for parsing cookies attached to the client's request.
+      const cookieParser = require('cookie-parser');
+      app.use(cookieParser());
+
+e. Passport: Authentication middleware for Node.js. It supports various authentication strategies.
+             including local authentication, OAuth, and more.
+
+             const passport = require('passport');
+               app.use(passport.initialize());
+               app.use(passport.session());
+
+f. Multer: Middleware for handling multipart/form-data, primarily used for handling file uploads.
+
+          const multer = require('multer');
+          const upload = multer({ dest: 'uploads/' });
+          app.post('/upload', upload.single('file'), (req, res) => {
+            // Handle uploaded file
+          });
+
+5. How do you manage sessions in express?
+:=> Express provides several ways to manage sessions, and one popular middleware for handling sessions 
+is express-session. This middleware simplifies the process of managing user sessions in an Express.js application.
+
+
+6. What is CORS?
+:=>  CORS stands for Cross-Origin Resource Sharing. it prevents other websites or domains from accessing your web resources directly
+    from the browser.
+
+- **Features of CORS**
+    - Supports `GET`, `POST`, or `HEAD` HTTP methods.
+    - Allows web programmers to use regular XML Http Request, which handles errors better.
+    - Allows websites to parse responses to increase security.
+- **Usage of CORS**
+    - We can use either enable CORs for all the routes or only for a single route.
+
+7. How do you manage cookies with express?
+:=> Cookies are small pieces of data that are stored on the client side.
+    To manage cookies with Express, we use the cookie-parser middleware. This middleware parses cookies that
+    are sent with the request and makes them available in the req.cookies object.
+
+    It is capable of parsing both unsigned and signed cookies.
+
+8. How do you do validations?
+:=> Express.js itself does not provide built-in validation features, but developers often use 
+    middleware or external libraries to handle input validation.
+
+    Joi is a powerful schema validation library that can be used for validating various types of data.
+    In this example, a Joi schema is defined to validate the username and email fields in the request body.
+
+    Express Validator is a middleware for Express that integrates with validator functions from the validator library.
+
+
+9. What are some templating engines?
+:=> Express.js is a flexible web application framework for Node.js that allows developers to choose
+    their preferred templating engine. While Express.js doesn't include a built-in templating engine, it 
+    is designed to be easily integrated with various engines. Here are some popular templating engines
+    commonly used with Express.js
+
+   a.  EJS (Embedded JavaScript):
+
+const express = require('express');
+const ejs = require('ejs');
+
+const app = express();
+
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
+
+// Render EJS views
+app.get('/', (req, res) => {
+  res.render('index', { title: 'Express with EJS' });
+});
+
+
+b. npm install pug
+const express = require('express');
+
+const app = express();
+
+// Set Pug as the view engine
+app.set('view engine', 'pug');
+
+// Render Pug views
+app.get('/', (req, res) => {
+  res.render('index', { title: 'Express with Pug' });
+});
+
+
+c.  express-handlebars
+ const express = require('express');
+ const exphbs = require('express-handlebars');
+
+ const app = express();
+
+ // Set Handlebars as the view engine
+ app.engine('handlebars', exphbs());
+ app.set('view engine', 'handlebars');
+
+ // Render Handlebars views
+ app.get('/', (req, res) => {
+  res.render('index', { title: 'Express with Handlebars' });
+});
+
+
+10. What are routes?
+:=>  In Express.js, routes are a way to define how an application responds to client requests. 
+     Routes determine how the application should handle different HTTP methods (such as GET, POST, PUT, DELETE) 
+     for specific URLs or patterns. Each route is associated with a function (often called a route handler) 
+    that is executed when the route is matched.
+
+
+
+
+
