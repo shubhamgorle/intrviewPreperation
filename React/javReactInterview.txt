@@ -156,3 +156,25 @@ Object.freeze(person);
 person.age = 31;
 
 console.log(person); // Output: { name: "John", age: 30 }
+
+
+express.urlencoded is a middleware which help to parse form data.
+
+
+
+ const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const userSchema = new Schema({
+  name: String,
+  age: Number,
+});
+
+// Creating a model with the name 'User' and using the 'users' collection in MongoDB
+const User = mongoose.model('User', userSchema, 'users');
+
+In the example above, 'User' is the name of the model, userSchema is the schema 
+definition, and 'users' is the name of the MongoDB collection that the model
+ corresponds to. If the collection name is not provided (or is null or undefined),
+  Mongoose will use the pluralized version of the model name by default
+   (e.g., 'users' for the 'User' model).

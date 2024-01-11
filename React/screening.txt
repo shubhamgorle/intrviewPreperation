@@ -1,6 +1,6 @@
 1. Tell me about yourself
 :=> 
-Good afternoon Sir/mam.
+Good morning  Sir/mam.
 i am shubham gorle from orange city i.e nagpur.
 about my  education, i have completed diploma in mechanical engineering form GHRP nagpur and BE in mechanical engineering from RTMNU.
 i have also completed MERN STACK developement course from masai school bengluru.
@@ -16,14 +16,21 @@ Thank you for considering me as a potential addition to your team.
 when i was in final year of graduation i had an idea on which i wanted to build a project which was related to computer 
 science and i did not able to build it bcz i did not familier with the tech stack which is required to build that project.
 but i wanted to learn the tech stack which is required for building that application.
-after completion of graduation to be very honest there was very limited job opportunities ans slow carrier growth in mechanical feild. 
+to be very honest there was very limited job opportunities ans slow carrier growth in mechanical feild. 
 thats why i choosen mern stack developer as a carrier.
 
-4. what is your strength ?
+3. why you shift your carrier from mechanical enginnering to computer science ?
+:=>
+after completion of graduation i discuss with my seniors about jobs availability in feild of mechanical enginnering.
+and they told me we wanted to shift our carrier from mechanical to IT after having 2-3 yr of experience due to slow carrier growth.
+then i think after having experice in core feild they are shifting their carrier then i should not waste time in trying someting because a great man 
+says you should learn from other's mistakes. thats why i choosen mern stack developer as a carrier. 
+ 
+ 
+4 what is your strength ?
 :=> 
 My gretest strenth i would like to say i am peoples person, i enjoy working in teams. during my masai school journey i have worked on three 
 projects in a team of 4 peoples for each project and i don't think they have complaints against me.
-second one is i am quick learner because of that i am able to shift my carrier from mechanical engineering to computer science in very limited period
 of time.
 
 5. what is your weakness ?
@@ -31,32 +38,73 @@ of time.
 public speaking makes me nervous Althught i don't need public speaking for my role as a mern stack developer but i still thing it is important
 skill, especially when i want to offer up my opinions in meetings or group discussions and i am working on this weakness to overcome it.
 
-3. Why do you want to work here specifically?
+6. Why do you want to work here specifically?
+:=> to be very honest i am not too proficient in this feild and i am looking for an organisation where i can learn and upskill myself and
+you are are looking for a employe who can give their 120 per while learning so i can give my 120 per while learning and be a profient employ asap.
+
+7. what do you know about our company ?
+:=> 
+avatu founded on 2018 and it is service based company which provide many services includes consulting, implementation and managed services.
+you help clients achieve their objectives of digital transformation. 
+you structure your teams on the basis of client requirement and provide them respective services quickly. 
+The team includes Developers, Subject Matter Experts, Implementation Specialists, Business Analysts ,etc. 
+
+8. tell me about your project ?
+shop.com :=> 
+    my first project was the clone of shop.com. 
+    shop.com is ecommerse website which provide deals on clothes, beauty, shoes & electronics.
+    this was collaborative project, built in 4 days by a team of 4 developers.
+    the features of this website includes Login, Signup, Filter & Delete, search.
+    my area of responsibility in this project was i Built the landing page, add to cart page and 
+    control the GitHub codebase & worked on the integration of all pages.
+
+
+chalanges you faced in this project ?
+
+Expendia :=>
+This is the clone of expendia application which
+able to book the hotel online. It is a collaborative
+project of four members which is completed in
+four days.
+Login, Signup, Filter, Delete, Hotel booking &
+google map.
+Built Hotel booking pages and their functionalities.
+Added filter functionality, page linking.
+
+9. what is your goal ?
+i want to become a best web developer and to become a best web developer i need to improve my skills, 
+to improve my skills i need new chanlanges and i feel like i will get new chalanges everyday while 
+working in your company. that will improve my skills and i would give my 100 per output and i will 
+achieve my carrier goal of becoming the best web developer.
+
+10. where do you see yourself in next 5 year ?
+:=> Over the next five years, I see myself taking on new and exciting projects within your company. 
+    I truly believe that can pursue my career goals and eventually become a senior developer within your organization.
+
+11. why should we hire you ?
+sir i believe i am great feet for this role i am self motivated person and give 100 per to the any task that given 
+to me that is why i been good with my acadamics and surely i will do same for any project that is given to me in company.
+i also work good as a group member that why i have 3 projects in team. 
+overall i believe i can contribute a lot to the organisation with my skill. 
 :=>
+you are hiring people for giving internship so you will first give traning and they will starts working for you 
+so obiously you are expecting 3 major things in candidate first one is quick learner and i think i am quick learner second one is loyalty
+because you invest in candidate then the candidate should be loyal with you and third one is candidate should be familier with techstack 
+mensioned in job description. and i meet all this obious expectation from company.
+
+12. tell me one situation when 
+
+13. Why do you want to work here specifically?
+
+14. Can you describe a time when you had to work in a team?"
+   "Tell me about a challenge you faced and how you overcame it.
 
 
- MsC founded in 2017, is an Independent and Professional run Company, which aims
- to help Businesses take a tiny step towards technology and automation to beat the
- new age day-to-day challenges of the business world.
+
+
+
  
- We help startups & MSME enterprises to Integrate & Implement CRM, ERP, 
- Distribution Management Systems (DMS), Utility Software
- & add-on Software at a growing stage of the Business.
-
-
- YOUR requireMENT IS YOU WANT A CANDIDATE WITH GOOD technical SKISSLS IN REACT JS JAVVASCRIPT
- HTML CSS AND WHO CAN CONTERT DESIGN INTO 
- REACT component WITH  effecIENT CODE, Build reusable components and libraries.
-
-
-Job description
-Convert designs into ReactJS components
-Create effective code to manage React component states
-
-
-Wunderman Thompson is a growth partner – part creative agency, part consultancy and part technology company, 
-Your experts deliver inspiration across the entire brand and customer experience.
-
+    
 
 
 Introduction and Background:

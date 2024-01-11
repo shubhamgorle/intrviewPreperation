@@ -5,11 +5,12 @@
  but also non-blocking like async.
  Although it's synchronous by nature, JavaScript benefits from asynchronous code.
 
+concurrent---> ( when you are doing more than one thing at the same time.)
+
 1. is null and undefined are same ?
 => null and undefined ---> null and undefined is not equal 
 if we check null and undefined like this ---> null == undefined ---> we will get true bcz both are falsy values.
 but if we check  null and undefined like this ---> null === undefined (Stricktly equals to)---> we will get false.
-
 
 
 ----------------------------------------------------------->
@@ -391,11 +392,10 @@ can we do with classes. it is just sugar sintaxing of prototype.
 // }
 
 // Rectangle.prototype.area = function(){
-
 //     return this.width * this.height
 // }
 
-// let b  = new Rectangle(5,10)
+// let box  = new Rectangle(5,10)
 // console.log(box.area())
 
 // same this we can build using classes.
@@ -429,7 +429,6 @@ console.log(num+2n)---> output => 9007199254740993n
 ------------------------------------------------------------------->
 
 14) what is event loop ?
-
     in the answer of event loop we have to answer the all below question.
     a)what is javaScript
     b)what is Call Stack
@@ -603,7 +602,8 @@ arrr.forEach((e)=>console.log(e+10))
 ---------------------------------------------------------------------------------->
 
 20) What is  javascript ?
-=> mutable means, variable which can change it's original value, immutable ar\
+
+=> mutable means, variable which can change it's original value, immutable are those 
 // In javascript there are two major datatypes.
 // 1.primitive  ---> string, number, boolean, null, undefined   ---> immutable
 // data is directly store in memory location where variable exist.
@@ -858,5 +858,10 @@ let lname = 'school'
 // after ES6
 let str = `${fname} ${lname}`
 console.log(str)
+
+
+*) garbage collector 
+:=> garbage collector is the process of freeing up memory by removing unUsed code.
+A automatic memory management that relieves you from doing memory management. it destroye those object which are of no use now.
 
 

@@ -46,37 +46,6 @@ import './App.css';
 
 // export default App;
 
-function App(){
-  const [ref, setref] = useState(false);
- 
-
-  useEffect(() => {
-    count.current = count.current + 1;
-    
-  });
-  
-  var count = useRef(1)
-console.log("count", count);
-console.log(count)
-  // const onRender = (id, phase, actualDuration, baseDuration, startTime, commitTime) => {
-  //   console.log(`Component ${id} took ${actualDuration}ms to render.`);
-  //   console.log("phase",phase)
-  //   console.log("actualDuration",actualDuration)
-  //   console.log("baseDuration",actualDuration)
-  //   console.log("startTime",actualDuration)
-  //   console.log("commitTime",actualDuration)
-  // };
-  return (<Profiler id="MyComponent" >
-        <div className="App">
-         <button onClick={()=>{
-          setref(!ref);
-         }}>switch</button>
-      <h1>Render Count: {count.current}</h1>
-        </div>
-</Profiler>
-);
-}
-export default App;
 // 1. **************************************
 
 // import {Profiler} from 'react'

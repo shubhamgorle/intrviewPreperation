@@ -3,7 +3,7 @@
 
 // // let a = 10;
 // console.log(a);
-function person (name,energy){
+function person(name,energy){
 
     var person = {};
     person.name = name;
@@ -31,7 +31,8 @@ function person (name,energy){
 var sai = person("sai",15)
 var jay = person("jay",12)
 
-console.log(sai) 
+
+// console.log(sai) 
 // // when we calling fuction person for every call indirectly we are calling
 // // eat, sleep, code function every time unneccesarrily. which takes extra space & memory
 // // which is not desirable at all.
@@ -78,28 +79,28 @@ console.log(sai)
 
 
 
-// function Person(name, energy) {
-//     // var person = Object.create(Person.prototype)
-//     ths.name = name;
-//     this.energy = energy;
-//     // return person;
-// }
-// Person.prototype.eat = function (energy) {
-//     console.log(this.name, 'is eating')
-//     this.energy += energy
-// }
-// Person.prototype.sleep = function (energy) {
-//     console.log(this.name, 'is sleeping')
-//     this.energy += energy
-// }
-// Person.prototype.code = function (energy) {
-//     console.log(this.name, 'is coding')
-//     this.energy -= energy
-// }
-// var sai = new Person("sai",15)
-// var jay = new Person("jay",12)
-// console.log(sai)
-// console.log(jay)
+function Person(name, energy){
+    // var person = Object.create(Person.prototype)
+    this.name = name;
+    this.energy = energy;
+   
+}
+Person.prototype.eat = function (energy) {
+    console.log(this.name, 'is eating')
+    this.energy += energy
+}
+Person.prototype.sleep = function (energy) {
+    console.log(this.name, 'is sleeping')
+    this.energy += energy
+}
+Person.prototype.code = function (energy) {
+    console.log(this.name, 'is coding')
+    this.energy -= energy
+}
+var sai = new Person("sai",15)
+var jay = new Person("jay",12)
+console.log(sai)
+console.log(jay)
 
 
 
@@ -133,21 +134,21 @@ console.log(sai)
 
 
 
-// function Rectangle(height,width){
+// function rectangle(height,width){
 //     this.width = width;
 //     this.height=height
 // }
 
-// Rectangle.prototype.area = function(){
+// rectangle.prototype.area = function(){
 //     return this.width + this.height
 // }
 
-// let box = new Rectangle(5,10)
+// let box = new rectangle(5,10)
 // console.log(box.area())
 
 // same this we can build using classes.
 
-// class Rectangle{
+// class rectangle{
 //     constructor(height,width){
 //         this.height = height
 //         this.width = width
@@ -157,7 +158,7 @@ console.log(sai)
 //     }
 // }
 
-// let box = new Rectangle(5,10)
+// let box = new rectangle(5,10)
 // console.log(box.area());
 
 
@@ -452,7 +453,7 @@ function myArray() {
 
 // function allSubjects(maths,english,science=0){
 //      return maths+english+science
-// }
+// } 
     
 //     let total = allSubjects(50,60);
 //     console.log(total)  ---> output is 110
@@ -530,6 +531,131 @@ var obj = {
        }, 1000);
     }
 }
-obj.data() 
-console.log("10")
+// obj.data() 
+// console.log("10")
 
+
+
+let mypromise = new Promise((resolve, reject)=>{
+    let isauth = false;
+    if(isauth){
+        setTimeout(()=>{
+          resolve("operation is completed")
+        },1000)
+    }
+    else{
+        reject("operation is failed")
+    }
+})
+
+mypromise.then((data)=>{
+  console.log(data)
+}).catch((e)=>{
+console.log(e)
+})
+
+function outer(a){
+    return function inner(b){
+        return a + b;
+    }
+}
+console.log(outer(10)(20))
+
+
+
+// const makeapi = ()=>{
+//     console.log("api is called")
+// }
+
+// const throtling = (time, maqkeapi)=>{
+//   let throtler = 0;
+//   return function(){
+//    if(Date.now() - throtler > time){
+//     throtler = date.now();
+//     makeapi.apply(this, arguments)
+//    }
+//   }
+// }
+
+
+// let arrayOfObjects = [
+//     { name: 'John', age: 30 },
+//     { name: 'Jane', age: 25 },
+//     { name: 'Bob', age: 35 }
+// ];
+
+// // Sort by name in ascending order
+// arrayOfObjects.sort((a, b) => b.name.localeCompare(a.name));
+
+// console.log(arrayOfObjects);
+
+function rec(w,h){
+this.width = w;
+this.height = h;
+
+}
+
+rec.prototype.area = function(){
+    return this.width*this.height;
+}
+
+let re = new rec(1,2);
+console.log(re.area())
+
+
+// function rectangle(height,width){
+    //     this.width = width;
+    //     this.height=height
+    // }
+    
+    // rectangle.prototype.area = function(){
+    //     return this.width + this.height
+    // }
+    
+    // let box = new rectangle(5,10)
+    // console.log(box.area())
+    
+    // same this we can build using classes.
+    
+    // class rectangle{
+    //     constructor(height,width){
+    //         this.height = height
+    //         this.width = width
+    //     }
+    //     area(){
+    //         return this.height + this.width
+    //     }
+    // }
+    
+    // let box = new rectangle(5,10)
+    // console.log(box.area());
+
+    // class rectangle {
+    //     constructor(height,width){
+    //        this.width = width
+    //        this.height = height
+    //     }
+    //     area(){
+    //         return this.width*this.height
+    //     }
+    // }
+    // let box1 = new rectangle(10,20);
+    // console.log(box1.area())
+
+    function exampleFunction() {
+        let x = 100;
+        let y = 300;
+        
+        // Some code here
+        console.log(x+y)
+       
+        // Execution will pause here
+        
+        // More code here
+        
+        let z = x + y;
+        console.log(z);
+      }
+     
+      exampleFunction();
+      

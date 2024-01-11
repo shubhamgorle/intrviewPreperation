@@ -11,8 +11,8 @@
                                                                             
  By default, Node.js uses a non-blocking                                        Blocking behavior can occur when using
  I/O model, where I/O operations are performed                                  certain synchronous I/O methods in Node.js. 
- asynchronously without blocking the main thread  
- of execution. 
+ asynchronously without blocking the main thread                                which have names that end with Sync
+ of execution.  
 
 This means that when an I/O operation is executed,                              Synchronous methods block the main thread until
 the program continues to execute other tasks while                              the operation is completed, preventing the program 
@@ -39,7 +39,7 @@ Eg. const fs = require('node:fs');
 
 3. What is throughput?
 :=> rate at which a system can process a certain amount of work within a given amount of time.
-it is important in determining the overall efficiency and effectiveness of a system.
+    it is important in determining the overall efficiency and effectiveness of a system.
 
 4. what is the difference between readFile and readFileSync
 :=> readFile is an asynchronous function in Node.js that is used for reading the contents of a file.
@@ -51,7 +51,7 @@ it is important in determining the overall efficiency and effectiveness of a sys
 
 6. How to create a web server without express?
 :=> 
-we can create a basic web server in Node.js without using Express by using the built-in http module. 
+we can create a basic web server in Node.js without using Express by using the "built-in http module".
 Here's a simple example:-
 
 
@@ -111,7 +111,7 @@ This phase executes callbacks registered with close events, such as those in soc
 
 
 9.What are timers in Node.js?
-:=> n Node.js, timers are mechanisms that allow you to schedule the execution of functions or
+:=> in Node.js, timers are mechanisms that allow you to schedule the execution of functions or
  code at a specified time in the future or after a certain interval.
 
  setTimeout(callback, delay[, ...args]):
@@ -129,7 +129,7 @@ setInterval is used to repeatedly execute a callback function at fixed intervals
 CommonJS is a module system for JavaScript that is used primarily in server-side environments, 
 such as Node.js. It allows developers to organize code into separate files, called modules, and then 
 import and use those modules in other parts of the code. CommonJS uses the require function to import
- modules and module.exports to export values from a module.
+modules and module.exports to export values from a module.
 
  // math.js
 const add = (a, b) => a + b;

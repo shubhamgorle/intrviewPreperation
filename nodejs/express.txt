@@ -1,11 +1,11 @@
 1. How does express work?
 :=> Express is just a framework, that can help us in creating the server in a very easy way.
-It provides a set of features and utilities that make it easier to handle routing, middleware, HTTP requests, and responses.
+    It provides a set of features and utilities that make it easier to handle routing, middleware, HTTP requests and responses.
 
 2. What are Middlewares?
 :=>  Middlewares are the functions that get executed before the request reaches the route handler and after the response is sent to the client.
-It sets between request and response.
-Because of the middleware, we get the chance to perform modification, updation, or deletion on request and response objects.
+     It sets between request and response.
+     Because of the middleware, we get the chance to perform modification, updation, or deletion on request and response objects.
 - Using middlewares, we can :
     - change the object
     - check for security
@@ -42,8 +42,8 @@ The Controller is responsible for handling user actions and updating the Model a
 
 
 3. How do you do static routing?
-:=> static routing typically involves specifying the relationship between URLs 
-(Uniform Resource Locators) and the corresponding HTML files or views.
+:=>  static routing typically involves specifying the relationship between URLs 
+    (Uniform Resource Locators) and the corresponding HTML files or views.
 
 const express = require('express');
 const app = express();
@@ -70,7 +70,7 @@ app.listen(PORT, () => {
 
 4. What are common libraries you work with express?
 
-a. Body-parser: It parses incoming request data (such as JSON, URL-encoded, or multipart form data) and makes it accessible in req.body.
+a. Body-parser: It parses incoming request data (such as JSON, URL-encoded, or multipart form data) and makes it accessible in req.body
 
       const bodyParser = require('body-parser');
       app.use(bodyParser.json());
@@ -171,7 +171,7 @@ app.get('/', (req, res) => {
 });
 
 
-c.  express-handlebars
+c.express-handlebars
  const express = require('express');
  const exphbs = require('express-handlebars');
 
@@ -191,7 +191,7 @@ c.  express-handlebars
 :=>  In Express.js, routes are a way to define how an application responds to client requests. 
      Routes determine how the application should handle different HTTP methods (such as GET, POST, PUT, DELETE) 
      for specific URLs or patterns. Each route is associated with a function (often called a route handler) 
-    that is executed when the route is matched.
+     that is executed when the route is matched.
 
 
 

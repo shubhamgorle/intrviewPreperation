@@ -283,9 +283,8 @@ For example, managing the state of a toggle, input field, or a counter is well-s
 
 import React, { useState } from 'react';
 
-function Counter() {
+function Counter(){
   const [count, setCount] = useState(0);
-
   const increment = () => {
     setCount(count + 1);
   };

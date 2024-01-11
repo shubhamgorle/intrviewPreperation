@@ -1,3 +1,6 @@
+#what is the main difference between html and html5 ?
+:=> it is the new version of the html which is added like Semantic tags.
+
 # What does CSS stand for?
 :=> Cascading Style Sheets.
 
@@ -170,7 +173,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_element_element
 
 6. Child Selector: Targets elements that are direct children of another element. It is denoted by the > symbol between two selectors. 
 For example, div > p targets all <p> elements that are direct children of <div> elements.
-   https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_element_gt
+   https://www
+   .w3schools.com/css/tryit.asp?filename=trycss_sel_element_gt
 
 # What are CSS variables? 
 :=> allow you to define reusable values in CSS. They are similar to variables in programming languages,
