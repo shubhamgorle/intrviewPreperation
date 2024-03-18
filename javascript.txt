@@ -1,3 +1,5 @@
+ https://www.udemy.com/course/javascript-interview      <---- 200 javascript questions
+ 
  # is javascript synchronous language or asynchronous language?
  javaScript is an asynchronous and concurrent
  programming language that offers a lot of 
@@ -44,8 +46,8 @@ output ---> shubham
 
 3. what is NaN (Not-A-Number)?
 => NaN is a property of the global object which value repersenting Not-A-Number.
- In other words, it is a variable in global scope.
-In modern browsers, NaN is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it.
+   In other words, it is a variable in global scope.
+   In modern browsers, NaN is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it.
 
 eg.
 function sanitise(x){
@@ -316,7 +318,6 @@ obj.data()    output---> object
  The chain ends when we reach a prototype that has null for its own prototype.
 
 Prototypes are the mechanism by which JavaScript objects inherit features from one to another.
-JavaScript object have a special property called prototype that is null or reference to another objects.
 
 'Prototype inheritance' in javascript is the linking of prototypes of
  a parent object to a child object to share and utilize the properties of a parent class using a child class.
@@ -355,7 +356,7 @@ Apply is very similar to the call function. The only difference is that in
 apply you can pass an array as an argument list.
 
 Bind is a function that helps you create another function that you can execute later with 
-the new context of  this that is provided.
+the new context of 'this' that is provided.
 
 var jethalal = {
     wife:"Daya",
@@ -573,7 +574,7 @@ All modern browsers support "use strict" except Internet Explorer 9 and lower:
 
 function myArray(){
     this.length = 0;
-}
+} 
 // push
 // pop
 // Map
@@ -861,7 +862,13 @@ console.log(str)
 
 
 *) garbage collector 
-:=> garbage collector is the process of freeing up memory by removing unUsed code.
+:=> garbage collector is the process of freeing up memory by removi ng unUsed code.
 A automatic memory management that relieves you from doing memory management. it destroye those object which are of no use now.
 
+differenec between while and do while loop 
 
+whie                                                                                      do-while
+Condition is checked first then statement(s) is executed.         Statement(s) is executed atleast once, thereafter condition is checked.
+
+It might occur statement(s) is executed zero times,               At least once the statement(s) is executed.
+ If condition is false.

@@ -1,8 +1,6 @@
-import React from 'react'
 import { useState } from 'react';
 const ConditionA = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-
     return (
       <div>
         {isLoggedIn ? <p>Welcome back!</p> : <p>Please log in.</p>}

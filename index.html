@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="./index.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" child-j="width=device-width, initial-scale=1.0">
     <title>interview prep</title>
     <link rel="stylesheet" href="./i">
     <style>
@@ -20,36 +20,29 @@
           justify-items: center;
           align-items: center;
         } */
-        
-        .item{
-            border: 1px solid blue; 
+
+        .item {
+            border: 1px solid blue;
             height: 200px;
             width: 200px;
         }
-        .item1{
+
+        .item1 {
             display: grid;
             justify-items: center;
             align-items: center;
-        } */
-        body{
+        }
+
+        */ body {
             font-family: Gumela;
             font-size: 14px;
             font-weight: 100;
             margin-top: 10px;
         }
+
         /* position:-> static(by default) absolute, relative, fixed, sticky. */
-      .box{
-        border: 2px solid red;
-        width: 150px;
-        height: 150px;
-        display: inline-block;
-        margin: 2px;
-       }
-      .conatainer{
-        border: 1px solid green;
-        background-color: khaki;
-        height: 1400px;
-      }
+
+
         /* 
         #blue{
             background-color: blue;
@@ -62,7 +55,7 @@
         #green{
             background-color: green;
         } */
-        
+
         /* .main{
             display: flex;
             border: 1px solid black;
@@ -83,39 +76,74 @@
             top: 20px;
           
         } */
-        #blue{
-            background-color: blue;
-            position: relative;
-            z-index: 9;
-        }
-        #red{
-            background-color: red;
-            position: relative;
-            z-index: 10;
-        }
-        #green{
-            background-color: green;
-            position: relative;
-            z-index: 7;
-        }
-        table,th,tr,td{
-            border:1px solid black;
+        
+        table,
+        th,
+        tr,
+        td {
+            border: 1px solid black;
             border-collapse: collapse;
+        }
+
+        .position {
+            border: 1px solid black;
+            height: 400px;
+            width: 400px;
+            position: relative;
+        }
+
+        .ele1 {
+            border: 1px solid red;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            left: 10px;
+        }
+
+
+        /* img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: -1;
+        } */
+        /* .inline-block{
+           width: 100px; 
+           height: 100px;
+           border: 1px solid;
+           display: inline-block;
+        } */
+        /* What does justify-content, justifyItems, justifySelf mean? */
+        .container-j{
+            border: 1px solid;
+            display: flex;
+            width: 500px;
+             height: 300px;
+            justify-content:space-evenly;
+            align-items: center;
+
+        }
+        .container-j > div{
+            display: grid;
+            justify-self: center;
+             border: 1px solid red;
+             width: 100px;
+             height: 100px;
         }
     </style>
 </head>
 <title>interview preperation</title>
 
 
-<body>
+<body onload="myfunc()">
     <!-- <div class="main">
         <div class="div1"> div 1</div> 
         <div class="div2"> div 2</div> 
         <div class="div3"> div 3 </div> 
     </div> -->
-    <h1 id="header">Welcome to interview preperation</h1>
+    <!-- <p id="header">Welcome to interview preperation</p> -->
     <!-- <button id="click">Click me</button>  -->
-    <!-- Scrollable content -->
+    <!-- Scrollable child-j -->
     </div>
     <!-- <div class="conatainer">
     <div class="box" id="box1">1</div>
@@ -124,7 +152,6 @@
     <div class="box" id="box4">4</div>
     </div> -->
 
-    <br> <br>
     <!-- form validation in HTML-->
 
     <!-- <form action="" id="form">
@@ -141,41 +168,39 @@
     <input type="submit">
 </form> -->
 
-
-    <!-- <div class="container">
-    <div class="item item1"><a href="#">item 1</a>
-    <p>Testing</p>
-    </div>
-    
-    <div class="item item2"><a href="#">item 2</a></div>
-    <div class="item item3"><a href="#">item 3</a></div>
-    <div class="item item4"><a href="#">item 4</a></div>
-    <div class="item item5"><a href="#">item 5</a></div>
-    <div class="item item6"><a href="#">item 6</a></div>
+    <!-- <table id="table">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>lname</th>
+            <th>email</th>
+            <th>password</th>
+            <th>lpassword</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+    </tbody>
+</table> -->
+    <!-- <div class="position">
+      <div class="ele1"></div>
 </div> -->
 
-    <!-- form validation -->
+<!-- difference between display - block, inline-block, inline -->
+<!-- <div class="inline-block"></div>
+<div class="inline-block"></div>
+<div class="inline-block"></div> -->
 
-    <!-- <form id="input_form" >
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value=""><br><br>
-        <input type="submit" value="Submit">
-      </form> -->
-
-    <!-- form validation -->
-
+</div>
     <!-- z - indexing -->
-    <div class="container">
-        <div class="box" id="blue">1</div>
-        <div class="box" id="red">2</div>
-        <div class="box" id="green">3</div>
-    </div>
+    <!-- <p>z-Index</p>
+    <div id="zindex">
+        <p>this is indexing</p>
+        <img src="https://www.w3schools.com/cssref/w3css.gif" alt="">
+    </div> -->
 
-
-<!-- simple table -->
- <!-- <table>
+    <!-- simple table -->
+    <!-- <table>
     <thead>
         <tr>
             <th>name</th>
@@ -201,241 +226,298 @@
         </tr>
     </tbody>
  </table> -->
+    <!-- colspan rowspan table -->
+    <!-- <table>
+        <tr>
+            <th colspan="2">Name</th>
+            <th rowspan="2">Age</th>
+        </tr>
+        <tr>
+            <th>name</th>
+            <th>sirname</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>57</td>
+        </tr>
+    </table> -->
 
- <table style="width:100%">
-    <tr>
-      <th>Name</th>
-      <td>Jill</td>
-    </tr>
-    <tr>
-      <th rowspan="2">Phone</th>
-      <td>555-1234</td>
-    </tr>
-    <tr>
-      <td>555-8745</td>
-    </tr>
-  </table>
 
-  <table>
-  <tr>
-    <th colspan="2">Name</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>43</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>57</td>
-  </tr>
-</table>
+
+    <!-- What does justify-child-j, justifyItems, justifySelf mean? -->
+<div class="container-j">
+<div class="child-j">
+    <p>a</p>
+    <p>b</p>
+    <p>c</p>
+</div>
+<div class="child-j"> <p>a</p>
+    <p>b</p>
+    <p>c</p></div>
+<div class="child-j"> <p>a</p>
+    <p>b</p>
+    <p>c</p></div>
+<div class="child-j"> <p>a</p>
+    <p>b</p>
+    <p>c</p></div>
+</div>
+
 </body>
-<script >
+<script>
 
-let a1 = [1,2,3]
-let a2 = a1; 
-//  a2 = [...a1]
-a2.pop();
-console.log(a1)
-console.log(a2)
+    // let a1 = [1, 2, 3]
+    // let a2 = a1;
+    // //  a2 = [...a1]
+    // a2.pop();
+    // console.log(a1)
+    // console.log(a2)
 
     // console.log('Welcome to interview preperation');
-//     var arr = [1, 2, 3, 4, 5];
-//     arr.forEach((e, i) => {
-//         console.log(e)
-//     })
+    //     var arr = [1, 2, 3, 4, 5];
+    //     arr.forEach((e, i) => {
+    //         console.log(e)
+    //     })
 
-//     var brr = arr.map((e, i) =>
-//         e + 10
-//     )
-//     console.log(brr)
-
-
-//     var brr = arr.filter((e, i) =>
-//         e > 2
-//     )
-//     console.log(brr)
-
-//    var val =  arr.reduce((a,b)=>{
-//     return a+b
-//    },0)
-//    console.log(val)
-//    console.log(arr)
-
-// var x = 100;
-// function data(){
-//     y = 10;
-// }
-// data();
-// console.log(x,y)   
-// // output :=> 100,10 because if the variable is not declare and value is assign to that 
-// // variable in fuction then var is declare to that initialisation at the
-// // top of the code bydefault 
+    //     var brr = arr.map((e, i) =>
+    //         e + 10
+    //     )
+    //     console.log(brr)
 
 
+    //     var brr = arr.filter((e, i) =>
+    //         e > 2
+    //     )
+    //     console.log(brr)
 
-// let myPromise1 = new Promise(function(resolve, reject) {
-//   let x = 0;
-//     if (x == 0) {
-//     resolve("OK1");
-//   } else {
-//     reject("Error");
-//   }
-// });
+    //    var val =  arr.reduce((a,b)=>{
+    //     return a+b
+    //    },0)
+    //    console.log(val)
+    //    console.log(arr)
 
-// let myPromise2 = new Promise(function(resolve, reject) {
-//   let x = 0;
-//     if (x == 0) {
-//     resolve("OK2");
-//   } else {
-//     reject("Error");
-//   }
-// });
-
-// let myPromise3 = new Promise(function(resolve, reject) {
-//   let x = 0;
-//     if (x == 0) {
-//     resolve("OK3");
-//   } else {
-//     reject("Error");
-//   }
-// });
-// Promise.all([myPromise1,myPromise2,myPromise3]).then(res=>console.log(res))
-// myPromise1.then( 
-//   function(error) {console.log(error);},
-//   function(value) {console.log(value);}
-// );
-// console.log("object")
-
-// let promise1 = new Promise((resolve,reject)=>{
-//     let x = 0;
-//     if(x == 0){
-//         resolve("ok1")
-//     }
-//     else{
-//         reject("error1")
-//     }
-// })
-// let promise2 = new Promise((resolve,reject)=>{
-//     let x = 1;
-//     if(x == 0){
-//         resolve("ok2")
-//     }
-//     else{
-//         reject("error2")
-//     }
-// })
-// let promise3 = new Promise((resolve,reject)=>{
-//     let x = 0;
-//     if(x == 0){
-//         resolve("ok3")
-//     }
-//     else{
-//         reject("error2")
-//     }
-// })
-// Promise.all(([promise1,promise2,promise3])).then((val)=>{
-// console.log(val)
-// },
-// (err)=>{
-// console.log(err)
-// })
-// promise1.then((value)=>{
-//     console.log(value)
-// },
-// (err)=>{
-// console.log(err)
-// }
-// )
-// var obj = {
-//     name:"shubham",
-//     data:function(){  
-//        setTimeout(() => {
-//        console.log(this.name)
-//        }, 1000);
-//     }
-// }
-// obj.data()
-
-
-// var obj = {
-//     name:"shubham",
-//     data:function(){  
-//        setTimeout(function(){
-//        console.log(this)
-//        }, 1000);
-//     }
-// }
-// obj.data()
-
-// var obj = {
-//     name:"shubham",
-//     data:function(){  
-//        console.log(this.name)
-//     },
-//     dataa:()=>
-//         console.log(this)
-// }
-// obj.data()
-// obj.dataa()
+    // var x = 100;
+    // function data(){
+    //     y = 10;
+    // }
+    // data();
+    // console.log(x,y)   
+    // // output :=> 100,10 because if the variable is not declare and value is assign to that 
+    // // variable in fuction then var is declare to that initialisation at the
+    // // top of the code bydefault 
 
 
 
-// We can set the prootype for a object if we want some properties and methods for it
-// var a = {
-//     name:'Shubham'
-// }
-// var b = {
-//     data:()=>{
-//         console.log("Console Is Working");
-//     }
-// }s
-// a.__proto__ = b;
-// a.data();
+    // let myPromise1 = new Promise(function(resolve, reject) {
+    //   let x = 0;
+    //     if (x == 0) {
+    //     resolve("OK1");
+    //   } else {
+    //     reject("Error");
+    //   }
+    // });
+
+    // let myPromise2 = new Promise(function(resolve, reject) {
+    //   let x = 0;
+    //     if (x == 0) {
+    //     resolve("OK2");
+    //   } else {
+    //     reject("Error");
+    //   }
+    // });
+
+    // let myPromise3 = new Promise(function(resolve, reject) {
+    //   let x = 0;
+    //     if (x == 0) {
+    //     resolve("OK3");
+    //   } else {
+    //     reject("Error");
+    //   }
+    // });
+    // Promise.all([myPromise1,myPromise2,myPromise3]).then(res=>console.log(res))
+    // myPromise1.then( 
+    //   function(error) {console.log(error);},
+    //   function(value) {console.log(value);}
+    // );
+    // console.log("object")
+
+    // let promise1 = new Promise((resolve,reject)=>{
+    //     let x = 0;
+    //     if(x == 0){
+    //         resolve("ok1")
+    //     }
+    //     else{
+    //         reject("error1")
+    //     }
+    // })
+    // let promise2 = new Promise((resolve,reject)=>{
+    //     let x = 1;
+    //     if(x == 0){
+    //         resolve("ok2")
+    //     }
+    //     else{
+    //         reject("error2")
+    //     }
+    // })
+    // let promise3 = new Promise((resolve,reject)=>{
+    //     let x = 0;
+    //     if(x == 0){
+    //         resolve("ok3")
+    //     }
+    //     else{
+    //         reject("error2")
+    //     }
+    // })
+    // Promise.all(([promise1,promise2,promise3])).then((val)=>{
+    // console.log(val)
+    // },
+    // (err)=>{
+    // console.log(err)
+    // })
+    // promise1.then((value)=>{
+    //     console.log(value)
+    // },
+    // (err)=>{
+    // console.log(err)
+    // }
+    // )
+    // var obj = {
+    //     name:"shubham",
+    //     data:function(){  
+    //        setTimeout(() => {
+    //        console.log(this.name)
+    //        }, 1000);
+    //     }
+    // }
+    // obj.data()
+
+
+    // var obj = {
+    //     name:"shubham",
+    //     data:function(){  
+    //        setTimeout(function(){
+    //        console.log(this)
+    //        }, 1000);
+    //     }
+    // }
+    // obj.data()
+
+    // var obj = {
+    //     name:"shubham",
+    //     data:function(){  
+    //        console.log(this.name)
+    //     },
+    //     dataa:()=>
+    //         console.log(this)
+    // }
+    // obj.data()
+    // obj.dataa()
 
 
 
-
-
-let cities = [
-
-   {name: 'Los Angeles', population: 3792621},
-
-   {name: 'New York', population: 8175133},
-
-   {name: 'Chicago', population: 2695598},
-
-   {name: 'Houston', population: 2099451},
-
-   {name: 'Philadelphia', population: 1526006}
-
-];
-   let newcities = cities.filter((e)=>{
-           return e.population > 3000000
-})
-console.log(newcities)
-//Output should be like this {"A":32,"B":25,"D":90,"E":30}
-
-
-
-// let a = 5;
-// let b = 6;
-//  let temp = a;
-//   a = b;
-//   b = temp;
-// console.log(a);
-// console.log(b);
-console.log("rgg" + 3)
-console.log("3"-3)
-console.log("3"*3)
-console.log("3"/3)
+    // We can set the prootype for a object if we want some properties and methods for it
+    // var a = {
+    //     name:'Shubham'
+    // }
+    // var b = {
+    //     data:()=>{
+    //         console.log("Console Is Working");
+    //     }
+    // }s
+    // a.__proto__ = b;
+    // a.data();
 
 
 
 
+
+    let cities = [
+
+        { name: 'Los Angeles', population: 3792621 },
+
+        { name: 'New York', population: 8175133 },
+
+        { name: 'Chicago', population: 2695598 },
+
+        { name: 'Houston', population: 2099451 },
+
+        { name: 'Philadelphia', population: 1526006 }
+
+    ];
+    let newcities = cities.filter((e) => {
+        return e.population > 3000000
+    })
+    console.log(newcities)
+
+
+
+    // let a = 5;
+    // let b = 6;
+    //  let temp = a;
+    //   a = b;
+    //   b = temp;
+    // console.log(a);
+    // console.log(b);
+    // console.log("rgg" + 3)
+    // console.log("3"-3)
+    // console.log("3"*3)
+    // console.log("3"/3)
+
+    // var arr = JSON.parse(localStorage.getItem("formdata")) || [];
+    // document.getElementById("form").addEventListener("submit", handleInputForm)
+    // function handleInputForm(e){
+    // e.preventDefault();
+    // console.log("object")
+    // let name = document.getElementById("name").value
+    // let lname = document.getElementById("lname").value
+    // let email = document.getElementById("email").value
+    // let password = document.getElementById("password").value
+    // let cpassword = document.getElementById("cpassword").value
+
+    // document.getElementById("name").value="";
+    // document.getElementById("lname").value="";
+    // document.getElementById("email").value="";
+    // document.getElementById("password").value="";
+    // document.getElementById("cpassword").value="";
+
+    // var newEntry = {
+    //     name,lname,email,password,cpassword
+    // }
+    // arr.push(newEntry);
+    // localStorage.setItem("formdata",JSON.stringify(arr));
+    // displayTable(name, lname, email, password, cpassword);
+    // }
+
+
+    // function displayTable(name, lname, email, password, cpassword){
+    //     var formdata = JSON.parse(localStorage.getItem("formdata")) || [];
+    //     document.querySelector("tbody").innerHTML = "";
+    //     formdata.map(()=>{
+    //         var tr = document.createElement("tr");
+    //         var td1 = document.createElement("td");
+    //         var td2 = document.createElement("td");
+    //         var td3 = document.createElement("td");
+    //         var td4 = document.createElement("td");
+    //         var td5 = document.createElement("td");
+    //         td1.textchild-j = name;
+    //         td2.textchild-j = lname;
+    //         td3.textchild-j = email;
+    //         td4.textchild-j = password;
+    //         td5.textchild-j = cpassword;
+    //         tr.append(td1,td2,td3,td4,td5);
+    //         document.querySelector("tbody").append(tr);
+    //     })
+    // }
+
+
+    function myfunc() {
+        console.log("window is loaded")
+    }
 </script>
 
 </html>

@@ -1,18 +1,20 @@
 1. Tell me about yourself
 :=> 
-Good morning  Sir/mam.
+Good afternoon Sir.
 i am shubham gorle from orange city i.e nagpur.
 about my  education, i have completed diploma in mechanical engineering form GHRP nagpur and BE in mechanical engineering from RTMNU.
-i have also completed MERN STACK developement course from masai school bengluru.
+i have also completed MERN STACK developement course from masai school, bengluru.
 I specialize in the MERN stack, which includes MongoDB, Express.js, React.js, and Node.js.
 During my studies, I worked on a project that involved building a clone of shop.com, clone of expendia using html, css and javascript and clone 
 of Koo application using React js. 
+my hobbies are to playing cricket and listnining spritual song as wel.
 I'm excited about the opportunity to contribute my expertise and learn from the experienced team at your company.
 Thank you for considering me as a potential addition to your team.
 
 
 2. What prompted you to pursue a career in mern stack developement ?
 :=> 
+
 when i was in final year of graduation i had an idea on which i wanted to build a project which was related to computer 
 science and i did not able to build it bcz i did not familier with the tech stack which is required to build that project.
 but i wanted to learn the tech stack which is required for building that application.
@@ -22,34 +24,42 @@ thats why i choosen mern stack developer as a carrier.
 3. why you shift your carrier from mechanical enginnering to computer science ?
 :=>
 after completion of graduation i discuss with my seniors about jobs availability in feild of mechanical enginnering.
-and they told me we wanted to shift our carrier from mechanical to IT after having 2-3 yr of experience due to slow carrier growth.
-then i think after having experice in core feild they are shifting their carrier then i should not waste time in trying someting because a great man 
-says you should learn from other's mistakes. thats why i choosen mern stack developer as a carrier. 
+and they told me they wanted to shift their carrier from mechanical to IT due to slow carrier growth.
+then i think after having experice of 2-3 yrs in core feild they are shifting their carrier then i should not waste time in 
+trying someting because a great man says you should learn from other's mistakes. thats why i choosen mern stack developer as a carrier. 
  
  
 4 what is your strength ?
 :=> 
 My gretest strenth i would like to say i am peoples person, i enjoy working in teams. during my masai school journey i have worked on three 
 projects in a team of 4 peoples for each project and i don't think they have complaints against me.
-of time.
+
 
 5. what is your weakness ?
 :=>
 public speaking makes me nervous Althught i don't need public speaking for my role as a mern stack developer but i still thing it is important
 skill, especially when i want to offer up my opinions in meetings or group discussions and i am working on this weakness to overcome it.
 
-6. Why do you want to work here specifically?
-:=> to be very honest i am not too proficient in this feild and i am looking for an organisation where i can learn and upskill myself and
-you are are looking for a employe who can give their 120 per while learning so i can give my 120 per while learning and be a profient employ asap.
 
 7. what do you know about our company ?
-:=> 
-avatu founded on 2018 and it is service based company which provide many services includes consulting, implementation and managed services.
-you help clients achieve their objectives of digital transformation. 
-you structure your teams on the basis of client requirement and provide them respective services quickly. 
-The team includes Developers, Subject Matter Experts, Implementation Specialists, Business Analysts ,etc. 
+:=>  Zealeye.Ai specializes in user experience design, mobile app development, and RPA solutions using UiPath and Blue Prism.
+     With expertise in AI (Artificial Intelligence), ML(Machine Learning) , and software development, we aim to transform
+     businesses across industries through innovative solutions.
+    
 
-8. tell me about your project ?
+
+what is RPA solutions ?
+ :=>  RPA (Robotic Process Automation) solutions involve using software robots or "bots" to automate repetitive
+  and rule-based tasks typically performed by humans. These bots can mimic human interactions with digital systems 
+  and applications to execute tasks such as data entry, data extraction, form filling, and more. RPA technology 
+  aims to streamline workflows, increase efficiency, and reduce human error in business processes.
+    
+UiPath and Blue Prism are two of the leading software platforms for Robotic Process Automation.
+UiPath: UiPath is an RPA platform that provides a suite of tools for automating repetitive tasks..
+Blue Prism: Blue Prism is another RPA platform designed to automate business processes.
+
+
+8. tell me about your project ? 
 shop.com :=> 
     my first project was the clone of shop.com. 
     shop.com is ecommerse website which provide deals on clothes, beauty, shoes & electronics.
@@ -58,6 +68,11 @@ shop.com :=>
     my area of responsibility in this project was i Built the landing page, add to cart page and 
     control the GitHub codebase & worked on the integration of all pages.
 
+ the biggest chalange for my team was collecting the data and converting in the form of array of objects because this
+ was our first project we did not know that we can go on github and see the project of different people and can copy the data
+ so prepare our data by ourself.
+ second chalange was lot of conflict arise while integrating all the pages because we have use github as a codebase everyone push their 
+ code in github and pull the code others code.
 
 chalanges you faced in this project ?
 
@@ -74,66 +89,160 @@ Added filter functionality, page linking.
 9. what is your goal ?
 i want to become a best web developer and to become a best web developer i need to improve my skills, 
 to improve my skills i need new chanlanges and i feel like i will get new chalanges everyday while 
-working in your company. that will improve my skills and i would give my 100 per output and i will 
+working in your company. that will improve my skills and when i would give my 100 per output i will 
 achieve my carrier goal of becoming the best web developer.
 
 10. where do you see yourself in next 5 year ?
 :=> Over the next five years, I see myself taking on new and exciting projects within your company. 
-    I truly believe that can pursue my career goals and eventually become a senior developer within your organization.
+    I truly believe that i can pursue my career goals and eventually become a senior developer within your organization.
 
-11. why should we hire you ?
+11. why should  we hire you ? 
 sir i believe i am great feet for this role i am self motivated person and give 100 per to the any task that given 
 to me that is why i been good with my acadamics and surely i will do same for any project that is given to me in company.
 i also work good as a group member that why i have 3 projects in team. 
 overall i believe i can contribute a lot to the organisation with my skill. 
-:=>
-you are hiring people for giving internship so you will first give traning and they will starts working for you 
-so obiously you are expecting 3 major things in candidate first one is quick learner and i think i am quick learner second one is loyalty
-because you invest in candidate then the candidate should be loyal with you and third one is candidate should be familier with techstack 
-mensioned in job description. and i meet all this obious expectation from company.
 
-12. tell me one situation when 
-
-13. Why do you want to work here specifically?
 
 14. Can you describe a time when you had to work in a team?"
    "Tell me about a challenge you faced and how you overcame it.
+:=>
+         
+                         CEO ROUND
 
-
-
-
+1. Project explanation
+:=> 
+shop.com :=> 
+    my first project was the clone of shop.com. 
+    shop.com is ecommerse website which provide deals on clothes, beauty, shoes & electronics.
+    this was collaborative project, built in 4 days by a team of 4 developers.
+    the features of this website includes Login, Signup, Filter & Delete, search.
+    my area of responsibility in this project was i Built the landing page, add to cart page and 
+    control the GitHub codebase & worked on the integration of all pages.
 
  
+
+
+Expendia :=>
+This is the clone of expendia application which
+able to book the hotel online. It is a collaborative
+project of four members which is completed in
+four days.
+Login, Signup, Filter, Delete, Hotel booking &
+google map.
+Built Hotel booking pages and their functionalities.
+Added filter functionality, page linking.
+
+2. chalanges you faced in this project ?
+:=>the biggest chalange for my team was collecting the data and converting in the form of array of objects because this
+ was our first project we did not know that we can go on github and see the project of different people and can copy the data
+ so prepare our data by ourself.
+ second chalange was lot of conflict arise while integrating all the pages because we have use github as a codebase everyone push their 
+ code in github and pull the code other's code.
+ 
+ most important think i learn from this project was if we want to complte our project before given deadline then always code html 
+ with required css. dont try to give complete css it consume lot of time. so after giving required css first work on functionality and after 
+ completing the functionality work on css. 
+
+
+3. what are your strenghs ?
+:=> My gretest strenth i would like to say i am peoples person, i enjoy working in teams.
+    during my masai school journey i have worked on three projects in a team of 4 peoples for each project
+    and i don't think they have complaints against me.
+
+
+4. why you want to join our company ? how you will help our company?
+:=> I am particularly drawn to your company because you believe in Delivering Excellence Earning Trust.. This aligns with my
+    own professional values. this made me even more enthusiastic about the opportunity to contribute to such a dynamic 
+    and forward-thinking organization." 
+    i am also familier with the tecstack which you mension in job description.
+    as you are offering internship for six month so you are looking for a candidate who is quick learner and good in javascripts so 
+    it will easier for you to train the candidate and who has loyal personality so after giving traning for first six month he
+    can contribute to the organisation for long period of time.
+    i think i meet all these expectations and requirements thats why i want to join your company.
+     
     
 
 
-Introduction and Background:
 
-"Tell me about yourself."
-"What prompted you to pursue a career in [specific field]?"
-Education and Skills:
+5. how do you handle work in teams ?
+:=>  One of the key aspects of how I handle work in teams is through strong communication. 
+     I prioritize active listening to understand my team members' perspectives, concerns, and ideas. 
+     This not only helps in building a cohesive team but also ensures that everyone's input is valued.
+     I approach conflicts as opportunities for growth and learning."
+     "I ensure effective time management which help the team to deliver high-quality work on schedule.
+     "I learn from both successes and challenges, refining our processes for future projects.
 
-"Can you elaborate on your academic background?"
-"What programming languages/software/tools are you familiar with?"
-"Do you have any relevant projects or internships you'd like to discuss?"
-Behavioral and Situational:
 
-"Can you describe a time when you had to work in a team?"
-"Tell me about a challenge you faced and how you overcame it."
-"How do you handle tight deadlines?"
-Motivation and Career Goals:
 
-"Why are you interested in this particular role?"
-"Where do you see yourself in the next five years?"
-Company Knowledge:
+6. where do you look youself after 5 years ?
+:=> Over the next five years, I see myself taking on new and exciting projects within your company. 
+    I truly believe that can pursue my career goals and eventually become a senior developer within your organization.
 
-"What do you know about our company?"
-"Why do you want to work here specifically?"
-Strengths and Weaknesses:
 
-"What do you consider your strengths?"
-"Can you discuss an area you're looking to improve?"
-Communication and Interpersonal Skills:
+7. if you have done big mistake in project how did you tackle ?
+:=> one mistake which i think of while working on clone of shop.com project was, it was not very big mistake, when i working on  
 
-"How do you handle conflicts or disagreements?"
-"Give an example of a time you had to communicate complex information."
+
+8. what is your salary expectations?
+:=> As of now i am fresher so i don't have idea about how much i deserve but i resquest you to make best possible offer for me 
+    i will discuss with my masai mentors and let you know within a day.
+
+9. explain your hobies
+:=> My interests include playing cricket and engaging in fitness activities, 
+    such as working out at the gym. I believe that maintaining physical well-being is very important. 
+    Participating in activities like gym workouts, running, or playing outdoor sports is essential 
+    for staying physically fit. This enables us to perform wel in our profession.
+
+    i also use to listen spritual songs for mental peice. because
+    daily we sleep at night which predominantly addresses 
+    physical rest rather than mental relaxation. to give relaxation to the mind 
+    i use to listen spriatual songs which create a harmonious balance that extends beyond physical well-being.
+
+10. tell me about your family ?
+  there are 9 members in my family as i live in join family. i have a brother, mom, grandpa, uncle, aunt and 3 sisters.
+  my bother and 3 sisters are studing write now my uncle is farmer and my mom and aut also work at farm.
+
+
+11. what you do in your free time ?
+:=> as of now i am preparing for interviews so in free time i used to spend time on linkedin and naukari.com.
+    sometimes i used to listen spritual songs for mental peice which help me to give relaxation to my mind. 
+
+
+ *********PLACEMENT PATHWAY PROGRAM ASSIGNMENTS*********
+
+1. What are your career objectives?/Where do you see yourself 5 years
+from now?
+:=> i want to become a best web developer and to become a best web developer i need to improve my skills, 
+    to improve my skills i need new chanlanges and i feel like i will get new chalanges everyday while 
+    working in your company. that will improve my skills and when i would give my 100 per output i will 
+    achieve my carrier goal of becoming the best web developer.
+
+     Over the next five years, I see myself taking on new and exciting projects within your company. 
+     I truly believe that i can pursue my career goals and eventually become a senior developer within your organization.
+
+
+2. What is your greatest personal/professional achievement so far?
+:=> My gretest professional achievement are i got third prize in 4th unit constuct week project competition at masai school, bengluru.  
+    my project was the clone of shop.com. 
+    shop.com is ecommerse website which provide deals on clothes, shoes, beauty & electronics.
+    this was collaborative project, built in 4 days by a team of 4 developers.
+    i got first prize in state level project competition Dipex-2019 at Nanded.
+    my personal achievement is i was second topper in  winter-2017 MSBTE board exam.
+    This is all about my personal/professional achievement so far.
+
+3.Tell me about a team project you were involved in. What was your role,
+  and what was the outcome?
+:=> my first team project was the clone of shop.com. 
+    shop.com is ecommerse website which provide deals on clothes, beauty, shoes & electronics.
+    this was collaborative project, built in 4 days by a team of 4 developers.
+    the features of this website includes Login, Signup, Filter & Delete, search.
+    The teckstack we had used for building this project was hmtl, css, javascript.
+    my area of responsibility in this project was i had Built the landing page, add to cart page and 
+    control the GitHub codebase & worked on the integration of all pages.
+
+    the biggest chalange for my team was lot of conflict arise while integrating all the pages 
+    which consume our time alot.
+ 
+    most important think i learn from this project was if we want to complete our project before given deadline then always code html 
+    with required css. dont try to give complete css it consume lot of time. so after giving required css first work on functionality and after 
+    completing the functionality work on css. 

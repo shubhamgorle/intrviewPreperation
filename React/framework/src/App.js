@@ -1,51 +1,91 @@
-import React, { useState, useEffect,useRef ,Profiler} from 'react';
-import './App.css';
+import './App.js';
+import Usereducer from './Hooks/usereduced/Usereducer.jsx';
+function App() {
+    return (
+        <div className="App">
+            <Usereducer/>
+        </div>
+    );
+}
 
-// function App() {
-//   const [time, setTime] = useState(0);
-//   const [countdown, setCountdown] = useState(false);
+export default App;
 
-//   const startCountdown = () => {
-//       setTime(time+1);
-//       setCountdown(true);
-//   }
-//   const stopCountdown =()=>{
-//     setCountdown(false);
-//   }
-//   useEffect(() => {
-//     let interval;
 
-//     if (countdown) {
-//       interval = setInterval(() => {
-//         setTime(prevTime => prevTime + 1);
-//       }, 1000);
-//     } else{
-//       clearInterval(interval);
-//       setCountdown(false);
-//     }
-//     return () => clearInterval(interval);
-//   }, [countdown, time]);
 
-//   //  the return () => clearInterval(interval); line ensures that the interval is cleared when the component
-//   //  is unmounted or when the dependencies of the useEffect hook change
+// import './App.css';
+// // import Counter from './Redux-component/Counter';
+// import Democontexts from './contextApi/Democontexts';
+// // function App() {
+// //   const [time, setTime] = useState(0);
+// //   const [countdown, setCountdown] = useState(false);
 
-//   // The cleanup function is defined inside the useEffect hook using return () => clearInterval(interval);. 
-//   // This cleanup function is responsible for clearing the interval when the component is unmounted or when 
-//   // the countdown or time values change.
-//   return (
-//     <div className="App">
-//       <h1>Timer App</h1>
-//       <div className="timer">
-//           <h2>{time} seconds</h2>
-//             <button onClick={startCountdown}>Start Countdown</button>
-//             <button onClick={stopCountdown}>stop Countdown</button>
-//       </div>
-//     </div>
-//   );
+// //   const startCountdown = () => {
+// //       setTime(time+1);
+// //       setCountdown(true);
+// //   }
+// //   const stopCountdown =()=>{
+// //     setCountdown(false);
+// //   }
+// //   useEffect(() => {
+// //     let interval;
+
+// //     if (countdown) {
+// //       interval = setInterval(() => {
+// //         setTime(prevTime => prevTime + 1);
+// //       }, 1000);
+// //     } else{
+// //       clearInterval(interval);
+// //       setCountdown(false);
+// //     }
+// //     return () => clearInterval(interval);
+// //   }, [countdown, time]);
+
+// //   //  the return () => clearInterval(interval); line ensures that the interval is cleared when the component
+// //   //  is unmounted or when the dependencies of the useEffect hook change
+
+// //   // The cleanup function is defined inside the useEffect hook using return () => clearInterval(interval);. 
+// //   // This cleanup function is responsible for clearing the interval when the component is unmounted or when 
+// //   // the countdown or time values change.
+// //   return (
+// //     <div className="App">
+// //       <h1>Timer App</h1>
+// //       <div className="timer">
+// //           <h2>{time} seconds</h2>
+// //             <button onClick={startCountdown}>Start Countdown</button>
+// //             <button onClick={stopCountdown}>stop Countdown</button>
+// //       </div>
+// //     </div>
+// //   );
+// // }
+
+// // export default App;
+// // function App(){
+// //     const [state, setstate] = useState("");
+// //     var count = 0;
+// //     var refcount = useRef(0)
+// //     useEffect(()=>{
+// //         count++;
+// //         refcount.current = refcount.current+1;
+// //     })
+// //     return (
+// //         <div className='App'>
+// //        <input type='text' value={state} onChange={(e)=>setstate(e.target.value)}/>
+// //       <h1>refcount:{refcount.current}</h1>
+// //       <h1>count:{count}</h1>
+// //         </div>
+// //     )
+// // }
+// // export default App;
+// function App(){
+    
+//     return (
+//         <div className='App'>
+//             {/* <Counter/> */}
+//            < Democontexts/>
+//         </div>
+//     )
 // }
-
 // export default App;
-
 // 1. **************************************
 
 // import {Profiler} from 'react'
@@ -113,3 +153,4 @@ import './App.css';
 //       );
 // }
 // export default App;
+

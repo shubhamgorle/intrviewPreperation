@@ -77,7 +77,7 @@ Minimal Changes : The goal of the diffing algorithm is to find the minimal set o
 
 
 8. why we are using react ?
-:=> we are using React because it offers efficient UI rendering, promotes code reusability, Unidirectional data flow
+:=> we are using React because it offers efficient UI rendering, promotes code reusability, Unidirectional data flow,
     provides a clear and declarative way to describe UIs, has a supportive community, and is backed by a
     powerful ecosystem of tools and libraries. These factors collectively make React a strong choice for
     building modern and interactive web applications.
@@ -101,14 +101,11 @@ function App() {
     update   :- Grouth of your component.
     unmounting :- death of your component.
 
-7. Explain how lists work in React?
-8. How does Class Components work?
-
 
 11. What are keys in React?
-:=>  A “key” is a special attribute you need to include when creating lists of elements in React.
-     Keys are used in React to identify which items in the list are changed, updated, or deleted.
+:=>  A “key” is a special attribute we need to include when creating lists of elements in React.
      Keys are used to give an identity to the elements in the lists.
+     Keys are used to identify which items in the list are changed, updated, or deleted.
 
      const MyList = ({ items }) => {
   return (
@@ -126,15 +123,17 @@ function App() {
     When a component is wrapped with React.memo(), React will automatically check whether 
     the component's props have changed since the last render. If the props are the same, the cached 
     result of the previous render is returned, and the component is not re-rendered.
+    It prevents unnecessary re-renders of a component when its props haven't changed.
 
 13. What is the difference between react.memo and react.useMemo?
                                                                    |   
 React.memo:
 
-React.memo is a higher-order component that you can use to optimize the rendering of functional components.
-It works by memoizing the rendered output of a component and reusing it if the component is rendered with the same props.
+React.memo is a higher-order component that you can use to optimize the rendering performance of functional components.
+When a component is wrapped with React.memo(), React will automatically check whether 
+the component's props have changed since the last render. If the props are the same, the cached 
+result of the previous render is returned, and the component is not re-rendered.
 It prevents unnecessary re-renders of a component when its props haven't changed.
-Useful for preventing the rendering of components that have the same props as their previous render.
 It doesn't affect the internal logic or calculations within the component; it only focuses on whether 
 the component should be re-rendered based on its props.
 
@@ -142,7 +141,6 @@ the component should be re-rendered based on its props.
   // ...
   return <div>{value}</div>;
 });
-
 
 React.useMemo is a hook that allows you to memoize the result of a computation within a functional component.
 It takes a function and an array of dependencies as arguments. The result of the function is cached and only 
@@ -187,11 +185,7 @@ const SomeComponent = ({ array }) => {
      The effect will be re-run whenever any of the values in the dependencies array change between renders.
 
 
-16. 
-
-
-
-16. What are useRefs? What are some usecases??
+16. What are useRefs? What are some usecases?
 :=> The useRef Hook allows you to persist values between renders.
     It can be used to store a mutable value that does not cause a re-render when updated.
 
@@ -200,8 +194,8 @@ const SomeComponent = ({ array }) => {
 function App(){
   const [inputValue, setInputValue] = useState("");
   const count = useRef(0);
-var count1 = 0;
-  useEffect(() => {
+   var count1 = 0;
+   useEffect(() => {
     count.current = count.current + 1;
     count1 = count1 + 1;
   });
@@ -222,7 +216,7 @@ export default App;
 
 17. What is useCallback?
     :=> The React useCallback Hook returns a memoized callback function.
- note:- The useCallback and useMemo Hooks are similar. The main difference is that useMemo 
+ note:- The `useCallback` and useMemo Hooks are similar. The main difference is that useMemo 
         returns a memoized value and useCallback returns a memoized function. 
 import React, { useState, useCallback } from 'react';
 

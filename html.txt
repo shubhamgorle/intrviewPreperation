@@ -263,3 +263,7 @@ psudo classes https://www.w3schools.com/css/tryit.asp?filename=trycss_pseudo-cla
 
 Note : => z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) 
           and flex items (elements that are direct children of display:flex elements).
+
+
+display:none ---> will hide element ans space !
+visibility:hidden ---> will hide the element but show the empty space !

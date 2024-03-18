@@ -1,35 +1,35 @@
-// // "use strict"
+// "use strict"
 
 
-// // let a = 10;
-// console.log(a);
-function person(name,energy){
 
+console.log(a);
+var a;
+function person(name, energy) {
     var person = {};
     person.name = name;
     person.energy = energy;
 
 
-    person.eat  = function(energy){
-        console.log(this.name,'is eating')
+    person.eat = function (energy) {
+        console.log(this.name, 'is eating')
         this.energy += energy
     }
 
 
-    person.sleep = function(energy){
-        console.log(this.name,'is sleeping')
+    person.sleep = function (energy) {
+        console.log(this.name, 'is sleeping')
         this.energy += energy
     }
 
 
-    person.code = function(energy){
-        console.log(this.name,'is coding')
+    person.code = function (energy) {
+        console.log(this.name, 'is coding')
         this.energy -= energy
     }
     return person;
 }
-var sai = person("sai",15)
-var jay = person("jay",12)
+var sai = person("sai", 15)
+var jay = person("jay", 12)
 
 
 // console.log(sai) 
@@ -62,7 +62,7 @@ var jay = person("jay",12)
 //     // var person = {};   instead of this we can create the person object like
 //     var person = Object.create(personMethods)
 //     // now we will not have unneccessary methods in every call
-//     // but to access this javascropt has inbuild term .ie prototype
+//     // but to access this javascript has inbuild term .ie prototype
 //     person.name = name;
 //     person.energy = energy;
 //     //  person.eat=personMethods.eat
@@ -83,22 +83,21 @@ function Person(name, energy){
     // var person = Object.create(Person.prototype)
     this.name = name;
     this.energy = energy;
-   
 }
-Person.prototype.eat = function (energy) {
+Person.prototype.eat = function (energy){
     console.log(this.name, 'is eating')
     this.energy += energy
 }
-Person.prototype.sleep = function (energy) {
+Person.prototype.sleep = function (energy){
     console.log(this.name, 'is sleeping')
     this.energy += energy
 }
-Person.prototype.code = function (energy) {
+Person.prototype.code = function (energy){
     console.log(this.name, 'is coding')
     this.energy -= energy
 }
-var sai = new Person("sai",15)
-var jay = new Person("jay",12)
+var sai = new Person("sai", 15)
+var jay = new Person("jay", 12)
 console.log(sai)
 console.log(jay)
 
@@ -201,9 +200,9 @@ console.log(jay)
 
 ///
 
-function myArray() {
-    this.length = 0;
-}
+// function myArray() {
+//     this.length = 0;
+// }
 // push
 // pop
 // Map
@@ -232,7 +231,7 @@ function myArray() {
 
 
 // // In javascript there are two major datatypes.
-// // 1.primitive  ---> string, number, boolean, null, undefined
+// // 1.primitive  ---> string, number, boolean, null, undefined, bigint, symbol
 // // data is directly store in memory location where variable exist.
 // // 2.reference  --->  array & object
 // // data is stored in variable which is a pointer to allocation in memory where object is stored.
@@ -296,7 +295,7 @@ function myArray() {
 
 // Debouncing
 
-// If user click two times and request time of first request not complete yet then it shoud cancel the first request.
+// If user click two times and request time of first request not complete yet then it will cancel the first request.
 
 // const makeApiCall=()=>{
 //     console.log("API call in progress");
@@ -454,7 +453,7 @@ function myArray() {
 // function allSubjects(maths,english,science=0){
 //      return maths+english+science
 // } 
-    
+
 //     let total = allSubjects(50,60);
 //     console.log(total)  ---> output is 110
 
@@ -523,43 +522,43 @@ function myArray() {
 //    }
 // }
 
-var obj = {
-    name:"shubham",
-    data:function(){  
-       setTimeout(function(){
-       console.log("this")
-       }, 1000);
-    }
-}
+// var obj = {
+//     name:"shubham",
+//     data:function(){  
+//        setTimeout(function(){
+//        console.log("this")
+//        }, 1000);
+//     }
+// }
 // obj.data() 
 // console.log("10")
 
 
 
-let mypromise = new Promise((resolve, reject)=>{
-    let isauth = false;
-    if(isauth){
-        setTimeout(()=>{
-          resolve("operation is completed")
-        },1000)
-    }
-    else{
-        reject("operation is failed")
-    }
-})
+// let mypromise = new Promise((resolve, reject)=>{
+//     let isauth = false;
+//     if(isauth){
+//         setTimeout(()=>{
+//           resolve("operation is completed")
+//         },1000)
+//     }
+//     else{
+//         reject("operation is failed")
+//     }
+// })
 
-mypromise.then((data)=>{
-  console.log(data)
-}).catch((e)=>{
-console.log(e)
-})
+// mypromise.then((data)=>{
+//   console.log(data)
+// }).catch((e)=>{
+// console.log(e)
+// })
 
-function outer(a){
-    return function inner(b){
-        return a + b;
-    }
-}
-console.log(outer(10)(20))
+// function outer(a){
+//     return function inner(b){
+//         return a + b;
+//     }
+// }
+// console.log(outer(10)(20))
 
 
 
@@ -589,73 +588,295 @@ console.log(outer(10)(20))
 
 // console.log(arrayOfObjects);
 
-function rec(w,h){
-this.width = w;
-this.height = h;
+// function rec(w,h){
+// this.width = w;
+// this.height = h;
 
-}
+// }
 
-rec.prototype.area = function(){
-    return this.width*this.height;
-}
+// rec.prototype.area = function(){
+//     return this.width*this.height;
+// }
 
-let re = new rec(1,2);
-console.log(re.area())
+// let re = new rec(1,2);
+// console.log(re.area())
 
 
 // function rectangle(height,width){
-    //     this.width = width;
-    //     this.height=height
-    // }
-    
-    // rectangle.prototype.area = function(){
-    //     return this.width + this.height
-    // }
-    
-    // let box = new rectangle(5,10)
-    // console.log(box.area())
-    
-    // same this we can build using classes.
-    
-    // class rectangle{
-    //     constructor(height,width){
-    //         this.height = height
-    //         this.width = width
-    //     }
-    //     area(){
-    //         return this.height + this.width
-    //     }
-    // }
-    
-    // let box = new rectangle(5,10)
-    // console.log(box.area());
+//     this.width = width;
+//     this.height=height
+// }
 
-    // class rectangle {
-    //     constructor(height,width){
-    //        this.width = width
-    //        this.height = height
-    //     }
-    //     area(){
-    //         return this.width*this.height
-    //     }
-    // }
-    // let box1 = new rectangle(10,20);
-    // console.log(box1.area())
+// rectangle.prototype.area = function(){
+//     return this.width + this.height
+// }
 
-    function exampleFunction() {
-        let x = 100;
-        let y = 300;
-        
-        // Some code here
-        console.log(x+y)
-       
-        // Execution will pause here
-        
-        // More code here
-        
-        let z = x + y;
-        console.log(z);
-      }
-     
-      exampleFunction();
-      
+// let box = new rectangle(5,10)
+// console.log(box.area())
+
+// same this we can build using classes.
+
+// class rectangle{
+//     constructor(height,width){
+//         this.height = height
+//         this.width = width
+//     }
+//     area(){
+//         return this.height + this.width
+//     }
+// }
+
+// let box = new rectangle(5,10)
+// console.log(box.area());
+
+// class rectangle {
+//     constructor(height,width){
+//        this.width = width
+//        this.height = height
+//     }
+//     area(){
+//         return this.width*this.height
+//     }
+// }
+// let box1 = new rectangle(10,20);
+// console.log(box1.area())
+
+// function exampleFunction() {
+//     let x = 100;
+//     let y = 300;
+
+//     // Some code here
+//     console.log(x+y)
+
+//     // Execution will pause here
+
+//     // More code here
+
+//     let z = x + y;
+//     console.log(z);
+//   }
+
+//   exampleFunction();
+
+
+//   reverse string 
+
+
+// eassy way
+// let str = "pratik";
+// let rev = "";
+// for(let i = str.length-1; i>=0; i--){
+//     rev += str[i];
+// }
+// console.log(rev);
+
+
+// // convert string to array 
+// var s = "shubham";
+// var arr = s.split("");
+// console.log(arr)
+
+
+// // convert array to string 
+// var arr = [1,2,3,4,5]
+// var s = arr.join("")
+// console.log(s)
+// console.log(typeof(s))
+
+
+
+// shortcut way 
+// const reverseString = (str)=>{
+//         return str.split("").reverse().join("")
+// split the string into array of character
+// reverse the order of element in array
+// join character back togather into the string
+// }
+
+// let rev = reverseString("shubham");
+// console.log(rev)
+
+// var arr = [1,2,3,4,5];
+// var brr = arr.reverse();
+// console.log(brr) 
+
+// let str = "vicky";
+// let b = str.split("")  
+// console.log(b)
+//  output ---> [ 'v', 'i', 'c', 'k', 'y' ]
+
+
+// find the logest word  in the sentence
+
+// var str = "i love coding in javascript";
+// let arr = str.split(" ");
+// console.log(arr);
+// let ref = "";
+// for(let word of arr){
+//     if(word.length > ref.length){
+//         ref = word
+//     }
+// }
+// console.log(ref)
+// let ref = "";
+// for(let i = 0; i < arr.length; i++){
+//    if(arr[i].length > ref.length){
+//     ref = arr[i];
+//    }
+// }
+// console.log(ref.length)
+
+// let arr = [1,2,3,4,5];
+// let str5 = "bhushan"
+// for(let i of str5){
+//     console.log(i)
+// }
+
+// write the function to remove duplicate element in the array
+// var arr = [1,2,2,3,7,7,3,4,5];
+
+// function RemoveDuplicates(arr){
+//       const uniqueElement = [];
+//       for(let i = 0; i<arr.length; i++){
+//          if(uniqueElement.indexOf(arr[i]) === -1){
+//              uniqueElement.push(arr[i]);
+//          }
+//       }
+//       return uniqueElement;
+// }
+// OR 
+// function RemoveDuplicates(arr){
+// convert the array to a Set which allow only unique values
+// convert set back to an array
+// let newarr = new Set(arr)
+// let finalarr = [...newarr]
+// return finalarr;
+// return [...new Set(arr)]
+// }
+// console.log(RemoveDuplicates(arr))
+
+// var arr = [1,2,3,4,5];
+//  arr.sort();
+//  for(let i = 1; i<arr.length; i++){
+//     if(arr[i] - arr[i-1] == 0){
+//      delete arr[i+1];
+//     }
+//  }
+//  console.log(arr)
+
+// sorting 
+// console.log(arr.sort())
+// var brr = [{
+//     name:"shubham",
+//     age:23
+// },{
+//     name:"vicky",
+//     age:21
+// },{
+//     name:"yash",
+//     age:22
+// },{
+//     name:"vansh",
+//     age:18
+// },]
+// brr.sort((a,b)=>a.name > b.name ? 1: a.age < b.age ? -1 : 0)
+// brr.sort((a,b)=>(a.age-b.age))
+// console.log(brr)
+
+
+// write the function that check two strings are anagram or not
+
+// let str1 = "silent";
+// let str2 = "listen";
+//  function CheckAnagram(s1,s2){
+//    let str1 = s1.split("").sort().join();
+//    let str2 = s2.split("").sort().join();
+//    return str1 === str2;
+//  }
+//  console.log(CheckAnagram(str1,str2));
+
+// traverse the array  by using different type of loops
+// 1.Simple for loop
+// var arr = [1, 2, 3, 4, 5];
+// var n = arr.length;
+// for(let i = 0; i< n; i++){
+//     console.log(arr[i]);
+// }
+
+// for of loop 
+// for(let i of arr){
+//     console.log(i);
+// }
+
+// Using while loop
+// let i = 0;
+// while(i < n){
+//     console.log(arr[i]);
+//     i++;
+// }
+
+// suing do-while loop
+// {
+//     let i = 0;
+//     do{
+//         console.log(arr[i]);
+//         i++;
+//     }while (i < n);
+// }
+
+// print the vviwels present in the string
+
+let s = "aeioubcd";
+let count = 0;
+// for(let i = 0; i<s.length; i++){
+//    if(s[i] == 'a' || s[i] == 'e' ||  s[i] == 'i' || s[i] == 'o' || s[i] == 'u'){
+//     count++;
+//    }
+// }
+// console.log(count);
+
+// let vowels = ['a','e','i','o','u'];
+
+// for(let i of s){
+//     if(vowels.indexOf(i) != -1){
+//       count++;
+//     }
+// }
+// console.log(count)
+
+
+// for(let i of s){
+//         if(vowels.includes(i)){
+//             count++;
+//         }
+//     }
+
+    // console.log(count)
+
+
+    // var a = "abchbstshoessssbghds";
+    // if(a.includes('shoes')){
+    //     console.log("shoes")
+    // }
+    // else{
+    //     console.log("not")
+    // }
+
+    const mypromise1 = new Promise((resolve,reject)=>{
+       setTimeout(() => {
+          if(true){
+            resolve("yes");
+          }
+          else{
+            reject("no");
+          }
+       }, 1000);
+    })
+
+    // mypromise1.then((res)=>{
+    //    console.log(res)
+    // },(err)=>{
+    //      console.log(err)
+    // })
+    // mypromise1.then(res=>console.log(res))
+    // .catch((err)=>console.log(err))
