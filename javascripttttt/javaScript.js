@@ -495,4 +495,106 @@
 
 // write the function to remove duplicate element in the array---------------------------------------------------------------------------->
 // var arr = [1,2,2,3,7,7,3,4,5];
+// arr.sort();
+// for(let i = 1; i < arr.length; i++){
+//     if(arr[i] === arr[i-1]){
+//        arr.splice(i,1)
+//     }
+// }
+// console.log(arr)
+
+
+// var brr = [];
+// for(let i = 0; i < arr.length; i++) {
+//     if(brr.indexOf(arr[i]) == -1){
+//         brr.push(arr[i]);
+//     }
+// }
+// console.log(brr)
+
+// function RemoveDuplicates(arr){
+// // convert the array to a Set which allow only unique values
+// // convert set back to an array
+// let newarr = new Set(arr)
+// console.log(newarr)
+// let finalarr = [...newarr]
+// console.log(finalarr)
+// return finalarr;
+// // OR
+// // return [...new Set(arr)]
+// }
+// console.log(RemoveDuplicates(arr))
+
+
+
+// ----------------------------------------------------------------------------------------------------->
+
+// var brr = [{
+//     name:"shubham",
+//     age:23
+// },{
+//     name:"vicky",
+//     age:21
+// },{
+//     name:"yash",
+//     age:22
+// },{
+//     name:"vicky",
+//     age:18
+// },]
+// brr.sort((a,b)=>a.name > b.name ? 1: a.age < b.age ? -1 : 0)
+// brr.sort((a,b)=>()
+// console.log(brr)
+
+
+// brr.sort((a,b)=>a.age-b.age)
+// console.log(brr)
+
+// brr.sort((a,b)=>a.age > b.age ? 1 : a.age < b.age ? -1 : 0);
+// console.log(brr)
+
+// brr.sort((a,b)=>a.name>b.name?1:a.name<b.name?-1:0);
+// console.log(brr)
+
+// brr.sort((a,b)=> a.name>b.name ? 1: a.age < b.age ? -1 :0)
+// console.log(brr)
+
+// ----------------------------------------------------------------------------------------------------->
+
+// write the function that check two strings are anagram or not
+
+// let str1 = "silent";
+// let str2 = "listen";
+
+// function isAnagram(str1, str2) {
+//       let s1 = str1.split("").sort().join("");
+//       let s2 = str2.split("").sort().join("");
+//       return s1===s2
+// }
+// console.log(isAnagram(str1, str2))
+
+// ----------------------------------------------------------------------------------------------------->
+
+// difference between array.splice and array.slice
+
+// 1. array.splice()   --->
+// At position 2, add 2 elements:
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(2, 0, "Lemon", "Kiwi");
+// console.log(fruits)
+
+// At position 2, remove 2 items:    --> use in delete item from cart 
+// const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+// fruits.splice(2, 2);
+// console.log(fruits)
+
+// 2.array.slice()   ---> use in Add to cart
+// Array.slice() returns selected array elements as a new array:
+
+// const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// const citrus = fruits.slice(1, 3);
+// console.log(citrus)
+// output--->  ['Orange', 'Lemon']
+
 

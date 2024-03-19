@@ -1,9 +1,9 @@
 import './App.js';
-import Usereducer from './Hooks/usereduced/Usereducer.jsx';
+import Parent from './lazyLoading/Parent.jsx';
 function App() {
     return (
         <div className="App">
-            <Usereducer/>
+             <Parent/>
         </div>
     );
 }
