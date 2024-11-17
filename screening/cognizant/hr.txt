@@ -1,0 +1,103 @@
+1. Tell me about yourself
+:=> 
+Good afternoon Sir/mam.
+i am shubham gorle from orange city i.e nagpur.
+about my  education, i have completed diploma in mechanical engineering form GHRP nagpur and BE in mechanical engineering from RTMNU.
+i have also completed MERN STACK developement course from masai school, bengluru.
+During my studies, I worked on a projects that involved building a clone of shop.com, clone of expendia using html, css and javascript.
+my hobbies are to playing cricket and listnining spritual song as wel.
+I'm excited about the opportunity to contribute my expertise and learn from the experienced team at your company.
+Thank you for considering me as a potential addition to your team.
+
+
+2. why should we hire you ? 
+sir i believe i am great feet for this role i am self motivated person and give 100 per to the any task that given 
+to me that is why i been good with my acadamics and surely i will do same for any project that is given to me in company.
+i also work good as a group member that why i have 3 projects in team. 
+overall i believe i can contribute a lot to the organisation with my skill. 
+
+
+3 what is your strength ?
+:=> 
+My gretest strenth i would like to say i am peoples person, i enjoy working in teams. during my masai school journey i have worked on three 
+projects in a team of 4 peoples for each project and i don't think they have complaints against me.
+
+
+4. what is your weakness ?
+:=>
+public speaking makes me nervous Althught i don't need public speaking for my role as a mern stack developer but i still thing it is important
+skill, especially when i want to offer up my opinions in meetings or group discussions and i am working on this weakness to overcome it.
+
+5. What is your greatest personal/professional achievement so far?
+:=> My gretest professional achievement are i got third prize in 4th unit constuct week project competition at masai school, bengluru.  
+    my project was the clone of shop.com. 
+    shop.com is ecommerse website which provide deals on clothes, shoes, beauty & electronics.
+    this was collaborative project, built in 4 days by a team of 4 developers.
+    i got first prize in state level project competition Dipex-2019 at Nanded.
+    my personal achievement is i was second topper in  winter-2017 MSBTE board exam.
+    This is all about my personal/professional achievement so far.
+
+6. where do you look youself after 5 years ?
+:=> Over the next five years, I see myself taking on new and exciting projects within your company. 
+    I truly believe that can pursue my career goals and eventually become a seniore within your organization.
+                                                                    get a senior position within your organisation.
+
+7. tell me about gap in resume ?
+:=> I graduated in 2022, after that I joined a MERN stack development course at Masai School,
+    where I studied until June 2023. During that time, my father became seriously ill, and I took 
+    care of him through all the treatments and diagnoses. Unfortunately, I learned that both of his
+    kidneys had failed. I was with him in the hospital, managing his entire treatment, but sadly, 
+    I was unable to save him, and he passed away. It took me a long time to recover from this loss.
+
+    After 4-5 months, I started preparing for interviews again. That is why you can see a two-year gap in my resume.
+
+
+ 8. what does motivation means to uhhh ?
+ i don't believe on motivation. i am not saying it dosen't work but it work for short time.
+ i belive on just follow the process constistently. focus on the process , do hard work in right direction then you will definately get success.
+
+ 9. how do you deal with critisism ?
+ :=> "If someone is criticizing me, there are two reasons for this. 
+ The first is that he or she may not like me personally. In this case, 
+ I don’t pay attention to such things; I just let go and move forward. 
+ The second reason is that I might have made a mistake. In that case, 
+ I try to find out what I did wrong and work to fix it." 
+
+ 10. what is difference between confidence and overconfidence ?
+ :=> there is very thin line between confidence and overconfidence.
+ if some task is give given to then 
+ "i can complete this task within the given time" is my confidence but
+ "only i can complete the task" it can be turn into my overconfidence.
+
+ 11. difference between hard work and smart work.
+ hard work is nothing but completing work by spending lot of time and effort.
+ smartwork  is nothing but completing work by spending less time and effort.
+ in other words we can say that smartwork is about the abolity to execute task 
+ effectively and efficiently within the time and with quality.
+
+12. why you shift your carrier from mechanical enginnering to computer science ?
+:=>
+after completion of graduation i discuss with my seniors about jobs availability in feild of mechanical enginnering.
+and they told me they wanted to shift their carrier from mechanical to IT due to slow carrier growth.
+then i think after having experice of 2-3 yrs in core feild they are shifting their carrier then i should not waste time in 
+trying someting because a great man says you should learn from other's mistakes. thats why i choosen mern stack developer as a carrier. 
+ 
+ 13. why do you want to join our company ? 
+:=> I am particularly drawn to your company because you believe in Delivering Excellence Earning Trust. This aligns with my
+    own professional values. this made me even more enthusiastic about the opportunity to contribute to such a dynamic 
+    and forward-thinking organization. 
+    second thing is i am quick learner that why i am able to shift my carrier from mechnical to IT in limited period of time.
+    i am very confident that i can learn any thing quickly and start work on it. this will help me in your company
+    to learn quickly while training and immediately start work on it. 
+
+14. you are web developer then why do you want to work here ?
+:=> "If I were get a job relevant to the tech stack I am familiar with, I would still need to
+     learn new technologies or languages. It’s impossible that the work will align perfectly with my 
+     current knowledge. In the field of computer science, 
+     we must be flexible to quickly adapt to new challenges. I am confident that I can learn
+     new things and start contributing as soon as possible.
+
+     Currently, my financial situation is quite challenging. I lost my father last year,
+     it is very difficult for me to wait for opportunities in web development.
+     I am eager to start my career in whichever field I can. 
+     I am very confident that i become the best at what I do."

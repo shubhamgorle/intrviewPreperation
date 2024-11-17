@@ -1,0 +1,39 @@
+h1{
+    width: fit-content;
+    margin: auto;
+}
+/* 1. how to declare the css variable's */
+:root{
+    --bgColor:rgb(174, 38, 38);
+}
+/* .container{
+    width: 100px;
+    height: 10px;
+    background-color: var(--bgColor);
+    margin-bottom: 100px;
+} */
+
+/* justify content, justify item, justify self */
+/* align content, align item, align self */
+/* .item{
+    border: 1px solid;
+    background-color:gray;
+}
+.container{
+    border: 1px solid;
+    background-color: red;
+    display: grid;
+    width: 1000px;
+    height: 500px;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 150px);
+    justify-items:flex-start;
+    align-items:flex-start;
+}
+.item6{
+ display: grid;
+ justify-self: center;
+ align-self: center;
+} 
+*/
+/* endddddd */

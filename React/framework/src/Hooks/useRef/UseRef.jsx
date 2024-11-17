@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef} from 'react'
 
 const UseRef = () => {
     const data = useRef(0);
+    var a = 0;
     useEffect(()=>{
     data.current = data.current+1;
     })
@@ -11,6 +12,7 @@ const UseRef = () => {
     <div>
       <input type="text" value={count} onChange={(e)=>setCount(e.target.value)} />
       <h1>{data.current}</h1>
+      <h1>{a}</h1>
     </div>
   )
 }

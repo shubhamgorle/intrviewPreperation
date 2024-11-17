@@ -1,8 +1,76 @@
+
+// var url1 = "https://dummyjson.com/products/4"
+// var url2 = "https://dummyjson.com/products/2"
+// var url3 = "https://dummyjson.com/products/3"
+
+// async function fetchdata(url){
+//     // console.time("fetchdataTime");
+//     try {
+//         var res = await fetch(url);
+//         var data = await res.json();
+//         // console.timeEnd("fetchdataTime");
+//         return data;
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+// var promise1 = fetchdata(url1)
+// var promise2 = fetchdata(url2)
+// var promise3 = fetchdata(url3)
+
+// Promise.all([promise1, promise2, promise3])
+//     .then((data) => console.log(data))
+//     .catch((err) => console.log(err))
+
+// fetching multiple data at a time using fetch 
+
+// const apiEndpoints = [
+//     'https://dummyjson.com/products/1',
+//     'https://dummyjson.com/products/2',
+//     'https://dummyjson.com/products/3',
+// ];
+
+// // Function to fetch data from a single API endpoint using fetch
+// const fetchData = async (url) => {
+//     try {
+//         const response = await fetch(url);
+//         return await response.json();
+//     } 
+//     catch (error) {
+//         console.error(error);
+//     }
+// };
+
+// // Function to fetch data from multiple API endpoints concurrently
+// const fetchMultipleApis = async (endpoints) => {
+//     try {
+//         var AllPromises = endpoints.map((url) => fetchData(url))
+//         const results = await Promise.all(AllPromises);
+//         return results;
+//     } catch (error) {
+//         console.error(error);
+//     }
+// };
+
+// Usage: Fetch data from multiple APIs
+// fetchMultipleApis(apiEndpoints)
+//     .then(results => {
+//         console.log(results);
+//     })
+//     .catch(error => {
+//         console.error(error);
+//     });
+
+
+
+
+
 // 1. fetch data using async await ---------------------------------------------------------------------------->
 // async function getData(){
 //     try {
-//         let data =  await fetch("https://dummyjson.com/products");
-//         let res = await data.json();
+//         var data =  await fetch("https://dummyjson.com/products");
+//         var res = await data.json();
 //         console.log(res);
 //     } catch (error) {
 //         console.log(error)
@@ -15,7 +83,8 @@
 // fetch("https://dummyjson.com/products")
 // .then((data)=>data.json())
 // .then((res)=>console.log(res))
-// .catch((error)=>console.log(error));
+// .catch((err)=>console.log(err))
+
 
 // 3.hoisting ---------------------------------------------------------------------------->
 
@@ -26,8 +95,8 @@
 
 // 4 Promises ---------------------------------------------------------------------------->
 
-// let mypromise = new Promise((resolve, reject)=>{
-//     let isAuth = false;
+// var mypromise = new Promise((resolve, reject)=>{
+//     var isAuth = false;
 //     if(isAuth){
 //         resolve("true")
 //     }else{
@@ -64,16 +133,26 @@
 //     })
 
 
+
 // 4 this in diffferen schenario's ---------------------------------------------------------------------------->
 
 // var obj1 = {
-//     name:"shubham",
+//     name:"vicky",
 //     fun:function(){
 //         console.log(this)
 //     }
 // }
+// obj1.fun()    
+// ---> output---> Entire object
 
-// obj1.fun()    ---> output---> Entire object
+// var obj1 = {
+//     name:"vicky",
+//     fun:()=>{
+//         console.log(this)
+//     }
+// }
+// obj1.fun()    
+// ---> output---> window object
 
 // var obj1 = {
 //     name: "shubham",
@@ -83,44 +162,35 @@
 //         },1000)
 //     }
 // }
-// obj1.fun()    ---> output---> window object
+// obj1.fun()    
+// ---> output---> window object
 
 // var obj1 = {
 //     name: "shubham",
-//     fun: (() => {
-//         setTimeout(() => {
+//     fun: function() {
+//         setTimeout(()=> {
 //             console.log(this)
 //         }, 1000)
-//     })
+//     }
 // }
+// obj1.fun()
 // obj1.fun() ---> output---> Entire object
 
 
 
-
-
-
-// var obj1 = {
-//     name: "shubham",
-//     fun: function () {
-//         setTimeout(() => {
-//             console.log(this)
-//         })
-//     }
-// }
-// obj1.fun()    
-
 // 5.    ---------------------------------------------------------------------------->
-// const one = false || {} || null;
-// const two = null || false || '';
-// const three = [] || 0 || true;
+const one = false || {} || null;
+const two = null || false || '';
+const three = [] || 0 || true;
 
-// console.log(three);
+console.log(one);
+console.log(two);
+console.log(three);
 
-// empty String and empty array are the truthy values
+// empty curly braces {} and empty array [] are the truthy values
 
 
-// 6. prototype inheritance---------------------------------------------------------------------------->
+// 6. prototype inheritance ---------------------------------------------------------------------------->
 
 // var employe = {
 //    name:"shubham",
@@ -168,18 +238,17 @@
 
 // 8. prototype ---------------------------------------------------------------------------->
 
-// function rectangle(width, height) {
-//  this.width = width;
-//  this.height = height;
+// function rectangle(width, height){
+//  this.width = width
+//  this.height = height
 // }
 // rectangle.prototype.area = function(){
 //     return this.width*this.height
 // }
+// var box1 = new rectangle(10, 30);
+// console.log(box1.area());
 
-// let box1 = new rectangle(10,20);
-// console.log(box1.area())
-
-// if we have to make multiple objects with same properties and methods
+// if we wants to make multiple objects with same properties and methods
 
 // function person(name, energy) {
 //     var person = {};
@@ -194,7 +263,7 @@
 //     }
 //     return person
 // }
-// let per1 = person("shubham", 12)
+// var per1 = person("shubham", 12)
 // console.log(per1)
 // per1.code()
 
@@ -267,16 +336,14 @@
 //     }
 // }
 
-// let box = new Rectangle(10,30);
+// var box = new Rectangle(10,30);
 // console.log(box);
-
 
 
 // 10. BIGINT ---------------------------------------------------------------------------->
 // var num = 2n**53n - 1n;
 // console.log(num)
-// console.log(num+3n)
-
+// console.log(num+2n)    
 
 // 11 .---------------------------------------------------------------------------->
 // const fun1 = ()=>{
@@ -300,24 +367,27 @@
 // for (var i = 0; i < arr.length; i++) {
 //     setTimeout((i) => {
 //         console.log(arr[i])
-//     }, i * 1000,i)
+//     }, i * 1000, i)
 // }
 
 // 13.---------------------------------------------------------------------------->
 // var arr = [11,12,13,14,15];
 // for (ele of arr){
 //     console.log(ele)
-// }   output---> 11,12,13,14,15
+// }  
+//  output---> 11,12,13,14,15
 
 // var arr = [11,12,13,14,15];
 // for (ele in arr){
 //     console.log(ele)
-// }   output---> 0,1,2,3,4
+// }   
+// output---> 0,1,2,3,4
 
 // var arr = [11,12,13,14,15];
 // for (ele in arr){
 //     console.log(arr[ele])
-// }   output---> 11,12,13,14,15
+// }  
+//  output---> 11,12,13,14,15
 
 // var obj = {
 //     name: "shubham",
@@ -337,6 +407,7 @@
 
 
 // closure---------------------------------------------------------------------------->
+// a closure gives you access to an outer function's scope from an inner function
 // var val = "suraj";
 // function outer(){
 //     val = "shubham";
@@ -346,25 +417,26 @@
 //     val = "Vicky"
 //     return inner()
 // }
-// let c2 = outer();
+// var c2 = outer();
 // c2()
 
 
 // debouncing ---> function is call after specific period of inactivity---------------------------------------------------------------------------->
-//  function makeApiCall(){
-//     console.log("API call in progress");
-//  }
 
+// function makeApiCall (){
+//     console.log("API call in progress");
+// }
 // function debouncer(makeApiCall, delay){
-//     var debouncing;
-//     return function(){
-//         debouncing && clearTimeout(debouncing);
-//         debouncing = setTimeout(() => {
-//             makeApiCall.call(this,arguments)
-//         }, delay);
-//     }
-//  }
-// document.getElementById("botton").addEventListener("click", debouncer(makeApiCall, 1000));
+//    var debouncing;
+//    return function(){
+//     debouncing && clearTimeout(debouncing);
+//     debouncing = setTimeout(()=>{
+//     makeApiCall.call(this,arguments);
+//     },delay)
+//    }
+// }
+
+// document.getElementById("botton").addEventListener("click", debouncer(makeApiCall, 3000));
 
 
 // Throtling---------------------------------------------------------------------------->
@@ -372,16 +444,7 @@
 // function makeApiCall() {
 //     console.log("API call in progress");
 // }
-// function debouncer(makeApiCall, delay) {
-//        let lastcall = 0;
-//        return function() {
-//              if(Date.now() - lastcall > delay){
-//                 lastcall = Date.now();
-//                 makeApiCall.call(this,arguments)
-//              }
-//        }
-// }
-// document.getElementById("botton").addEventListener("click", debouncer(makeApiCall, 1000));
+
 
 
 // destructuring ---------------------------------------------------------------------------->
@@ -392,11 +455,8 @@
 //     age:23,
 //     city:"nagpur"
 // }
-
-// var{name, age, city} = obj
+// var{name,age, city} = obj
 // console.log(name, age, city)
-
-
 
 // array destructuring
 // var arr = ["vicky", "nagpur", 21];
@@ -414,7 +474,8 @@
 // }]
 
 // var [{name, age, city}] = arr
-// console.log(name, age, city)
+// console.log(name,age,city)
+
 
 
 // ---------------------------------------------------------------------------->
@@ -430,24 +491,38 @@
 // ---------------------------------------------------------------------------->
 // Sorting
 // var arr = [2,3,5,1,7,8,10];
-// arr.sort((a,b)=>a-b);
+// arr.sort((a,b)=>a-b)
 // console.log(arr)
 
+// var brr = [{
+//     name: "abhi",
+//     age: 23
+// }, {
+//     name: "dbhi",
+//     age: 21
+// }, {
+//     name: "dbhi",
+//     age: 19
+// }, {
+//     name: "bbhi",
+//     age: 18
+// },]
 
-// let arrayOfObjects = [
-//     { name: 'bohn', age: 30 },
-//     { name: 'aane', age: 25 },
-//     { name: 'cob', age: 35 }
-// ];
-//  arrayOfObjects.sort((a,b)=>{
-//     return a.age-b.age
-// })
-// console.log(arrayOfObjects)
+// brr.sort((a,b)=>a.name > b.name ? 1 : a.name < b.name ? -1 : a.age > b.age ? 1: a.age < b.age ? -1 : 0)
+// console.log(brr)
 
 
-// // Sort by name in ascending order
-// arrayOfObjects.sort((a, b) => a.name.localeCompare(b.name));
-// console.log(arrayOfObjects)
+// brr.sort((a,b)=>a.age-b.age)
+// console.log(brr)
+
+// brr.sort((a,b)=>a.age > b.age ? 1 : a.age < b.age ? -1 : 0);
+// console.log(brr)
+
+// brr.sort((a,b)=>a.name>b.name?1:a.name<b.name?-1:0);
+// console.log(brr)
+
+// brr.sort((a,b)=> a.name>b.name ? 1: a.age < b.age ? -1 :0)
+// console.log(brr)
 
 
 
@@ -496,7 +571,7 @@
 // write the function to remove duplicate element in the array---------------------------------------------------------------------------->
 // var arr = [1,2,2,3,7,7,3,4,5];
 // arr.sort();
-// for(let i = 1; i < arr.length; i++){
+// for(var i = 1; i < arr.length; i++){
 //     if(arr[i] === arr[i-1]){
 //        arr.splice(i,1)
 //     }
@@ -505,7 +580,7 @@
 
 
 // var brr = [];
-// for(let i = 0; i < arr.length; i++) {
+// for(var i = 0; i < arr.length; i++) {
 //     if(brr.indexOf(arr[i]) == -1){
 //         brr.push(arr[i]);
 //     }
@@ -515,9 +590,9 @@
 // function RemoveDuplicates(arr){
 // // convert the array to a Set which allow only unique values
 // // convert set back to an array
-// let newarr = new Set(arr)
+// var newarr = new Set(arr)
 // console.log(newarr)
-// let finalarr = [...newarr]
+// var finalarr = [...newarr]
 // console.log(finalarr)
 // return finalarr;
 // // OR
@@ -529,46 +604,18 @@
 
 // ----------------------------------------------------------------------------------------------------->
 
-// var brr = [{
-//     name:"shubham",
-//     age:23
-// },{
-//     name:"vicky",
-//     age:21
-// },{
-//     name:"yash",
-//     age:22
-// },{
-//     name:"vicky",
-//     age:18
-// },]
-// brr.sort((a,b)=>a.name > b.name ? 1: a.age < b.age ? -1 : 0)
-// brr.sort((a,b)=>()
-// console.log(brr)
 
-
-// brr.sort((a,b)=>a.age-b.age)
-// console.log(brr)
-
-// brr.sort((a,b)=>a.age > b.age ? 1 : a.age < b.age ? -1 : 0);
-// console.log(brr)
-
-// brr.sort((a,b)=>a.name>b.name?1:a.name<b.name?-1:0);
-// console.log(brr)
-
-// brr.sort((a,b)=> a.name>b.name ? 1: a.age < b.age ? -1 :0)
-// console.log(brr)
 
 // ----------------------------------------------------------------------------------------------------->
 
 // write the function that check two strings are anagram or not
 
-// let str1 = "silent";
-// let str2 = "listen";
+// var str1 = "silent";
+// var str2 = "listen";
 
 // function isAnagram(str1, str2) {
-//       let s1 = str1.split("").sort().join("");
-//       let s2 = str2.split("").sort().join("");
+//       var s1 = str1.split("").sort().join("");
+//       var s2 = str2.split("").sort().join("");
 //       return s1===s2
 // }
 // console.log(isAnagram(str1, str2))
@@ -584,7 +631,7 @@
 // fruits.splice(2, 0, "Lemon", "Kiwi");
 // console.log(fruits)
 
-// At position 2, remove 2 items:    --> use in delete item from cart 
+// At position 2, remove 2 items:    --> use to delete item from cart 
 // const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
 // fruits.splice(2, 2);
 // console.log(fruits)
@@ -595,6 +642,95 @@
 // const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 // const citrus = fruits.slice(1, 3);
 // console.log(citrus)
-// output--->  ['Orange', 'Lemon']
+// output--->  ['Orange', 'Lemon'];
+
+// ----------------------------------------------------------------------------------->
+// Higher order functions
+
+// function higherOrderFunction(callback) {
+//     console.log("Inside higherOrderFunction");
+//     callback();
+//   }
+
+//   function callbackFunction() {
+//     console.log("Inside callbackFunction");
+//   }
+
+//   // Pass callbackFunction as an argument to higherOrderFunction
+//   higherOrderFunction(callbackFunction);
 
 
+//   function higherOrderFunction(callback) {
+//     // Perform some operations
+//     console.log("Inside higherOrderFunction");
+//     // Call the callback function
+//     callback();
+//   }
+
+//   function callbackFunction() {
+//     console.log("Inside callbackFunction");
+//   }
+
+//   // Pass callbackFunction as an argument to higherOrderFunction
+//   higherOrderFunction(callbackFunction);
+
+function handlechange(){
+    document.getElementById("showrange").textContent = document.getElementById("range").value
+}
+const handleClick = (e)=>{
+    e.preventDefault();
+    var value = document.getElementById("range").value;
+    console.log(value)
+}
+document.getElementById("botton").addEventListener("click", handleClick);
+
+
+
+
+
+
+
+function vicky() {
+    console.time("time")
+    // Code to be measured
+    var sum = 0;
+    for (var i = 0; i < 1000000; i++) {
+        sum += i;
+    }
+    console.timeEnd("time")
+
+    // Stop the timer and log the elapsed time
+}
+vicky();
+
+
+
+// arr_url = [
+//     "https://dummyjson.com/products/1",
+//     "https://dummyjson.com/products/2",
+//     "https://dummyjson.com/products/3",
+//     "https://dummyjson.com/products/4",
+//     "https://dummyjson.com/products/5",
+// ]
+
+// async function fetchData(url){
+//    try {
+//      var res = await fetch(url);
+//      var data = await res.json()
+//      return data;
+//    } catch (error) {
+//      console.log(error)
+//    }
+// }
+
+// async function fetchMultipleApi(urls){
+//   var response = urls.map((url)=>fetchData(url));
+//   var allPromises = await Promise.all(response);
+//   return allPromises
+// }
+// fetchMultipleApi(arr_url)
+// .then((res)=>console.log(res))
+// .catch((err)=>console.log(err))
+
+
+    

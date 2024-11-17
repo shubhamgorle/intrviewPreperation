@@ -21,6 +21,7 @@ const Duumy1 = () => {
     return (
         <div>
             <p>Count: {count}</p>
+            <p>Count1: {count1}</p>
           <p>Expensive value: {memoizedValue}</p>
           <button onClick={handleClick}>ADD</button>
           <button onClick={handleClick1}>ADD1</button>

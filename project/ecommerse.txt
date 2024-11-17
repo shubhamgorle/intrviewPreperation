@@ -1,0 +1,59 @@
+jsonwebtoken
+"When a user logs in to the website, their credentials (such as email and password)
+ are verified by the server.
+ userSchema.methods.getJWTToken = function () {
+    return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
+        expiresIn: process.env.JWT_EXPIRE
+    })
+} 
+ If the credentials are valid, the server generates a JWT token 
+ containing the user's information (e.g., user ID, role) and sends it back to the client
+ This token is then stored in the localStorage or sessionStorage or cookies at client side".
+ if we want to give access to specific route only when the user is authenticate in such case we can use the jwt token 
+ stored in a cookies. we can use this token to verify the user id valid or not.
+ we just need to use jwt.verify and pass th token and jwt secret key then we will get the information of user if it is valid user
+ depending on this we can evaluate that user is authenticated or not. 
+
+const decodesData = jwt.verify(token, process.env.JWT_SECRET)
+
+
+nodemailer
+Nodemailer is a popular Node.js library used for sending emails from your applications.
+It allows you to send both plain text and HTML emails through various email services (like Gmail, Outlook,
+custom SMTP servers (Simple Mail Transfer Protocol).
+
+// 1. Import the nodemailer package
+const nodemailer = require('nodemailer');
+
+// 2. Create a transporter (this is your email service configuration)
+const transporter = nodemailer.createTransport({
+  service: 'gmail', // You can use other email services like 'hotmail', 'yahoo', etc.
+  auth: {
+    user: 'your-email@gmail.com',  // Your email
+    pass: 'your-email-password'    // Your email password (or app-specific password for Gmail)
+  }
+});
+
+// 3. Set up the email options
+const mailOptions = {
+  from: 'your-email@gmail.com',  // Sender's email
+  to: 'recipient@example.com',   // Receiver's email
+  subject: 'Test Email',         // Email subject
+  text: 'Hello, this is a test email from Nodemailer!',  // Plain text content
+  // html: '<p>Hello, <strong>this is a test email</strong> from Nodemailer!</p>' // Optional HTML content
+};
+
+// 4. Send the email
+transporter.sendMail(mailOptions, (error, info) => {
+  if (error) {
+    console.log('Error:', error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+
+
+crypto
+
+What is an API?
+API stands for application programming interface—a set of definitions and protocols to build and integrate application software.

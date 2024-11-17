@@ -1,0 +1,363 @@
+1.  difference betweeen server side and client side 
+:=> Server-side refers to the execution environment and "code that runs on the server",
+    This includes the backend logic of a web application that handles
+    requests, processes data, interacts with databases, and generates dynamic content
+    to be sent back to the client.
+    
+
+   Responsibilities:
+
+   Handling HTTP requests from clients (e.g., browsers).
+   Implementing business logic and data manipulation.
+   Accessing databases or other external services.
+   
+   Examples:
+
+   Creating RESTful APIs using Express.js.
+   Performing server-side authentication and authorization.
+   Implementing backend logic for real-time communication using WebSockets (e.g., with Socket.io).
+
+   Client-side refers to the environment and "code that runs in the user's browser". 
+   
+   Responsibilities:
+   Handling user interactions and events within the browser.
+   Making asynchronous requests to the server (e.g., via AJAX or fetch API).
+   Dynamically updating the UI based on received data.
+   Implementing client-side business logic or validation.
+   
+   Examples:
+   
+   Manipulating the DOM (Document Object Model) to update UI elements.
+   Validating user input before submitting to the server.
+   Making HTTP requests to fetch data from the server asynchronously.
+   Implementing front-end frameworks like React, Vue.js, or Angular for building interactive user interfaces.
+
+2.  What is Node.js and why is it popular for building server-side applications?
+:=> Node.js is an open-source runtime environment built on Chrome's V8 JavaScript engine. 
+    node js uses JavaScript as a programming language.
+    It allows you to run JavaScript code on the server-side.
+    Node.js provides an event-driven, non-blocking I/O model,
+    making it well-suited for handling concurrent connections and handling large amounts of traffic.
+
+
+    Here are some reasons why Node.js is popular for building server-side applications:
+    a. Node.js uses JavaScript as its programming language, which is already familiar to many developers.
+       This allows developers to use the same language and share code between the client-side and server-side.
+
+    b. Asynchronous and Non-Blocking: 
+       Node.js uses an event-driven, non-blocking I/O model, which means that
+       it can handle multiple concurrent connections efficiently without blocking the execution of 
+       other operations. This makes it ideal for building scalable and high-performance applications that
+       can handle a large number of concurrent requests.
+
+       Node.js has gained popularity for server-side development due to its scalability, performance, 
+       efficiency, and the ability to use JavaScript throughout the full-stack development process. 
+       Its non-blocking I/O model and extensive ecosystem make it a powerful choice for building web 
+       servers, APIs, microservices, and other server-side applications.
+
+3.   difference betweeen synchronous and asynchronous functions in js ? 
+:=>  Synchronous functions execute in sequence, one after another. When a synchronous function is called,
+     the program waits until that function completes its task before moving on to the next line of code.
+     These functions block further execution of code until they return a result or complete their operation.
+     
+     function synchronousTask() {
+     console.log("Start");
+     console.log("Middle");
+     console.log("End");
+    }
+
+   synchronousTask();
+
+    Asynchronous functions do not block the execution of code. Instead, they allow the program to continue executing 
+    while they perform their task in the background.
+    Asynchronous functions use callbacks, promises, or async/await to handle operations that may take time, 
+    such as fetching data from a server or reading a file.
+
+    function asynchronousTask(){
+       console.log("Start");
+       setTimeout(function() {
+       console.log("Async task done");
+       callback();
+    }, 2000);
+      console.log("After async task");
+}
+         console.log("Before async task");
+         asynchronousTask()
+
+4. CRUD operations statuscode's
+
+A. create(POST) ---> 201
+
+successfully created ---> 201
+client error ---> "400 Bad Request"
+
+B. read (GET)   ---> 200
+
+successfully get ---> 200
+client error ---> "404 not found"
+
+C. update (PATCH) ---> 200
+
+successfully update ---> 200
+client error ---> "404 not found"
+client error ---> "400 Bad Request"
+
+D. Delete (Delete)  ---> 204
+successfully deleted ---> 204
+client error ---> "404 not found"
+
+5. What is npm and what is its purpose in Node.js?
+:=> npm (Node Package Manager) is the default package manager for Node.js. It is a command-line 
+    tool that allows developers to install dependencies and packages for their Node.js projects.
+
+     npm allows Node.js developers to easily install, manage, and share third-party packages or libraries
+     written in JavaScript. These packages can include reusable code, modules, frameworks, and tools 
+     that extend the functionality of Node.js applications.
+
+6. How can you manage environment variables in Node.js?
+:=> 1. Install dotenv Package.
+    2. In our application's entry point (e.g., app.js or index.js or server.js), require the dotenv package and call the config() method. 
+       inside the config method pass the object in which we have to pass a key named as path and provide the path 
+       of the env file store in our folder as a value for key path .
+       This will load the variables defined in the .env file into the process.env object.
+
+
+7. Explain the concept of middleware in Express.js ?
+:=>  Middlewares are the functions that get executed before the request reaches the route handler and after the
+     response is sent to the client.
+     It sets between request and response.
+     Middleware functions are functions that have access to the request object (req), response object (res),
+     and the next middleware function in the application's request-response cycle.
+     Because of the middleware, we get the chance to perform modification, updation, or deletion on request and response objects.
+- Using middlewares, we can :
+    - change the object
+    - check for security
+    - check for validation
+The next function is crucial in the middleware chain as it passes control to the next middleware in the stack. 
+If next is not called, the request-response cycle can be terminated.
+
+8. Explain the difference between req.params, req.query, and req.body in Express.js ?
+:=> - **`req.params`** captures route parameters from the URL path.
+- **`req.query`** retrieves query parameters from the URL's query string.
+- **`req.body`** holds the parsed data from the request body.
+
+It's important to note that to access **`req.params`** and **`req.query`**, you don't need any additional middleware.
+ However, to access **`req.body`**, you need to include middleware like **`body-parser`** or **`express.json()`**
+  to handle request body parsing.
+
+
+  9.  What is CORS and how can you enable CORS in Express.js?
+  :=> when we trying to make requests (like fetching data via AJAX) to a different domain, port, or protocol than 
+      the one your site is hosted on. in such schenario cors error generally arise. 
+      This can be common when developing frontend applications that need to interact with backend APIs
+      hosted on a different domain.
+
+
+       how to use this --->
+       First, you need to install the cors package from npm.
+       First, you need to install the cors package from npm if it's not already installed in your project.
+
+       const express = require('express');
+       const cors = require('cors');
+
+       const app = express();
+
+       // Use CORS middleware
+       app.use(cors());
+
+
+    You can customize CORS behavior by passing options to the cors middleware. For example, you can
+    specify which origins are allowed, which HTTP methods are supported, and more.
+
+    // Example custom CORS setup
+         const corsOptions = {
+              origin: 'http://example.com', // Allow requests from this origin
+              methods: ['GET', 'POST'], // Allow only GET and POST requests
+              allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
+         };
+
+     app.use(cors(corsOptions));
+
+
+10. In the context of NEM (Node.js, Express, and MongoDB), differentiate between authentication and authorization ?
+:=> 
+  Authentication: A user logs into a web application using their username and password. The application
+  verifies these credentials with stored user records in the database. If the credentials are valid, 
+  the user is considered authenticated and receives an authentication token.
+
+   Authorization: After authentication, when the authenticated user tries to access a specific endpoint 
+   e.g., to upload the product data on database in term of ecommerse website, the application checks the user's role.
+   If the user has the necessary role (e.g., "admin").
+   the request is authorized and the operation is allowed to proceed. Otherwise, access is denied.
+
+
+   In summary, authentication confirms a user's identity, while authorization determines what an 
+   authenticated user is allowed to do within the application. Both authentication and authorization 
+   are crucial for maintaining the security and integrity of applications.
+
+   11. What is the difference between readFile and readFileSync ? Explain with example ?
+       :=>   readFile is an asynchronous method that reads the contents of a file asynchronously and 
+             provides the result through a callback function.   
+             Asynchronous methods like readFile are typically preferred in Node.js applications to prevent blocking the event loop 
+
+- It takes the file path, an optional encoding (e.g., **`'utf8'`** for text files), and a callback function as arguments.
+- The callback function has two parameters:
+  an error object (if an error occurs) and the file data (contents) 
+
+   
+const fs = require('fs');
+
+fs.readFile('file.txt', 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(data);
+  }
+});
+
+ readFileSync is a synchronous method that reads the contents of a file synchronously and returns the result directly.    
+ - It takes the file path and an optional encoding as arguments and returns the file data. 
+ - Since it is synchronous, the execution of the program halts until the file is read and the result is returned.    
+
+ 
+const fs = require('fs');
+
+try {
+  const data = fs.readFileSync('file.txt', 'utf8');
+  console.log(data);
+} catch (err) {
+  console.error(err);
+}
+
+
+12. What is JWT and what can we achieve with that?
+:=>  JSON Web Tokens (JWT) are a type of token-based authentication commonly used in web applications. 
+     it is a powerful tool for securely transmitting information between parties.
+     It simplifies authentication and authorization processes in web applications, promotes scalability, 
+     and enhances security by ensuring that tokens are tamper-proof and carry all necessary user information.
+
+     They consist of three parts separated by dots: header, payload, and signature.
+     Header: Contains metadata about the type of token and the hashing algorithm used.
+     Payload: Contains claims or statements about the user (e.g., user ID, roles, permissions).
+     Signature: Ensures the token hasn't been tampered with. It's created by encoding the header, payload, 
+     and a secret key with the specified algorithm.
+
+13. What are common libraries you work with express?
+
+a. Body-parser: It parses incoming request data (such as JSON, URL-encoded, or multipart form data) and makes it accessible in req.body
+
+      const bodyParser = require('body-parser');
+      app.use(bodyParser.json());
+      app.use(bodyParser.urlencoded({ extended: true }));
+
+b. Morgan : 
+c. Cors : Middleware for enabling Cross-Origin Resource Sharing (CORS). It allows or restricts
+          access to resources on a web server from a different domain.
+
+          const cors = require('cors');
+          app.use(cors());
+
+d. Cookie-parser: Middleware for parsing cookies attached to the client's request.
+      const cookieParser = require('cookie-parser');
+      app.use(cookieParser());
+
+e. Passport: Authentication middleware for Node.js. It supports various authentication strategies.
+             including local authentication, OAuth, and more.
+
+             const passport = require('passport');
+               app.use(passport.initialize());
+               app.use(passport.session());
+
+f. Multer: Middleware for handling multipart/form-data, primarily used for handling file uploads.
+
+          const multer = require('multer');
+          const upload = multer({ dest: 'uploads/' });
+          app.post('/upload', upload.single('file'), (req, res) => {
+            // Handle uploaded file
+          });
+
+
+14. Explain the concept of collections and documents in MongoDB 
+:=> In MongoDB, collections and documents are fundamental concepts that form the building blocks of data organization.
+    A collection in MongoDB is a group of related documents. It can be thought of as a table in a relational database.
+    A document in MongoDB is an individual unit of data stored within a collection. It is equivalent to a row or a record 
+    in a relational database.
+
+15. What are the different types of modules available in Node.js?
+:=> modules are a fundamental concept used to organize and encapsulate code.
+       1. Core Modules: Built-in modules provided by Node.js.
+                        fs: File system operations
+                        http: HTTP server and client functionalities
+                        path: Path-related operations
+                        os: Operating system information
+                        util: Various utility functions
+                        events: EventEmitter for event-driven programming
+          Core modules are loaded using require('module_name') without specifying a path.
+
+
+       2. Local Modules: Custom modules created by developers within the application.
+       // utils.js
+            function add(a, b) {
+              return a + b;
+           }
+           function subtract(a, b) {
+              return a - b;
+           }
+           module.exports = {
+              add,
+              subtract
+           };
+       // app.js
+            const utils = require('./utils');
+            console.log(utils.add(5, 3)); // Output: 8
+            console.log(utils.subtract(10, 4)); // Output: 6
+ 
+
+       3. Third-Party Modules: Modules available on npm for extending application functionalities.
+    
+        eg. express, axios, nodemon
+
+    
+16. What are the different types of HTTP requests?
+:=> HTTP (Hypertext Transfer Protocol) defines several methods that indicate the desired
+    action to be performed on a resource.
+
+    1. **GET**:
+    - The GET method is used to retrieve a resource from a server.
+    2. **POST**:
+    - The POST method is used to send data to the server to create a new resource.3. **PUT**:
+    3. **PUT**:
+    - The PUT method is used to update or replace an existing resource on the server.
+    4. **PATCH**
+    - PATCH requests are commonly used when modifying specific fields or properties of a resource
+      without replacing the entire resource.
+    5. **DELETE**:
+    - The DELETE method is used to delete a resource from the server.
+    
+
+17. What is the purpose of the "next" function in Express middleware, and how is it used?
+:=> In Express.js, the next function is a callback function provided by Express middleware. 
+    It is used to pass control from one middleware function to the next middleware function
+    in the request-response cycle.
+
+18. Explain the concept of WebSocket and how it enables real-time communication between a client and a server in Node.js ?
+:=> WebSocket is a communication protocol that enables real-time, bidirectional communication between
+    a client and a server over a single, long-lived connection. It provides full-duplex communication, 
+    meaning both the client and the server can send and receive data simultaneously.
+
+19. - Explain Data segregation ?
+    
+    Data segregation refers to the practice of separating different types or categories of data to enhance 
+    security, privacy, and organizational efficiency. The goal is to ensure that sensitive information is 
+    appropriately isolated and protected from unauthorized access or unintended disclosure. Data segregation 
+    is a crucial aspect of data management and is often implemented in various contexts, including information
+    technology, finance, healthcare, and other industries.
+    
+    Benefits of Data segregation
+    
+    - Security & Privacy
+    - Risk Mitigation
+    - Operational Efficiency
+
+20. What is aggregation in MongoDB? Give some examples?
+:=> 

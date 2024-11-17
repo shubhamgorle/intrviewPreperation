@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>practical questions</title>
+    <style>
+        .container{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        .container > div{
+            width: 50px;
+            height: 30px;
+            border: 1px solid black;
+        }
+        
+    </style>
+     <!-- Include Axios from CDN -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"></script>
 </head>
 <body>
-    <h1 id="Data">Data</h1>
+    <h1 id="Data" style="  display: inline; color: orange; background-color: blue;">Data</h1>
+    
+    <input type="checkbox" id="no" onclick="myfunc()"> No
+    <input type="range" min="0" max="100" id="range" onchange="handlechange()">
+    <h1 id="showrange"></h1>
+    <br>
     <button id="botton">Click me</button>
+
+
+    <!-- <div class="container">
+        <div>shubham</div>
+        <div>vicky</div>
+    </div> -->
+    <form id="checkboxForm">
+        <label>
+            <input type="checkbox" name="option" value="option1"> Option 1
+        </label><br>
+        <label>
+            <input type="checkbox" name="option" value="option2"> Option 2
+        </label><br>
+        <label>
+            <input type="checkbox" name="option" value="option3"> Option 3
+        </label><br>
+    </form>
+    <input type="checkbox" class="yes" > Yes
+    <label><input type="checkbox" class="single-checkbox" name="option" value="1"> Option 1</label>
+    <label><input type="checkbox" class="single-checkbox" name="option" value="2"> Option 2</label>
+    <label><input type="checkbox" class="single-checkbox" name="option" value="3"> Option 3</label>
+
+
 </body>
 </html>
 <script src="./output.js"></script>
+<script  src="./javaScript.js" ></script>
+<script  src="./rough.js" ></script>
+<script>
+   
+ 
+</script>

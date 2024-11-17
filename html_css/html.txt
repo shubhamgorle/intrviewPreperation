@@ -28,11 +28,7 @@ Before HTML5, application data had to be stored in cookies.
     such as a button click, mouse movement, keyboard input, or the loading of a webpage,
     and then execute a function or a series of instructions in response to that event.
 
-# what is onload event?
-:=> The onload event is an event in HTML that occurs when a webpage or 
-an element within a webpage has finished loading. 
-It is commonly used to execute JavaScript code or perform certain actions
-once the page or element has fully loaded.
+                                                                    
 
 <body onload="myFunction()">
   <!-- Rest of the HTML content -->
@@ -112,15 +108,15 @@ and if not supported, it will fallback to the audio.ogg file.
 The fallback text is displayed if the browser doesn't support any of the provided audio formats.
 
 
-1. mWhat is HTML?
+1. What is HTML?
 => HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.
 
 2. What is the purpose of HTML tags?
-=> HTML tags are used to define and structure the content on a web page. They are enclosed in angle brackets and come in pairs.
+=> HTML tags are used to "define and structure the content" on a web page. They are enclosed in angle brackets and come in pairs.
 
-3. What is the purpose of the DOCTYPE declaration?
+3. What is the purpose of the DOCTYPE declaration?patterns
 => The DOCTYPE declaration specifies the document type and version of HTML used in the document.
-It helps browsers to render the web page correctly.
+   It helps browsers to render the web page correctly.
 
 
 4. What is the difference between <div> and <span>?
@@ -139,21 +135,17 @@ while inline elements do not start on a new line and only take up as much width 
 What is the purpose of the alt attribute in the <img> tag?
 => The alt attribute provides alternative text for an image, which is displayed if the image cannot be loaded. It is also used for accessibility.
 
-Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+colspan ---> To make a cell span more than one column
+rowspan ---> To make a cell span more than one row
 
-Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
-
-Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element 
-can sit next to other elements.
-
-what is rowspan and colspan 
+Responsive web design is about creating web pages that look good on all devices!
 
 
 # ------------------------------------- CSS (Cascading Style Sheets)------------------------------------- #
 
 
 # What are CSS selectors?
-:=> CSS selectors are patterns used to select and target specific elements in an HTML document.
+:=> CSS selectors are used to select and target specific elements in an HTML document.
 Here are some commonly used CSS selectors: 
 
 1. Element Selector: Targets elements based on their tag names. For example, p targets all <p> elements.
@@ -173,8 +165,14 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_element_element
 
 6. Child Selector: Targets elements that are direct children of another element. It is denoted by the > symbol between two selectors. 
 For example, div > p targets all <p> elements that are direct children of <div> elements.
-   https://www
-   .w3schools.com/css/tryit.asp?filename=trycss_sel_element_gt
+   https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_element_gt
+
+7. A CSS pseudo-element is used to style specific parts of an element
+Style the first letter or line, of an element
+Insert content before or after an element
+
+8. A pseudo-class is used to define a special state of an element.
+
 
 # What are CSS variables? 
 :=> allow you to define reusable values in CSS. They are similar to variables in programming languages,
@@ -183,7 +181,7 @@ For example, div > p targets all <p> elements that are direct children of <div> 
  CSS variables are declared using the -- prefix followed by a name and an optional value.
   For example:
 
-:root {
+:root{
   --primary-color: blue;
 }
 
@@ -191,19 +189,6 @@ h1 {
   color: var(--primary-color);
 }
 
-# What is the difference between position absolute and relative?
-
-:=> position absolute :- position the element relative to the position of its first parent div.
-
-    position relative :- position the element relative to its normal position.
-
-    position fixed    :- position the element relative to its browser window.
-
-    position sticky   :- it will stick when it will reached to top of the page.
-
-
-# Create a search bar with CSS.
-:=> video link  ---> https://www.youtube.com/watch?v=9hnJsNIBq1g&t=636s
 
 # What is Box Model ?
 :=> The CSS box model is a fundamental concept that
@@ -213,19 +198,10 @@ h1 {
 
     
 # What is a flex-box?
-Flexbox, also known as Flexible Box Layout, is a CSS layout module that provides an efficient 
-way to arrange and align elements within a container. It is designed to handle the distribution 
+Flexbox, also known as Flexible Box Layout, it provides an efficient 
+way to arrange and align elements within a container. 
+It is designed to handle the distribution 
 of available space among the items in a container, even when their sizes are unknown or dynamic. 
-
-# What does justify-content, justifyItems, justifySelf mean?
-:=>   
-justify-items - Aligns the content inside a grid(box) item along the row axis (it is available in grid only not in Flexbox)
-
-justify-content - This property aligns the grid along the row axis
-
-justify-self - Aligns the content inside a grid item along the row axis and it override the properties of
-
-justify item and justify content (it is available in grid only not in Flexbox).
 
 # what are grids?
 :=> grid is a layout system that allows you to create complex and responsive
@@ -236,7 +212,7 @@ justify item and justify content (it is available in grid only not in Flexbox).
 
  # What are the differences between Flex and Grids?
  :=>              Grids                                                       Flex 
- Grid is designed for  two-dimensional layouts                 ||  The main purpose of Flexbox is to create one-dimensional layouts.
+ Grid is designed for two-dimensional layouts                 ||  The main purpose of Flexbox is to create one-dimensional layouts.
  allowing you to create both rows and columns simultaneously. ||  allowing you to create either in a row (horizontal) or in a column (vertical).
 
 
@@ -255,7 +231,7 @@ psudo classes https://www.w3schools.com/css/tryit.asp?filename=trycss_pseudo-cla
 
 # What are media queries?
 :=> Media queries are a fundamental feature of responsive web design in CSS. 
-    They allow you to apply different styles and layouts to a web page based on various device characteristics.
+    They allow you to apply different styles to a web page based on various device characteristics.
 
 # what is z-index?
 :=> The z-index property specifies the stack order of an element.  
@@ -265,5 +241,35 @@ Note : => z-index only works on positioned elements (position: absolute, positio
           and flex items (elements that are direct children of display:flex elements).
 
 
-display:none ---> will hide element ans space !
-visibility:hidden ---> will hide the element but show the empty space !
+# display:none ---> will hide element an space both 
+  visibility:hidden ---> will hide the element but show the empty space 
+
+
+# what is the difference between display inline, block, inline-block
+:=>
+display: inline -> default for span tag. -> width, height, paddding, margin are not respected -> -> does not add line break
+display: inline-block -> width height paddding margin are respected -> does not add line break
+display: block        -> width height paddding margin are respected  -> add line break
+ex. 
+https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1
+
+# difference between position absolute, relative, fixed and sticky.
+:=> position static : default
+ 
+    position absolute :- position the element relative to the position of its first parent div.
+
+    position relative :- position the element relative to its normal position.
+
+    position fixed    :- position the element relative to its browser window.
+
+    position sticky   :- it will stick when it will reached to top of the page. top should be 0 only.
+
+
+# justify content, justifySelf, justifyItems.
+:=> justify-items - Aligns the content inside a grid(box) item along the row axis (it is available in grid only not in Flexbox)
+
+justify-content - This property aligns the grid along the row axis
+
+justify-self - Aligns the content inside a grid item along the row axis and it override the properties of
+
+justify item and justify content (it is available in grid only not in Flexbox).

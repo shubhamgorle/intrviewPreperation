@@ -1,33 +1,26 @@
-1. Tell me about yourself
+1. Tell me about yourself 
 :=> 
 Good afternoon Sir.
 i am shubham gorle from orange city i.e nagpur.
 about my  education, i have completed diploma in mechanical engineering form GHRP nagpur and BE in mechanical engineering from RTMNU.
 i have also completed MERN STACK developement course from masai school, bengluru.
-I specialize in the MERN stack, which includes MongoDB, Express.js, React.js, and Node.js.
-During my studies, I worked on a project that involved building a clone of shop.com, clone of expendia using html, css and javascript and clone 
-of Koo application using React js. 
+my latest project is I built an e-commerce platform using the MERN stack. 
+It includes user authentication, a dynamic shopping cart, a payment gateway, and admin features.
 my hobbies are to playing cricket and listnining spritual song as wel.
 I'm excited about the opportunity to contribute my expertise and learn from the experienced team at your company.
 Thank you for considering me as a potential addition to your team.
 
 
-2. What prompted you to pursue a career in mern stack developement ?
+2. What prompted you to pursue a career in m
+ern stack developement ?
 :=> 
-
 when i was in final year of graduation i had an idea on which i wanted to build a project which was related to computer 
 science and i did not able to build it bcz i did not familier with the tech stack which is required to build that project.
 but i wanted to learn the tech stack which is required for building that application.
 to be very honest there was very limited job opportunities ans slow carrier growth in mechanical feild. 
 thats why i choosen mern stack developer as a carrier.
 
-3. why you shift your carrier from mechanical enginnering to computer science ?
-:=>
-after completion of graduation i discuss with my seniors about jobs availability in feild of mechanical enginnering.
-and they told me they wanted to shift their carrier from mechanical to IT due to slow carrier growth.
-then i think after having experice of 2-3 yrs in core feild they are shifting their carrier then i should not waste time in 
-trying someting because a great man says you should learn from other's mistakes. thats why i choosen mern stack developer as a carrier. 
- 
+
  
 4 what is your strength ?
 :=> 
@@ -38,25 +31,7 @@ projects in a team of 4 peoples for each project and i don't think they have com
 5. what is your weakness ?
 :=>
 public speaking makes me nervous Althught i don't need public speaking for my role as a mern stack developer but i still thing it is important
-skill, especially when i want to offer up my opinions in meetings or group discussions and i am working on this weakness to overcome it.
-
-
-7. what do you know about our company ?
-:=>  Zealeye.Ai specializes in user experience design, mobile app development, and RPA solutions using UiPath and Blue Prism.
-     With expertise in AI (Artificial Intelligence), ML(Machine Learning) , and software development, we aim to transform
-     businesses across industries through innovative solutions.
-    
-
-
-what is RPA solutions ?
- :=>  RPA (Robotic Process Automation) solutions involve using software robots or "bots" to automate repetitive
-  and rule-based tasks typically performed by humans. These bots can mimic human interactions with digital systems 
-  and applications to execute tasks such as data entry, data extraction, form filling, and more. RPA technology 
-  aims to streamline workflows, increase efficiency, and reduce human error in business processes.
-    
-UiPath and Blue Prism are two of the leading software platforms for Robotic Process Automation.
-UiPath: UiPath is an RPA platform that provides a suite of tools for automating repetitive tasks..
-Blue Prism: Blue Prism is another RPA platform designed to automate business processes.
+skill, especially when i want to offer up my opinions in meetings or group discussions and i am working on this weakness to overcome it
 
 
 8. tell me about your project ? 
@@ -65,7 +40,7 @@ shop.com :=>
     shop.com is ecommerse website which provide deals on clothes, beauty, shoes & electronics.
     this was collaborative project, built in 4 days by a team of 4 developers.
     the features of this website includes Login, Signup, Filter & Delete, search.
-    my area of responsibility in this project was i Built the landing page, add to cart page and 
+    my area of responsibility in this project was i Built the landing page, add to cart page, 
     control the GitHub codebase & worked on the integration of all pages.
 
  the biggest chalange for my team was collecting the data and converting in the form of array of objects because this
@@ -92,11 +67,14 @@ to improve my skills i need new chanlanges and i feel like i will get new chalan
 working in your company. that will improve my skills and when i would give my 100 per output i will 
 achieve my carrier goal of becoming the best web developer.
 
+
+*--->  as of now my primary goal is to get a job and start professional career. once i get the job then i will set my new goals again.
+
 10. where do you see yourself in next 5 year ?
 :=> Over the next five years, I see myself taking on new and exciting projects within your company. 
     I truly believe that i can pursue my career goals and eventually become a senior developer within your organization.
-
-11. why should  we hire you ? 
+                                                                            Technical support enginner
+11. why should we hire you ? 
 sir i believe i am great feet for this role i am self motivated person and give 100 per to the any task that given 
 to me that is why i been good with my acadamics and surely i will do same for any project that is given to me in company.
 i also work good as a group member that why i have 3 projects in team. 
@@ -120,8 +98,6 @@ shop.com :=>
     control the GitHub codebase & worked on the integration of all pages.
 
  
-
-
 Expendia :=>
 This is the clone of expendia application which
 able to book the hotel online. It is a collaborative
@@ -148,7 +124,7 @@ Added filter functionality, page linking.
 :=> My gretest strenth i would like to say i am peoples person, i enjoy working in teams.
     during my masai school journey i have worked on three projects in a team of 4 peoples for each project
     and i don't think they have complaints against me.
-
+"My greatest strength is my ability to work well with others. Throughout my time at Masai School, I have worked on three projects, each with a team of four people. I am confident that my team members had no complaints about my work."
 
 4. why you want to join our company ? how you will help our company?
 :=> I am particularly drawn to your company because you believe in Delivering Excellence Earning Trust.. This aligns with my
@@ -160,9 +136,6 @@ Added filter functionality, page linking.
     can contribute to the organisation for long period of time.
     i think i meet all these expectations and requirements thats why i want to join your company.
      
-    
-
-
 
 5. how do you handle work in teams ?
 :=>  One of the key aspects of how I handle work in teams is through strong communication. 
@@ -180,7 +153,8 @@ Added filter functionality, page linking.
 
 
 7. if you have done big mistake in project how did you tackle ?
-:=> one mistake which i think of while working on clone of shop.com project was, it was not very big mistake, when i working on  
+:=> one mistake which i think of while working on clone of shop.com project was, it was not very big mistake,
+ when i working on  
 
 
 8. what is your salary expectations?
@@ -190,7 +164,7 @@ Added filter functionality, page linking.
 9. explain your hobies
 :=> My interests include playing cricket and engaging in fitness activities, 
     such as working out at the gym. I believe that maintaining physical well-being is very important. 
-    Participating in activities like gym workouts, running, or playing outdoor sports is essential 
+    Participating in activities like gym workouts, running, or playing outdoor sports is essential  
     for staying physically fit. This enables us to perform wel in our profession.
 
     i also use to listen spritual songs for mental peice. because
@@ -233,7 +207,7 @@ from now?
 3.Tell me about a team project you were involved in. What was your role,
   and what was the outcome?
 :=> my first team project was the clone of shop.com. 
-    shop.com is ecommerse website which provide deals on clothes, beauty, shoes & electronics.
+    shop.com is Ecommerse website which provide deals on clothes, beauty, shoes & electronics.
     this was collaborative project, built in 4 days by a team of 4 developers.
     the features of this website includes Login, Signup, Filter & Delete, search.
     The teckstack we had used for building this project was hmtl, css, javascript.
@@ -246,3 +220,95 @@ from now?
     most important think i learn from this project was if we want to complete our project before given deadline then always code html 
     with required css. dont try to give complete css it consume lot of time. so after giving required css first work on functionality and after 
     completing the functionality work on css. 
+
+
+
+
+
+
+
+
+
+
+
+
+Hello,
+My name is Shubham Gorle, and I am a recent graduate based in Nagpur with a Diploma in Mechanical 
+Engineering from GHRP and a Bachelor of Engineering (B.E.) in Mechanical Engineering from RTMNU.
+I have also completed a rigorous MERN Stack Development course at Masai School, Bengaluru, 
+where I gained proficiency in MongoDB, Express.js, React.js, and Node.js. While I do not have
+prior professional experience, I have undertaken projects during my studies, including building
+clones of shop.com and Expedia using HTML, CSS, and JavaScript, as well as a clone of the Koo
+application using React.js. I am eager to leverage my skills and knowledge to contribute 
+effectively in a MERN stack development role. I am actively seeking opportunities to kick-start
+my career in software development and would welcome the chance to discuss how I can add value to your team.
+
+Thank you for considering my application.
+
+Best regards,
+Shubham Gorle
+
+Front-end Developer:
+React.js Developer:
+Node.js Developer:
+Full-stack Developer:
+JavaScript Developer:
+Web Application Developer:
+Junior Developer/Entry-level Developer:
+
+1. What specifically attracted you to this particular position and what interests you most about our company?
+:=>As a MERN stack developer, I've gained strong expertise in building interactive and responsive web applications.
+   I'm particularly excited about the frontend developer position at Dendrite.ai because it offers an opportunity 
+   to leverage my frontend skills within a company that values innovation and user-centric design.
+   Dendrite.ai's commitment to pushing the boundaries of AI technology while maintaining a user-focused approach
+   really speaks to me. I'm eager to contribute to a team that prioritizes creativity, collaboration, and continuous learning.
+
+
+
+                                          <---Dendrite--->
+
+
+1. What specifically attracted you to this particular position and what interests you most about our company?
+:=> As a MERN stack developer, I've gained strong expertise in building interactive and responsive web applications. I'm particularly excited about the frontend developer position at Dendrite.ai because it offers an opportunity to leverage my frontend skills within a company that values innovation and user-centric design.
+   Dendrite.ai's commitment to pushing the boundaries of AI technology while 
+   maintaining a user-focused approach really speaks to me. I'm eager to contribute to 
+   a team that prioritizes creativity, collaboration, and continuous learning.
+
+
+2. What’s the biggest misconception your coworkers/colleagues have about you and why do they think that? 
+:=> During my time at Masai School, I participated in three group projects. We were given a time limit 
+of four days to complete the projects. However, some of the group members were slow in their work, and it
+ seemed impossible for us to complete the project before the deadline. During a group meeting, I expressed
+  my frustration and urged them to complete the work quickly. Unfortunately, my tone came across as arrogant, 
+  and they think that I was not a good person. This was a misconception, as I am a good person, but I wanted to 
+  ensure that we completed the project on time. In a professional setting, sometimes we have to make tough decisions, 
+  and I believe that my behavior was acceptable given the circumstances.
+
+3. What’s the most interesting thing about you that’s not on your resume? 
+:=> I am a spiritual person who believes in God and karma. Whenever something bad happens to me unexpectedly, most people would lose hope and become demotivated. However, during such times, spirituality always helps me. It reminds me that whatever happens in my life is with the wish of God, and it is for my own good. If I keep this attitude, it will be responsible for my success.
+
+4. Describe the best partner or supervisor with whom you’ve worked. What part of their managing style appealed to you? What characteristics are you looking for in a supervisor/manager? *
+:=> During my time at Masai School, I was part of a group project. One of my colleagues in the group was named shubhi. She was incredibly hardworking and passionate about her work. Whenever she got stuck at any point in the project, she would reach out to me and humbly ask for my help. I always appreciated her willingness to learn and improve, and I was happy to assist her in any way I could. 
+
+5. What are your biggest strengths? What are your biggest weaknesses?
+:=> My greatest strength is my ability to work well with others. Throughout my time at Masai School, I have worked on three projects, each with a team of four people. I am confident that my team members had no complaints about my work.
+    Public speaking makes me nervous, although I don't necessarily need it for my role as a MERN stack developer, I still believe it's an important skill to have. Especially when I want to offer my opinions in meetings or group discussions. I'm aware of this weakness and I'm actively working on overcoming it.
+
+6. How would your manager describe you? Now tell me, how would your best friend describe you?
+:=> If you were to ask my best friend how they would describe me, I believe they would say that I am dependable and empathetic. They know that I am someone they can rely on, both personally and professionally. For instance, when a friend was going through a tough time, I made sure to be there to listen and offer support, which I think reflects my compassionate nature.
+I think my best friend would also describe me as someone who brings a positive energy to any situation. I tend to see the bright side of things and try to motivate and uplift those around me. This positivity translates into my work as well, where I strive to foster a collaborative and encouraging environment.
+Overall, I believe my best friend would describe me as someone who is genuine, caring, and always willing to go the extra mile to help others succeed.
+
+7. What are the three things that are most important to you in a job? 
+:=> If I were to identify the three things that are most important to me in a job, first one would be, 
+Opportunities for Growth and Learning: I am committed to continuously improving my skills and knowledge. Therefore, I value a job that provides opportunities for professional development, whether through training programs, mentorship, or challenging projects that allow me to expand my expertise.
+second one would be, Positive Work Environment and Company Culture: It's important for me to work in a supportive and collaborative environment where teamwork is valued, and employees are respected. A positive company culture fosters employee engagement and satisfaction, which ultimately leads to better outcomes.
+third one would be, Alignment with Values and Impact: I seek a job that aligns with my values and allows me to make a meaningful impact. Whether it's contributing to a larger mission, serving customers, or creating innovative solutions, I want to feel that my work has significance and adds value to the organization.
+These three factors are essential to me because they not only contribute to my job satisfaction but also enable me to thrive professionally and contribute effectively to the success of the team and company.
+
+8. What is your current CTC (per annum) in INR? 
+:=> I am currently unemployed and actively seeking employment opportunities.
+
+
+
+

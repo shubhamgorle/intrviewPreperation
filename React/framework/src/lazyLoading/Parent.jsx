@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-const LazyComponent = React.lazy(() => import("./LazyComponent"))
+const LazyComponent = React.lazy(()=>import("./LazyComponent"))
 // Define a component that will be lazily loaded
 
 const Parent = () => {

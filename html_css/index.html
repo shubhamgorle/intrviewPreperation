@@ -8,6 +8,7 @@
     <title>interview prep</title>
     <link rel="stylesheet" href="./i">
     <style>
+
         /* /* .container{
             width: 1000px;
             height: 500px;
@@ -43,7 +44,7 @@
         /* position:-> static(by default) absolute, relative, fixed, sticky. */
 
 
-        /* 
+        
         #blue{
             background-color: blue;
         }
@@ -54,7 +55,7 @@
 
         #green{
             background-color: green;
-        } */
+        }
 
         /* .main{
             display: flex;
@@ -96,46 +97,116 @@
             border: 1px solid red;
             height: 100px;
             width: 100px;
-            position: absolute;
-            left: 10px;
+            position: sticky;
+            left: 70px;
+            top: 20px;
         }
 
 
-        /* img {
+        img {
             position: absolute;
             top: 10px;
             left: 10px;
             z-index: -1;
-        } */
-        /* .inline-block{
+        }
+        .inline-block{
+           display:block;
            width: 100px; 
            height: 100px;
            border: 1px solid;
-           display: inline-block;
-        } */
+        }
         /* What does justify-content, justifyItems, justifySelf mean? */
         .container-j{
             border: 1px solid;
             display: flex;
             width: 500px;
              height: 300px;
-            justify-content:space-evenly;
+            justify-content:space-between;
             align-items: center;
 
         }
         .container-j > div{
             display: grid;
-            justify-self: center;
+            justify-items: center;
              border: 1px solid red;
              width: 100px;
              height: 100px;
         }
-    </style>
+    .block{
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+    }
+     .block > div{
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+     }
+
+
+
+/* justify content , self, item start */
+.grid-container {
+  display: grid;
+  border: 1px solid red;
+  width: 400px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  justify-content: center; /* Aligns the entire grid along the row axis */
+  justify-items: center; /* Aligns grid items in each cell along the row axis */
+  gap: 10px; /* Adds space between items */
+}
+
+.grid-item {
+    width: 100px;
+    height: 100px;
+  background-color: lightblue;
+  border: 1px solid #333;
+  /* text-align: center; */
+  padding: 10px;
+}
+
+/* Overriding default alignment for specific items */
+.grid-item:nth-child(1) {
+  justify-self: start; /* Aligns Item 1 to the start of its cell along the row axis */
+}
+
+.grid-item:nth-child(2) {
+  justify-self: center; /* Aligns Item 2 to the center of its cell along the row axis */
+}
+
+.grid-item:nth-child(3) {
+  justify-self: end; /* Aligns Item 3 to the end of its cell along the row axis */
+}
+
+.grid-item:nth-child(4) {
+  justify-self: stretch; /* Stretches Item 4 to fill the entire cell */
+}
+
+/* justify content , self, item end */
+   
+   </style>
+
 </head>
 <title>interview preperation</title>
 
 
 <body onload="myfunc()">
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+      </div>
+    <!-- <div class="block">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div> -->
+    </div>
     <!-- <div class="main">
         <div class="div1"> div 1</div> 
         <div class="div2"> div 2</div> 
@@ -187,9 +258,9 @@
 </div> -->
 
 <!-- difference between display - block, inline-block, inline -->
-<!-- <div class="inline-block"></div>
-<div class="inline-block"></div>
-<div class="inline-block"></div> -->
+<!-- <div class="inline-block">12</div>
+<div class="inline-block">2</div>
+<div class="inline-block">3</div> -->
 
 </div>
     <!-- z - indexing -->
@@ -247,30 +318,46 @@
             <td>57</td>
         </tr>
     </table> -->
-
+<!-- <button id="mic">mike</button>
+    <div style=" border: 1px solid red; width: 100px; height: 100px; display: flex; justify-content: center; align-items: center;">
+        <div  style=" border: 1px solid green; position:absolute; right: 10px;">shubham</div>
+    </div> -->
 
 
     <!-- What does justify-child-j, justifyItems, justifySelf mean? -->
-<div class="container-j">
+<!-- <div class="container-j">
 <div class="child-j">
     <p>a</p>
     <p>b</p>
     <p>c</p>
 </div>
-<div class="child-j"> <p>a</p>
+<div class="child-j">
+     <p>a</p>
     <p>b</p>
     <p>c</p></div>
-<div class="child-j"> <p>a</p>
+<div class="child-j"> 
+    <p>a</p>
     <p>b</p>
     <p>c</p></div>
-<div class="child-j"> <p>a</p>
+<div class="child-j">
+    <p>a</p>
     <p>b</p>
     <p>c</p></div>
-</div>
+</div> -->
 
+  
 </body>
 <script>
+const button = document.querySelector("#mic");
 
+button.addEventListener("click", () => {
+  const recognition = new webkitSpeechRecognition();
+  recognition.onresult = (event) => {
+    console.log(event)
+    console.log( event.results[0][0].transcript)
+  };
+  recognition.start();
+});
     // let a1 = [1, 2, 3]
     // let a2 = a1;
     // //  a2 = [...a1]
@@ -452,7 +539,7 @@
     let newcities = cities.filter((e) => {
         return e.population > 3000000
     })
-    console.log(newcities)
+    // console.log(newcities)
 
 
 
@@ -515,9 +602,9 @@
     // }
 
 
-    function myfunc() {
-        console.log("window is loaded")
-    }
+    // function myfunc() {
+    //     console.log("window is loaded")
+    // }
 </script>
 
 </html>

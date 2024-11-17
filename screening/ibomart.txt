@@ -1,0 +1,25 @@
+function myFunction() {
+    // Start the timer with label 'myFunctionTime'
+    console.time('myFunctionTime');
+
+    // Code to be measured
+    let sum = 0;
+    for (let i = 0; i < 1000000; i++) {
+        sum += i;
+    }
+
+    // Stop the timer and log the elapsed time
+    console.timeEnd('myFunctionTime');
+}
+
+// Call the function to measure its processing time
+myFunction();
+destructuring
+1. function processing time of function datafetching and etc.
+2. difference between arrow function and normal function.
+promise.all();
+data fetching.
+object destructuring. 
+
+api multical request 5v request and console the results of all the request at a same time.
+

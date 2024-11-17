@@ -1,9 +1,26 @@
 import './App.js';
-import Parent from './lazyLoading/Parent.jsx';
+// import Parent from './lazyLoading/Parent.jsx';
+// import Dummy1 from './Hooks/usememo/Duumy1.jsx';
+// import UseRef from './Hooks/useRef/UseRef.jsx';
+// import UseCallBack from './Hooks/usecallback/UseCallBack.jsx';
+// import Problem1 from './ReactOutput/Problem1.jsx';
+// import Parent from './lazyLoading/Parent.jsx';
+// import Usereducer from './Hooks/usereduced/Usereducer.jsx';
+// import Practice from './Hooks/usereduced/Practice.jsx';
+// import Dummy1 from './Hooks/memo/Dummy1.jsx';
+// import Demo from './contextApi/Demo.jsx';
+// import { BrowserRouter } from 'react-router-dom';
+// import AllRoutes from './routing/AllRoutes.jsx';
+// import Navbar from './routing/Navbar.jsx';
+import ReduxCompo from './practiceredux/ReduxCompo.jsx';
 function App() {
     return (
         <div className="App">
-             <Parent/>
+            {/* <BrowserRouter>
+            <Navbar/>
+            <AllRoutes/>
+            </BrowserRouter> */}
+            <ReduxCompo/>
         </div>
     );
 }

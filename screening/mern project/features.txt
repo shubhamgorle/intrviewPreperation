@@ -1,0 +1,20 @@
+ I built a e-commerce platform using the MERN stack in 40 days. 
+ It includes user authentication, a dynamic shopping cart, a payment gateway, and admin features.
+ this is solo project.
+
+Tech Stack that i have use in this project are :
+
+for ---> Frontend: React, Redux, Material-UI, CSS
+for ---> Backend: Node.js, Express
+for ---> Database: MongoDB Atlas
+for ---> Cloud Storage: Cloudinary
+for ---> Authentication: JSON Web Token (JWT)
+for ---> Email Services: Nodemailer for password recovery
+for ---> Payment Gateway: Stripe.com
+
+the functionalities of this application are
+1. User Authentication : user can login, signup, can reset password & can forgot password via email.
+2. Shopping Cart & Checkout: Users can add products to their cart and make purchases using Stripe.
+3. Product Reviews: Users can submit and view product reviews.
+4. Basic Functionalities: Features like filtering, pagination, and search to enhance user experience.
+5. Admin Panel: An admin dashboard to manage products (add, update, delete), handle orders, and manage users and reviews.

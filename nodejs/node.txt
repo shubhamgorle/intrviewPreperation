@@ -33,7 +33,7 @@ Eg. const fs = require('node:fs');
     if (err) throw err;
   })
 
-
+ * difference between synchrounous function and asynchronous functions.
 ==============================================================_____***_____==============================================================
 
 

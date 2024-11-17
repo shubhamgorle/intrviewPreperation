@@ -2,6 +2,9 @@
 :=> Express is just a framework, that can help us in creating the server in a very easy way.
     It provides a set of features and utilities that make it easier to handle routing, middleware, HTTP requests and responses.
 
+    HTTP works as a request-response protocol between a client and server. Example: A client (browser) sends an HTTP request to the server;
+     then the server returns a response to the client.
+
 2. What are Middlewares?
 :=>  Middlewares are the functions that get executed before the request reaches the route handler and after the response is sent to the client.
      It sets between request and response.
@@ -68,39 +71,7 @@ app.listen(PORT, () => {
 });
 
 
-4. What are common libraries you work with express?
 
-a. Body-parser: It parses incoming request data (such as JSON, URL-encoded, or multipart form data) and makes it accessible in req.body
-
-      const bodyParser = require('body-parser');
-      app.use(bodyParser.json());
-      app.use(bodyParser.urlencoded({ extended: true }));
-
-b. Morgan : 
-c. Cors : Middleware for enabling Cross-Origin Resource Sharing (CORS). It allows or restricts
-          access to resources on a web server from a different domain.
-
-          const cors = require('cors');
-          app.use(cors());
-
-d. Cookie-parser: Middleware for parsing cookies attached to the client's request.
-      const cookieParser = require('cookie-parser');
-      app.use(cookieParser());
-
-e. Passport: Authentication middleware for Node.js. It supports various authentication strategies.
-             including local authentication, OAuth, and more.
-
-             const passport = require('passport');
-               app.use(passport.initialize());
-               app.use(passport.session());
-
-f. Multer: Middleware for handling multipart/form-data, primarily used for handling file uploads.
-
-          const multer = require('multer');
-          const upload = multer({ dest: 'uploads/' });
-          app.post('/upload', upload.single('file'), (req, res) => {
-            // Handle uploaded file
-          });
 
 5. How do you manage sessions in express?
 :=> Express provides several ways to manage sessions, and one popular middleware for handling sessions 

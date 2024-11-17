@@ -14,7 +14,8 @@ concurrent---> ( when you are doing more than one thing at the same time.)
 if we check null and undefined like this ---> null == undefined ---> we will get true bcz both are falsy values.
 but if we check  null and undefined like this ---> null === undefined (Stricktly equals to)---> we will get false.
 
-
+== compares the value of the variables. 
+=== compares the type and value of the variables.
 ----------------------------------------------------------->
 
 2. difference between falsy values and truthy values.
@@ -79,20 +80,20 @@ NaN == NaN -----> false
 
 
 5. Arrays (Higher order functions);
-=> forEach ---> when we want to iterate to the array and don't want to return any array then forEach is used. 
+=> forEach ---> when we want to iterate to the array and don't want to return any new array then forEach is used. 
  var arr = [1, 2, 3, 4, 5];
     arr.forEach((e, i) => {
         console.log(e)
     })
 
-   map ---> map used when we have to return the array.
+   map ---> map used when we have to return the new array.
   
     var brr = arr.map((e, i) =>
         e + 10
     )
     console.log(brr)
 
-   filter ---> filter is used when we have to apply any condition and return the array.
+   filter ---> filter is used when we have to apply any condition and return the new array.
     var brr = arr.filter((e, i) =>
         e > 2
     )
@@ -190,12 +191,12 @@ var is global scope while let & const are block scope.
 8. Promise
 :=> Promises are a way to implement asynchronous programming in JavaScript(ES6 which is also known as ECMAScript-6). 
     A Promise acts as a container for future values.
-    it is use for parallel execution of code. it allow you to handle asynchronous actions 
+    it is use for parallel execution of code. 
 
     there are three states in promise
     pending: initial state, neither fulfilled nor rejected.
-    fulfilled: meaning that the operation was completed successfully.
-    rejected: meaning that the operation failed.
+    fulfilled: meaning that the operation is completed successfully.
+    rejected: meaning that the operation is failed.
 
 
 
@@ -232,7 +233,7 @@ myPromise.then(
 
 ----------------------------------------------------------->
 
-9. arrow functions 
+9.    arrow functions 
 :=>   Arrow functions were introduced in ES6.
       Arrow functions allow us to write shorter function syntax: 
 
@@ -255,6 +256,7 @@ obj.data() ---> outpt ---> window object
        }, 1000);
     } 
 }
+obj.data() ---> outpt ---> enire object
 
 what is this in different schenario ?
 => in simple object if fuction is created using term function (without arrow fuction) & 'this' is used inside the fuction then 
@@ -336,6 +338,7 @@ let worker = {
   work: function () {
     console.log("Working");
   },
+
 }; //worker object
 worker.__proto__ = company; //worker object inherits company object
 console.log(worker);
@@ -514,11 +517,9 @@ Alone, this refers to the global object/window object.
 ------------------------------------------------------------------------------------->
 
 15) difference between fetch and axios ?
-=> Axios and Fetch are both popular JavaScript libraries
- used for making HTTP requests in web applications.
-fetch is vanilla javascript and axios is a 3rd party library.
+=>fetch is vanilla javascript and axios is a 3rd party library for making HTTP requests in web applications..
  fetch return the promise and then we have to convert that promise into
- jason data, but axios directly return jason data we dont have to convert that data into json.
+ jason data, but axios directly return jason data we don't need to convert that data into json.
 
 16) question related settimeout
 
@@ -526,7 +527,7 @@ var arr= [1,2,3,4,5];
 for(var i = 0; i<arr.length; i++){
     setTimeout(() => 
         console.log(arr[i]), i*1000);
-}
+} 
 
 // In the given code snippet, the issue is related to the scoping of the variable i inside 
 // the setTimeout callback function. The setTimeout function is asynchronous, meaning that 
@@ -604,17 +605,18 @@ arrr.forEach((e)=>console.log(e+10))
 
 20) What is  javascript ?
 
-=> mutable means, variable which can change it's original value, immutable are those 
+=> mutable means, variable which can change it's original value, immutable are those variable which can't change it's original value.
 // In javascript there are two major datatypes.
-// 1.primitive  ---> string, number, boolean, null, undefined   ---> immutable
+// 1.primitive  ---> string, number, boolean, null, undefined, Symbol  ---> immutable
 // data is directly store in memory location where variable exist.
 // 2.reference  --->  array & object   ---> mutable
 // data is stored pointer to allocation in memory where object is stored.
 let x = 20   
 let y = x;  
+y=y+1
 // it is immutable because value of x is not changing by changing the value of y.
 console.log(x)
-console.log(y+1)
+console.log(y)
 
 let a1 = [1,2,3]
 // let a2 = a1; its mutable because by changing the value of a2, value of a1 is changing. to overcome it we can use spread operator.
@@ -623,6 +625,7 @@ a2.pop();
 console.log(a1)
 console.log(a2)
 
+a1 and a2 both reference the same array.
 
 let obj1 = {
     name:"Shubham",
@@ -644,7 +647,8 @@ applications ?
 
 what are closures ?
 => A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).
-   In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a 
+   In other words, a closure gives you access of an outer function's scope Inside an inner function even after outer function finished executing.
+    In JavaScript, closures are created every time a 
    function is created, at function creation time.
 
 
@@ -672,8 +676,8 @@ c()  ---> o/p suraj
 
 what is currying ?
 => transforms a functions with multiple arguments into 
-a nested series of functions, each taking a single
- argument.
+   a nested series of functions, each taking a single
+   argument.
 
  function outer(a){
     return function inner(b){
@@ -685,7 +689,7 @@ console.log(outer(10)(20))
 ---------------------------------------------------->
 
 debouncing ?
-=> It ensures that a function is only executed after a
+=> debouncing delay the execution of function .It ensures that a function is only executed after a
  specified period of inactivity.
  
 If user click two times and request time of first request not complete yet then it shoud cancel the first request.
@@ -862,13 +866,117 @@ console.log(str)
 
 
 *) garbage collector 
-:=> garbage collector is the process of freeing up memory by removi ng unUsed code.
-A automatic memory management that relieves you from doing memory management. it destroye those object which are of no use now.
+:=> garbage collector is the process of freeing up memory by removing unUsed code.
+    A automatic memory 
+     which destroye those object which are of no use now.
++
+*) differenec between while and do while loop 
 
-differenec between while and do while loop 
-
-whie                                                                                      do-while
+while                                                                                   do-while
 Condition is checked first then statement(s) is executed.         Statement(s) is executed atleast once, thereafter condition is checked.
 
 It might occur statement(s) is executed zero times,               At least once the statement(s) is executed.
  If condition is false.
+
+
+*)datatype in javascript
+String.
+Number.
+Boolean.
+Null.
+Undefined.
+Bigint.
+Symbol.
+Object.
+
+
+*) higher order functions
+function that accepts functions as argument and/or returns a function.
+
+function higherOrderFunction(callback) {
+  console.log("Inside higherOrderFunction");
+  callback();
+}
+
+function callbackFunction() {
+  console.log("Inside callbackFunction");
+}
+
+// Pass callbackFunction as an argument to higherOrderFunction
+higherOrderFunction(callbackFunction);
+
+
+----------------------------------------------------
+
+
+methods in promises 
+The Promise.all() static method takes an iterable of promises as input and returns a single Promise.
+ This returned promise fulfills when all of the input's promises fulfill
+
+The Promise.resolve() static method returns a Promise object that is resolve with a given reason.
+The Promise.reject() static method returns a Promise object that is rejected with a given reason.
+
+
+    # difference between put and patch 
+:=> Use PUT when you want to completely replace a resource or create a new one.
+    Use PATCH when you want to partially update a resource, providing only the specific changes you want to apply.
+    PUT is idempotent (same result no matter how many times you apply it), while PATCH may not be idempotent.
+
+
+    # difference between library and framework ?
+    :=> A framework is a set of pre-written code that provides a structure for developing software applications. 
+        eg. Angular, React, and Vue.js for front-end development, providing a component-based architecture.
+        A library, on the other hand, is a collection of pre-written code that can be used to perform specific tasks.
+        eg. Query library in JavaScript for DOM manipulation and AJAX calls.
+
+        # what is Dom
+    :=> DOM stands for Document Object Model. it is the programming interface that represents a structure of HTML an XML document.
+        it allow javaScript to access and manipulate the content and structure of the webpage.
+
+# what is the difference between array.splice & array.slice 
+:=> `slice()` creates a new array containing selected elements from the original, 
+     while `splice()` modifies the original array by adding, removing, or replacing elements.
+
+Shallow Copy: Copies only the top-level properties. Nested objects or arrays are still referenced from the original object.
+
+// Original object
+let original = {
+    name: 'Alice',
+    address: { city: 'New York', zip: 10001 }
+};
+
+// Shallow copy using Object.assign()
+let shallowCopy = Object.assign({}, original);
+
+// Shallow copy using spread operator
+let shallowCopy2 = { ...original };
+
+// Modifying the nested object in shallowCopy
+shallowCopy.address.city = 'Los Angeles';
+
+console.log(original.address.city);  // "Los Angeles" (affected because it's a shallow copy)
+console.log(shallowCopy.address.city); // "Los Angeles"
+--------------------------------------------------------------------------------------------------->
+
+Deep Copy: Recursively copies all properties and nested objects, so changes to the copy don't affect the original object.
+For shallow copies, you can use methods like Object.assign() or the spread operator (...). For deep copies, the JSON.parse(JSON.stringify()) method 
+
+let original = {
+    name: 'Alice',
+    address: { city: 'New York', zip: 10001 }
+};
+
+// Deep copy using JSON methods
+let deepCopy = JSON.parse(JSON.stringify(original));
+
+// Modifying the nested object in deepCopy
+deepCopy.address.city = 'Los Angeles';
+
+console.log(original.address.city);  // "New York" (unchanged)
+console.log(deepCopy.address.city);   // "Los Angeles"
+
+
+
+
+
+

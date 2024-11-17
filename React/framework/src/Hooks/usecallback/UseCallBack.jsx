@@ -1,28 +1,24 @@
 import { React, useCallback, useState } from 'react'
-
+import Child from './Child';
 const UseCallBack = () => {
     const [count, setCount] = useState(0);
     const [ref, setref] = useState(0);
     // Without useCallback, ChildComponent would re-render on each ParentComponent render
-    const handlePlus = useCallback(() => {
+    const handlePlus = (() => {
+        console.log('recreated');
         setCount(count + 1);
-    }, [count])
+    })
+   
     return (
         <div>
             <p>Count: {count}</p>
+            <p>ref:{ref}</p>
+            <Child handlePlus={handlePlus} />
             <button onClick={() => setref(ref + 1)}>Refff</button>
-            <ChildComponent handlePlus={handlePlus} />
         </div>
     )
 }
-function ChildComponent({ handlePlus }) {
-    console.log('ChildComponent rendering');
-    return (
-        <button onClick={handlePlus}>
-            Increment Count in ParentComponent
-        </button>
-    );
-}
+
 export default UseCallBack
 // The React useCallback Hook returns a memoized callback function.
 //  note:- The `useCallback` and useMemo Hooks are similar. The main difference is that useMemo
